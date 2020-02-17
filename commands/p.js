@@ -31,7 +31,6 @@ exports.run = (client, message, args) => {
             message.channel.send("Entered into the game!").catch(console.error);
             tools.insertTree(message.author.id, tools.returnObj(message.author.id, message.author.username, message));
             tools.load(message.author.id, message.author.username);
-            // tools.returnTreeVal(message.author.id).saved = tools.returnTreeVal(message.author.id)._size + 1;
           }
           else {
             message.channel.send("Already entered.").catch(console.error);
@@ -867,8 +866,8 @@ exports.run = (client, message, args) => {
       catch (e) {
         client.channels.get("468170551135961108").send('ERROR WITH NICKNAME: ' + e);
       }
-    break;
-    case :
+    // break;
+    // case :
   }
 
   function catchPoke (bias) {
