@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     .setColor("#FFFF00")
     .addField("**~p start**", "• start a game in desired channel")
     .addField("**~p enter**", "• enter the game")
-    .addField("**~p catch [name] [Poké Ball]**", "• catch a pokemon ([poke], [great], [ultra] , [master])")
+    // .addField("**~p catch [name] [Poké Ball]**", "• catch a pokemon ([poke], [great], [ultra] , [master])")
     .addField("**~p nickname [box number] [nickname here]**", "• give your pokemon a nickname (20 character max)")
     .addField("**~p items **", "• display your items")
     .addField("**~p box **", "• display your pokemon")

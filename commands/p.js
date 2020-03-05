@@ -1,5 +1,6 @@
 let gameStart = false;
 let channell;
+let battling;
 let tools = require('../pokemonFuncs.js');
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
@@ -7,10 +8,11 @@ exports.run = (client, message, args) => {
   switch (args[0]) {
     case "start":
       try {
-        if (gameStart) {
+        if (gameStart && (gameStart && !tools.returnPause())) {
           message.channel.send("Game has already started.").catch(console.error);
         }
-        else if (message.author.id == 330011881341452288 && !gameStart) {
+        else if (message.author.id == 330011881341452288 && (!gameStart || tools.returnPause())) {
+          tools.setPause(false);
           gameStart = true;
           channell = message.channel;
           channell.send("Game is starting.").catch(console.error);
@@ -57,7 +59,7 @@ exports.run = (client, message, args) => {
           return;
         }
         else {
-          if(message.channel != channell) {
+          if(message.channel !== channell) {
             message.channel.send("Wrong channel.").catch(console.error);
             return;
           }
@@ -140,7 +142,7 @@ exports.run = (client, message, args) => {
           message.channel.send("Game not started.").catch(console.error);
           return;
         }
-        if(message.channel != channell) {
+        if(message.channel !== channell) {
           message.channel.send("Wrong channel.").catch(console.error);
           return;
         }
@@ -148,8 +150,8 @@ exports.run = (client, message, args) => {
           channell.send("Must be entered into the game before you can see your PokeBox.").catch(console.error);
           return;
         }
-        else if (tools.returnTreeVal(message.author.id).pokemon._size == 0) {
-          channell.send("Haven't caught anything yet.").catch(console.error);
+        else if (tools.returnTreeVal(message.author.id).pokemon._size === 0) {
+          channell.send("Empty PokeBox.").catch(console.error);
           return;
         }
         let box = tools.returnTreeVal(message.author.id).pokemon;
@@ -164,9 +166,9 @@ exports.run = (client, message, args) => {
             embed.addField("\u200b", i + ") " + box.get(i).name + " Level: " + box.get(i).level, true);
           }
           else {
-            embed.addField(box.get(i).nickName, "\n" + i + ") " + box.get(i).name + " Level: " + box.get(i).level, true);
+            embed.addField(box.get(i).nickName, "\n" + i + ") " + "**" + box.get(i).name + "**" + " Level: " + box.get(i).level, true);
           }
-          if (i%25 == 0) {
+          if (i%25 === 0) {
             channell.send({embed}).catch(console.error);
             embed = new Discord.RichEmbed()
                 .setTitle("**" + message.author.username + "'s Box Continued**")
@@ -175,7 +177,7 @@ exports.run = (client, message, args) => {
                 .setTimestamp()
           }
         }
-        if ((box._size)%25 != 0) {
+        if ((box._size)%25 !== 0) {
           channell.send({embed}).catch(console.error);
         }
         break;
@@ -244,32 +246,32 @@ exports.run = (client, message, args) => {
           channell.send("Must be entered into the game before you can claim presents.").catch(console.error);
           return;
         }
-        let pokeBall = 0;
-        let greatBall = 0;
-        let ultraBall = 0;
-        let masterBall = 0;
-        let potion = 0;
-        let superPotion = 0;
-        let hyperPotion = 0;
-        let maxPotion = 0;
+        // let pokeBall = 0;
+        // let greatBall = 0;
+        // let ultraBall = 0;
+        // let masterBall = 0;
+        // let potion = 0;
+        // let superPotion = 0;
+        // let hyperPotion = 0;
+        // let maxPotion = 0;
         if (tools.returnTreeVal(message.author.id).present < (new Date() - tools.returnTreeVal(message.author.id).date)) {
           for (let i = 0; i < 5; i++) {
             let bias = tools.rand(0,100, 0.6);
             if (bias < 2) {
               tools.returnTreeVal(message.author.id).items.pokeballs.masterBall++;
-              masterBall++;
+              // masterBall++;
             }
             else if (bias < 15) {
               tools.returnTreeVal(message.author.id).items.pokeballs.ultraBall++;
-              ultraBall++;
+              // ultraBall++;
             }
             else if (bias < 50) {
               tools.returnTreeVal(message.author.id).items.pokeballs.greatBall++;
-              greatBall++;
+              // greatBall++;
             }
             else {
               tools.returnTreeVal(message.author.id).items.pokeballs.pokeBall++;
-              pokeBall++;
+              // pokeBall++;
             }
           }
 
@@ -277,23 +279,23 @@ exports.run = (client, message, args) => {
             let bias = tools.rand(0,100);
             if (bias < 5) {
               tools.returnTreeVal(message.author.id).items.medicine.maxPotion++;
-              maxPotion++;
+              // maxPotion++;
             }
             else if (bias < 20) {
               tools.returnTreeVal(message.author.id).items.medicine.hyperPotion++;
-              hyperPotion++;
+              // hyperPotion++;
             }
             else if (bias < 55) {
               tools.returnTreeVal(message.author.id).items.medicine.superPotion++;
-              superPotion++;
+              // superPotion++;
             }
             else {
               tools.returnTreeVal(message.author.id).items.medicine.potion++;
-              potion++;
+              // potion++;
             }
           }
           tools.returnTreeVal(message.author.id).money = parseInt(tools.returnTreeVal(message.author.id).money) + tools.randomInt(500, 1000);
-          console.log(tools.returnTreeVal(message.author.id).money);
+          // console.log(tools.returnTreeVal(message.author.id).money);
 
           tools.savepokeBalls(message.author.id, message.author.username);
           tools.saveMedicine(message.author.id, message.author.username);
@@ -362,6 +364,7 @@ exports.run = (client, message, args) => {
         message.channel.send("Game not started.").catch(console.error);
         return;
       }
+      // console.log(isNaN(args[1]));
       if(message.channel !== channell) {
         message.channel.send("Wrong channel.").catch(console.error);
         return;
@@ -370,29 +373,14 @@ exports.run = (client, message, args) => {
         channell.send("Must be entered into the game before you can switch or look at your follower.").catch(console.error);
         return;
       }
-      else if (args.length === 1 && tools.returnTreeVal(message.author.id).follower !== null) {
-        // let embed = new Discord.RichEmbed()
-        //     .setTitle("**" + message.author.username + "'s Follower**")
-        //     .setColor(0xffff00)
-        //     .setThumbnail("https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png")
-        //     .setTimestamp()
-        //     .setURL("https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png")
-        //     .addField("test", "test")
-        // channell.send(embed).catch(console.error);
-        let pic = "";
-        if (tools.returnTreeVal(message.author.id).follower.pokedex < 10) {
-          pic = "https://serebii.net/pokemon/art/00" + tools.returnTreeVal(message.author.id).follower.pokedex + ".png";
-        }
-        else if (tools.returnTreeVal(message.author.id).follower.pokedex < 100) {
-          pic = "https://serebii.net/pokemon/art/0" + tools.returnTreeVal(message.author.id).follower.pokedex + ".png";
-        }
-        else {
-          pic = "https://serebii.net/pokemon/art/" + tools.returnTreeVal(message.author.id).follower.pokedex + ".png";
-        }
-        const file = new Discord.Attachment(tools.returnTreeVal(message.author.id).follower.icon);
-        const embed = {
+      else if ((tools.returnTreeVal(message.author.id).follower.id === "null" || tools.returnTreeVal(message.author.id).follower.id === null) && isNaN(args[1])) {
+        channell.send("Must have a follower before you can see it.").catch(console.error);
+        return;
+      }
+      else if (args.length === 1) {
+        let embed = {
           color: 0x0099ff,
-          title: "Pokedex #" + tools.returnTreeVal(message.author.id).follower.pokedex + ") " + tools.returnTreeVal(message.author.id).follower.name,
+          title: "Pokedex #" + tools.returnTreeVal(message.author.id).follower.id + " " + tools.returnTreeVal(message.author.id).follower.name,
           // url: 'https://discord.js.org',
           author: {
             name: tools.returnTreeVal(message.author.id).follower.nickName,
@@ -405,50 +393,34 @@ exports.run = (client, message, args) => {
           // },
           fields: [
             {
-              name: "Level:",
+              name: "**Level:**",
+              value: tools.returnTreeVal(message.author.id).follower.level,
+              inline: true,
+            },
+            {
+              name: "**XP to next level:**",
               value: 'Some value here',
               inline: true,
             },
             {
-              name: "XP to next level:",
-              value: 'Some value here',
+              // name: "**⣀ ⣄ ⣆ ⣇ ⣧ ⣷ ⣿**",
+              name: "**Max HP: **",
+              value: tools.hpformula(tools.returnTreeVal(message.author.id).follower),
               inline: true,
             },
             {
-              name: "⣀ ⣄ ⣆ ⣇ ⣧ ⣷ ⣿",
-              value: "\u200b",
+              name: '\u200b',
+              value: tools.returnTreeVal(message.author.id).follower.description,
+              inline: false,
             },
             {
-              name: 'Move 1',
-              value: 'Some value here',
-              inline: true,
-            },
-            {
-              name: 'Move 2',
-              value: 'Some value here',
-              inline: true,
-            },
-            {
-              name: "\u200b",
-              value: "\u200b",
-            },
-            {
-              name: 'Move 3',
-              value: 'Some value here',
-              inline: true,
-            },
-            {
-              name: 'Move 4',
-              value: 'Some value here',
-              inline: true,
-            },
-            {
-              name: "Original Owner:",
-              value: tools.returnTreeVal(message.author.id).follower.owner,
+              name: '\u200b',
+              value: "Weight: " + tools.returnTreeVal(message.author.id).follower.weight + " Height: " + tools.returnTreeVal(message.author.id).follower.height,
+              inline: false,
             },
           ],
           image: {
-            url: pic,
+            url: tools.returnTreeVal(message.author.id).follower.boxIcon,
             // url: 'attachment://' + tools.returnTreeVal(message.author.id).follower.pokedex + '.png',
             // url: 'attachment://108.png',
           },
@@ -458,6 +430,57 @@ exports.run = (client, message, args) => {
             icon_url: 'https://pngimg.com/uploads/pokeball/pokeball_PNG8.png',
           },
         };
+        for (let j = 1; j < 5; j++) {
+          if (tools.returnTreeVal(message.author.id).follower.currentMoves[j] !== null && tools.returnTreeVal(message.author.id).follower.currentMoves[j] !== "null") {
+            let moves = {
+              name: "**Move" + j + "**",
+              value: tools.returnTreeVal(message.author.id).follower.currentMoves[j].name + "\n" + tools.decodeType(tools.returnTreeVal(message.author.id).follower.currentMoves[j].type) + " " +
+                  tools.decodeCategory(tools.returnTreeVal(message.author.id).follower.currentMoves[j].category) + "\nPower:  " + tools.returnTreeVal(message.author.id).follower.currentMoves[j].power + " Accuracy:  " +
+                  tools.returnTreeVal(message.author.id).follower.currentMoves[j].accuracy + " PP:  " + tools.returnTreeVal(message.author.id).follower.currentMoves[j].powerPoints,
+              inline: true,
+            };
+            let empty = {
+              name: "\u200b",
+              value: "\u200b",
+              inline: false,
+            };
+            embed.fields.push(moves);
+            if (j === 2) {
+              embed.fields.push(empty);
+            }
+          }
+        }
+        let owner = {
+          name: "**Original Owner:**",
+          value: tools.returnTreeVal(message.author.id).follower.owner,
+        };
+        embed.fields.push(owner);
+
+        let base = {
+          name: "**Base Values**",
+          value: "**Atk:** " + tools.returnTreeVal(message.author.id).follower.base.atk + "\n**SpAtk:** " + tools.returnTreeVal(message.author.id).follower.base.spatk +
+              "\n**Def:** " + tools.returnTreeVal(message.author.id).follower.base.def + "\n**SpDef:** " + tools.returnTreeVal(message.author.id).follower.base.spdef +
+              "\n**Spd:** " + tools.returnTreeVal(message.author.id).follower.base.spd + "\n**HP:** " + tools.returnTreeVal(message.author.id).follower.base.hp,
+          inline: true,
+        };
+        embed.fields.push(base);
+        let ivs = {
+          name: "**Individual Values**",
+          value: "**Atk:** " + tools.returnTreeVal(message.author.id).follower.iv.atk + "\n**SpAtk:** " + tools.returnTreeVal(message.author.id).follower.iv.spatk +
+              "\n**Def:** " + tools.returnTreeVal(message.author.id).follower.iv.def + "\n**SpDef:** " + tools.returnTreeVal(message.author.id).follower.iv.spdef +
+              "\n**Spd:** " + tools.returnTreeVal(message.author.id).follower.iv.spd + "\n**HP:** " + tools.returnTreeVal(message.author.id).follower.iv.hp,
+          inline: true,
+        };
+        embed.fields.push(ivs);
+        let evs = {
+          name: "**Effort Values**",
+          value: "**Atk:** " + tools.returnTreeVal(message.author.id).follower.ev.atk + "\n**SpAtk:** " + tools.returnTreeVal(message.author.id).follower.ev.spatk +
+              "\n**Def:** " + tools.returnTreeVal(message.author.id).follower.ev.def + "\n**SpDef:** " + tools.returnTreeVal(message.author.id).follower.ev.spdef +
+              "\n**Spd:** " + tools.returnTreeVal(message.author.id).follower.ev.spd + "\n**HP:** " + tools.returnTreeVal(message.author.id).follower.ev.hp,
+          inline: true,
+        };
+        embed.fields.push(evs);
+
         channell.send({/*files: [file],*/ embed: embed });
         // console.log(tools.returnTreeVal(message.author.id).follower.name);
         return;
@@ -467,8 +490,8 @@ exports.run = (client, message, args) => {
         return;
       }
       try {
-        if (tools.returnTreeVal(message.author.id).follower !== null) {
-          console.log("changing");
+        channell.send("Changing follower.");
+        if (tools.returnTreeVal(message.author.id).follower.id !== "null" && tools.returnTreeVal(message.author.id).follower.id !== null) {
           tools.returnTreeVal(message.author.id).pokemon.insert(tools.returnTreeVal(message.author.id).pokemon.size() + 1, tools.returnTreeVal(message.author.id).follower);
         }
         tools.returnTreeVal(message.author.id).follower = tools.returnTreeVal(message.author.id).pokemon.get(args[1]);
@@ -517,72 +540,63 @@ exports.run = (client, message, args) => {
           }
           else
           {
-            console.log("test");
-
             // let test =1;
             // const file = new Discord.Attachment(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).icon);
             let pic = "";
-            if (parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).pokedex, 10) < 10) {
-              pic = "https://serebii.net/pokemon/art/00" + parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).pokedex, 10) + ".png";
+            if (parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).id, 10) < 10) {
+              pic = "https://serebii.net/pokemon/art/00" + parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).id, 10) + ".png";
             }
-            else if (parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).pokedex, 10) < 100) {
-              pic = "https://serebii.net/pokemon/art/0" + parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).pokedex, 10) + ".png";
+            else if (parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).id, 10) < 100) {
+              pic = "https://serebii.net/pokemon/art/0" + parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).id, 10) + ".png";
             }
             else {
-              pic = "https://serebii.net/pokemon/art/" + parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).pokedex,10) + ".png";
+              pic = "https://serebii.net/pokemon/art/" + parseInt(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).id,10) + ".png";
             }
-            const embed = {
+            let embed = {
               color: 0x0099ff,
-              title: "Pokedex #" + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).pokedex + ") " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).name,
+              title: "Pokedex #" + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).id + " " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).name,
+              // url: 'https://discord.js.org',
               author: {
                 name: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).nickName,
+                //   icon_url: 'https://i.imgur.com/wSTFkRM.png',
+                //   url: 'https://discord.js.org',
               },
+              // description: "```~p follower [box number]``` \n To switch followers.",
+              // thumbnail: {
+              //   url: 'https://i.imgur.com/wSTFkRM.png',
+              // },
               fields: [
                 {
-                  name: "Level:",
+                  name: "**Level:**",
+                  value: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).level,
+                  inline: true,
+                },
+                {
+                  name: "**XP to next level:**",
                   value: 'Some value here',
                   inline: true,
                 },
                 {
-                  name: "XP to next level:",
-                  value: 'Some value here',
+                  // name: "**⣀ ⣄ ⣆ ⣇ ⣧ ⣷ ⣿**",
+                  name: "**Max HP: **",
+                  value: tools.hpformula(tools.returnTreeVal(message.author.id).pokemon.get(args[1])),
                   inline: true,
                 },
                 {
-                  name: "⣀ ⣄ ⣆ ⣇ ⣧ ⣷ ⣿",
-                  value: "\u200b",
+                  name: '\u200b',
+                  value: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).description,
+                  inline: false,
                 },
                 {
-                  name: 'Move 1',
-                  value: 'Some value here',
-                  inline: true,
-                },
-                {
-                  name: 'Move 2',
-                  value: 'Some value here',
-                  inline: true,
-                },
-                {
-                  name: "\u200b",
-                  value: "\u200b",
-                },
-                {
-                  name: 'Move 3',
-                  value: 'Some value here',
-                  inline: true,
-                },
-                {
-                  name: 'Move 4',
-                  value: 'Some value here',
-                  inline: true,
-                },
-                {
-                  name: "Original Owner:",
-                  value: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).owner,
+                  name: '\u200b',
+                  value: "Weight: " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).weight + " Height: " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).height,
+                  inline: false,
                 },
               ],
               image: {
-                url: pic,
+                url: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).boxIcon,
+                // url: 'attachment://' + tools.returnTreeVal(message.author.id).follower.pokedex + '.png',
+                // url: 'attachment://108.png',
               },
               timestamp: new Date(),
               footer: {
@@ -590,7 +604,59 @@ exports.run = (client, message, args) => {
                 icon_url: 'https://pngimg.com/uploads/pokeball/pokeball_PNG8.png',
               },
             };
+            for (let j = 1; j < 5; j++) {
+              if (tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j] !== null && tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j] !== "null") {
+                let moves = {
+                  name: "**Move" + j + "**",
+                  value: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].name + "\n" + tools.decodeType(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].type) + " " +
+                      tools.decodeCategory(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].category) + "\nPower:  " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].power + " Accuracy:  " +
+                      tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].accuracy + " PP:  " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].powerPoints,
+                  inline: true,
+                };
+                let empty = {
+                  name: "\u200b",
+                  value: "\u200b",
+                  inline: false,
+                };
+                embed.fields.push(moves);
+                if (j === 2) {
+                  embed.fields.push(empty);
+                }
+              }
+            }
+            let owner = {
+              name: "**Original Owner:**",
+              value: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).owner,
+            };
+            embed.fields.push(owner);
+
+            let base = {
+              name: "**Base Values**",
+              value: "**Atk:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).base.atk + "\n**SpAtk:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).base.spatk +
+                  "\n**Def:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).base.def + "\n**SpDef:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).base.spdef +
+                  "\n**Spd:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).base.spd + "\n**HP:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).base.hp,
+              inline: true,
+            };
+            embed.fields.push(base);
+            let ivs = {
+              name: "**Individual Values**",
+              value: "**Atk:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).iv.atk + "\n**SpAtk:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).iv.spatk +
+                  "\n**Def:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).iv.def + "\n**SpDef:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).iv.spdef +
+                  "\n**Spd:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).iv.spd + "\n**HP:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).iv.hp,
+              inline: true,
+            };
+            embed.fields.push(ivs);
+            let evs = {
+              name: "**Effort Values**",
+              value: "**Atk:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).ev.atk + "\n**SpAtk:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).ev.spatk +
+                  "\n**Def:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).ev.def + "\n**SpDef:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).ev.spdef +
+                  "\n**Spd:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).ev.spd + "\n**HP:** " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).ev.hp,
+              inline: true,
+            };
+            embed.fields.push(evs);
+
             channell.send({/*files: [file],*/ embed: embed });
+            // console.log(tools.returnTreeVal(message.author.id).follower.name);
             return;
           }
         }
@@ -616,7 +682,7 @@ exports.run = (client, message, args) => {
       }
       let captured = 0;
       let followName = "\u200b";
-      if (tools.returnTreeVal(message.author.id).follower === null) {
+      if (tools.returnTreeVal(message.author.id).follower.id === "null" || tools.returnTreeVal(message.author.id).follower.id === null) {
         captured = tools.returnTreeVal(message.author.id).pokemon.size();
       }
       else {
@@ -667,8 +733,12 @@ exports.run = (client, message, args) => {
         channell.send("Must be entered into the game before you can look at avatars.").catch(console.error);
         return;
       }
+      else if (args.length <= 1) {
+        channell.send("Invalid arguments.").catch(console.error);
+        return;
+      }
       else {
-        console.log(args[1]);
+        // console.log(args[1]);
         const embed = new Discord.RichEmbed()
             .setTitle("Avatars:")
         switch (args[1]) {
@@ -730,7 +800,6 @@ exports.run = (client, message, args) => {
         channell.send({embed}).catch(console.error);
       }
     break;
-
     case "remove":
       try {
         console.log("remove");
@@ -866,8 +935,178 @@ exports.run = (client, message, args) => {
       catch (e) {
         client.channels.get("468170551135961108").send('ERROR WITH NICKNAME: ' + e);
       }
-    // break;
-    // case :
+    break;
+    case "stop":
+      console.log("stop");
+      if (message.author.id == 330011881341452288 && gameStart && !tools.returnPause()) {
+        tools.stopSpawn();
+        tools.setPause(true);
+      }
+      else {
+        console.log("Game not started");
+      }
+    break;
+    case "battle":
+      try {
+        console.log("battle");
+        if (!gameStart) {
+          message.channel.send("Game not started.").catch(console.error);
+          return;
+        }
+        else if(message.channel !== channell) {
+          message.channel.send("Wrong channel.").catch(console.error);
+          return;
+        }
+        else if (tools.returnPokemonObj() == null) {
+          channell.send("No pokemon has spawned.").catch(console.error);
+          return;
+        }
+        else if (!tools.returnContain(message.author.id)) {
+          channell.send("Must be entered into the game before you can battle.").catch(console.error);
+          return;
+        }
+        else if (args.length !== 1 ) {
+          channell.send("Just say battle.").catch(console.error);
+          return;
+        }
+        else if (tools.returnTreeVal(message.author.id).follower.id === "null" || tools.returnTreeVal(message.author.id).follower.id === null) {
+          channell.send("Must have a follower to battle with.").catch(console.error);
+          return;
+        }
+        else {
+          if (tools.returnPokemonObj().owner != null) {
+            channell.send(tools.returnPokemonObj().name + " has been already caught by " + tools.returnPokemonObj().owner + ".").catch(console.error);
+            return;
+          }
+          else if (tools.returnTreeVal(message.author.id).inBattle) {
+            channell.send("Currently in a battle.").catch(console.error);
+            return;
+          }
+          else {
+            // tools.stopSpawn();
+            tools.returnTreeVal(message.author.id).inBattle = true;
+            channell.send("Battle starting...").catch(console.error)
+              .then(d_msg => {
+                tools.setBattle(tools.returnTreeVal(message.author.id), tools.returnPokemonObj(), d_msg);
+                // console.log(tools.getbattleManager().length);
+              });
+            channell.send("", {
+              files: [
+                tools.returnPokemonObj().boxIcon,
+              ]
+            });
+            channell.send("", {
+              files: [
+                tools.returnTreeVal(message.author.id).follower.boxIcon
+              ]
+            });
+            const embed = new Discord.RichEmbed()
+                .setTitle("You are now battling a level " + tools.returnPokemonObj().level + " " + tools.returnPokemonObj().name + "!")
+                .setDescription("Use the following commands: \n**`~p attack`** *[Move Number]* \n**`~p medicine`** *[Medicine Number/Name]* \n**`~p pokeball`** *[Pokeball Number/Name]* \n **`~p run`**")
+                .setColor(0x032cfc)
+                .addField("Battle the pokemon before another appears!", "Good luck!")
+                .setTimestamp();
+            channell.send({embed}).catch(console.error);
+            // tools.getbattleManager()[tools.getbattleManager().length-1].updated = true;
+                // .then(d_msg => {
+                //   tools.setBattle(tools.returnTreeVal(message.author.id), tools.returnPokemonObj(), d_msg);
+                // });
+            // console.log(battling);
+            if (!battling) {
+              battleField();
+            }
+            return;
+          }
+        }
+        break;
+      }
+      catch (e) {
+        client.channels.get("468170551135961108").send('ERROR WITH BATTLE: ' + e);
+        console.log(e);
+      }
+    break;
+  }
+
+  function battleField () {
+    battling = setInterval(function(){
+      for (let i = 0; i < tools.getbattleManager().length; i++) {
+        // console.log(tools.getbattleManager()[i].fighter1.userID);
+        if (10000 < (new Date() - tools.getbattleManager()[i].time)) {
+          channell.send("<@" + tools.getbattleManager()[i].fighter1.userID + "> Your battle with " + tools.getbattleManager()[i].fighter2.name + " has ended. They either got bored or ran away :(.").catch(console.error);
+          // tools.getbattleManager()[i].messages.delete().catch(console.error);
+          tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).inBattle = false;
+          tools.getbattleManager().splice(i,1);
+          if (tools.getbattleManager().length === 0) {
+            clearInterval(battling);
+            battling = null;
+          }
+        }
+        else if (tools.getbattleManager()[i].updated) {
+          tools.getbattleManager()[i].messages.delete().catch(console.error);
+          let name =tools.getbattleManager()[i].fighter1.follower.name;
+          // console.log(tools.getbattleManager()[i].fighter1.follower.nickName);
+          if (tools.getbattleManager()[i].fighter1.follower.nickName !== null && tools.getbattleManager()[i].fighter1.follower.nickName !== "null" && tools.getbattleManager()[i].fighter1.follower.nickName !== "" &&
+              tools.getbattleManager()[i].fighter1.follower.nickName !== "\u200b") {
+            name = tools.getbattleManager()[i].fighter1.follower.nickName;
+          }
+          const embed = new Discord.RichEmbed()
+              .setTitle(tools.getbattleManager()[i].fighter1.name + "'s Battle Menu")
+              .setColor(0xd8eb34)
+              .setTimestamp();
+          // console.log(tools.getbattleManager()[i].fighter1.follower.currentMoves[1].type);
+          embed.addField("Enemy " + tools.getbattleManager()[i].fighter2.name + "'s HP Level: " + tools.getbattleManager()[i].fighter2.level, "**"
+              + tools.returnHP(tools.getbattleManager()[i].fighter2, tools.getbattleManager()[i].currentHP2) + "**");
+          embed.addField(name + "'s HP", "**" + tools.returnHP(tools.getbattleManager()[i].fighter1.follower, tools.getbattleManager()[i].currentHP1) + "**");
+          // embed.addField("\u200b", "\u200b");
+          // let moves = "";
+          // let counter = 1;
+          // while (counter < 5 && tools.getbattleManager()[i].fighter1.follower.currentMoves[counter]!== null && tools.getbattleManager()[i].fighter1.follower.currentMoves[counter] !== "null"
+          // && tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].name !== null && tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].name !== "null" ) {
+          //   moves = moves + "**" + counter + ") " + tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].name + "** \n**Type: **" + tools.decodeType(tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].type) +
+          //       "\n**Power: **" + tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].power + "\n**Accuracy: **" + tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].accuracy +
+          //       "\n**PP: **" + tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].powerPoints + "\n";
+          //   counter++;
+          // }
+          // embed.addField(name + "'s Moves List", moves);
+
+          for (let j = 1; j < 5; j++) {
+            if (tools.getbattleManager()[i].fighter1.follower.currentMoves[j] !== null && tools.getbattleManager()[i].fighter1.follower.currentMoves[j] !== "null") {
+              let moves = {
+                name: "**Move" + j + "**",
+                value: "**" + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].name + "**" + "\n" + tools.decodeType(tools.getbattleManager()[i].fighter1.follower.currentMoves[j].type) + " " +
+                    tools.decodeCategory(tools.getbattleManager()[i].fighter1.follower.currentMoves[j].category) + "\nPower:  " + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].power + " Accuracy: " +
+                    tools.getbattleManager()[i].fighter1.follower.currentMoves[j].accuracy + " PP:  " + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].powerPoints,
+                inline: true,
+              };
+              let empty = {
+                name: "\u200b",
+                value: "\u200b",
+                inline: false,
+              };
+              embed.fields.push(moves);
+              if (j === 2) {
+                embed.fields.push(empty);
+              }
+            }
+          }
+          embed.addField("\u200b", "\u200b");
+          embed.addField("Pokeball Bag", "**1) PokeBalls:** " + tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).items.pokeballs.pokeBall +
+              "\n**2) Great Balls: ** " + tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).items.pokeballs.greatBall +
+              "\n**3) Ultra Balls: ** " + tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).items.pokeballs.ultraBall +
+              "\n**4) Master Balls: ** " + tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).items.pokeballs.masterBall, true);
+          embed.addField("Medicine Bag", "**1) Potions: **" + tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).items.medicine.potion +
+              "\n**2) Super Potions: **" + tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).items.medicine.superPotion +
+              "\n**3) Hyper Potions: **" + tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).items.medicine.hyperPotion +
+              "\n**4) Max Potions: **" + tools.returnTreeVal(tools.getbattleManager()[i].fighter1.userID).items.medicine.maxPotion, true);
+          channell.send({embed}).catch(console.error)
+              .then(d_msg => {
+                tools.getbattleManager()[i].messages = d_msg;
+              });
+          // console.log(tools.returnHP(tools.getbattleManager()[i].fighter1.follower, tools.getbattleManager()[i].currentHP1));
+          tools.getbattleManager()[i].updated = false;
+        }
+      }
+    },1000);
   }
 
   function catchPoke (bias) {
@@ -883,8 +1122,9 @@ exports.run = (client, message, args) => {
           tools.save(message.author.id, false, message.author.username);
           channell.send("**" + tools.returnPokemonObj().owner + "** caught a level " + tools.returnPokemonObj().level + " " + tools.returnPokemonObj().name + "!").catch(console.error);
           console.log(tools.returnPokemonObj().owner + " caught: " + tools.returnPokemonObj().name + "!");
-          let money = tools.randomInt(100, 10000/tools.returnPokemonObj().spawnRarity);
+          let money = tools.randomInt(100, 10000/tools.returnPokemonObj().spawnRate);
           channell.send("**" + tools.returnPokemonObj().owner + "** received $" + money +"!").catch(console.error);
+
           tools.returnTreeVal(message.author.id).money = parseInt(tools.returnTreeVal(message.author.id).money) + money;
           tools.saveUserData(message.author.id, message.author.username);
           return;

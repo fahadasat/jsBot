@@ -10,6 +10,7 @@ exports.run = (client, message, args) => {
     .addField("**~say [something]**", "• have Matty say something")
     .addField("**~joke**", "• have Matty give you a joke")
     .addField("**~trivia**", "• lists trivia commonds")
-    .addField("**~pokemon**", "• lists pokemon commands");
+    .addField("**~pokemon**", "• lists pokemon commands")
+    .addField("**~avatar [@user]**", "• prints the user's avatar");
   message.channel.send({embed}).catch(console.error);
 };

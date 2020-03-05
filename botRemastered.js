@@ -15,6 +15,7 @@ var apiai = require('apiai');
 var app = apiai(config.Dialogflow);
 
 client.on('message', function(message){
+
         if((message.cleanContent.startsWith("@" + client.user.username) || message.channel.type === 'dm') && client.user.id !== message.author.id){
         var mess = remove(client.user.username, message.cleanContent);
         console.log(mess);
@@ -39,9 +40,9 @@ client.on('message', function(message){
         (async function(){
             var result = await promise;
             if(result){
-                message.reply(result);
+                await message.reply(result);
             } else{
-                message.reply("nothing here");
+                await message.reply("nothing here");
             }
         }());
 

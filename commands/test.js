@@ -1,6 +1,7 @@
 exports.run = (client, message, args) => {
   if (args.length != 0) return;
   message.channel.send("pong!").catch(console.error);
+  message.channel.send("<@" + message.author.id + ">").catch(console.error);
 
 
   // 'use strict';
