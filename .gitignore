@@ -3,3 +3,7 @@
 /config.json
 /tockens.txt
 /.idea/
+/.vs/
+/.eslintrc.json
+/package-lock.json
+/package.json
