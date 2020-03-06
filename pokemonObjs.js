@@ -24,7 +24,8 @@ const attributes = {
     water: 14,
     grass: 15,
     fairy: 16,
-    steel: 17
+    steel: 17,
+    dark: 18,
 };
 
 const battleCategory = {
@@ -462,6 +463,1870 @@ const moveList = {
             accuracy: 100,
             powerPoints: 10
         },
+    ],
+    4: [
+        {
+            level: 1,
+            name: "Growl",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Scratch",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 4,
+            name: "Ember",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 8,
+            name: "Smokescreen",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Dragon Breath",
+            type: attributes.dragon,
+            category: battleCategory.special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 17,
+            name: "Fire Fang",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 20,
+            name: "Slash",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 24,
+            name: "Flamethrower",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 28,
+            name: "Scary Face",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 32,
+            name: "Fire Spin",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 35,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 36,
+            name: "Inferno",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
+        {
+            level: 40,
+            name: "Flare Blitz",
+            type: attributes.fire,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    5: [
+        {
+            level: 1,
+            name: "Ember",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 1,
+            name: "Growl",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Scratch",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Smokescreen",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Dragon Breath",
+            type: attributes.dragon,
+            category: battleCategory.special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Fire Fang",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 24,
+            name: "Slash",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 30,
+            name: "Flamethrower",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 37,
+            name: "Scary Face",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 42,
+            name: "Fire Spin",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 35,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 48,
+            name: "Inferno",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
+        {
+            level: 54,
+            name: "Flare Blitz",
+            type: attributes.fire,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    6: [
+        {
+            level: 1,
+            name: "Air Slash",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 75,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Dragon Claw",
+            type: attributes.dragon,
+            category: battleCategory.physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Heat Wave",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 95,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Scratch",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Growl",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Ember",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 1,
+            name: "Smokescreen",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Dragon Breath",
+            type: attributes.dragon,
+            category: battleCategory.special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Fire Fang",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 24,
+            name: "Slash",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 30,
+            name: "Flamethrower",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 39,
+            name: "Scary Face",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 46,
+            name: "Fire Spin",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 35,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 54,
+            name: "Inferno",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
+        {
+            level: 62,
+            name: "Flare Blitz",
+            type: attributes.fire,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    7: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Tail Whip",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 3,
+            name: "Water Gun",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 6,
+            name: "Withdraw",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 9,
+            name: "Rapid Spin",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 12,
+            name: "Bite",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 15,
+            name: "Water Pulse",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 18,
+            name: "Protect",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 21,
+            name: "Rain Dance",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 24,
+            name: "Aqua Tail",
+            type: attributes.water,
+            category: battleCategory.physical,
+            power: 90,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 27,
+            name: "Shell Smash",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 30,
+            name: "Iron Defense",
+            type: attributes.steel,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 33,
+            name: "Hydro Pump",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 36,
+            name: "Skull Bash",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 130,
+            accuracy: 100,
+            powerPoints: 10
+        },
+    ],
+    8: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Tail Whip",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Water Gun",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 1,
+            name: "Withdraw",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 9,
+            name: "Rapid Spin",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 12,
+            name: "Bite",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 15,
+            name: "Water Pulse",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Protect",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 25,
+            name: "Rain Dance",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 30,
+            name: "Aqua Tail",
+            type: attributes.water,
+            category: battleCategory.physical,
+            power: 90,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 35,
+            name: "Shell Smash",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 40,
+            name: "Iron Defense",
+            type: attributes.steel,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 45,
+            name: "Hydro Pump",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 50,
+            name: "Skull Bash",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 130,
+            accuracy: 100,
+            powerPoints: 10
+        },
+    ],
+    9: [
+        {
+            level: 1,
+            name: "Flash Cannon",
+            type: attributes.steel,
+            category: battleCategory.special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Tail Whip",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Water Gun",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 1,
+            name: "Withdraw",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 9,
+            name: "Rapid Spin",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 12,
+            name: "Bite",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 15,
+            name: "Water Pulse",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Protect",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 25,
+            name: "Rain Dance",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 30,
+            name: "Aqua Tail",
+            type: attributes.water,
+            category: battleCategory.physical,
+            power: 90,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 35,
+            name: "Shell Smash",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 42,
+            name: "Iron Defense",
+            type: attributes.steel,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 49,
+            name: "Hydro Pump",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 56,
+            name: "Skull Bash",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 130,
+            accuracy: 100,
+            powerPoints: 10
+        },
+    ],
+    10: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "String Shot",
+            type: attributes.bug,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 95,
+            powerPoints: 40
+        },
+        {
+            level: 9,
+            name: "Bug Bite",
+            type: attributes.bug,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+    ],
+    11: [
+        {
+            level: 1,
+            name: "Harden",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+    ],
+    12: [
+        {
+            level: 1,
+            name: "Gust",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Harden",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "String Shot",
+            type: attributes.bug,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 95,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Bug Bite",
+            type: attributes.bug,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 4,
+            name: "Supersonic",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 20
+        },
+        {
+            level: 8,
+            name: "Confusion",
+            type: attributes.psychic,
+            category: battleCategory.special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 12,
+            name: "Poison Powder",
+            type: attributes.poison,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 35
+        },
+        {
+            level: 12,
+            name: "Stun Spore",
+            type: attributes.grass,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 30
+        },
+        {
+            level: 12,
+            name: "Sleep Powder",
+            type: attributes.grass,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 15
+        },
+        {
+            level: 16,
+            name: "Psybeam",
+            type: attributes.psychic,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Whirlwind",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 24,
+            name: "Air Slash",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 75,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 28,
+            name: "Safeguard",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 25
+        },
+        {
+            level: 32,
+            name: "Bug Buzz",
+            type: attributes.bug,
+            category: battleCategory.special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 36,
+            name: "Tailwind",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 40,
+            name: "Rage Powder",
+            type: attributes.bug,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 44,
+            name: "Quiver Dance",
+            type: attributes.bug,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+    ],
+    13: [
+        {
+            level: 1,
+            name: "Poison Sting",
+            type: attributes.poison,
+            category: battleCategory.physical,
+            power: 15,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "String Shot",
+            type: attributes.bug,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 95,
+            powerPoints: 40
+        },
+        {
+            level: 9,
+            name: "Bug Bite",
+            type: attributes.bug,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+    ],
+    14: [
+        {
+            level: 1,
+            name: "Harden",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+    ],
+    15: [
+        {
+            level: 1,
+            name: "Twineedle",
+            type: attributes.bug,
+            category: battleCategory.physical,
+            power: 25,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Fury Attack",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 14,
+            name: "Rage",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 20,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 17,
+            name: "Pursuit",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Focus Energy",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 23,
+            name: "Venoshock",
+            type: attributes.poison,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 26,
+            name: "Assurance",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 29,
+            name: "Toxic Spikes",
+            type: attributes.poison,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 32,
+            name: "Pin Missile",
+            type: attributes.bug,
+            category: battleCategory.physical,
+            power: 25,
+            accuracy: 95,
+            powerPoints: 20
+        },
+        {
+            level: 35,
+            name: "Poison Jab",
+            type: attributes.poison,
+            category: battleCategory.physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 38,
+            name: "Agility",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 41,
+            name: "Endeavor",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 44,
+            name: "Fell Stinger",
+            type: attributes.bug,
+            category: battleCategory.physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+    ],
+    16: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 5,
+            name: "Sand Attack",
+            type: attributes.ground,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 9,
+            name: "Gust",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 13,
+            name: "Quick Attack",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 17,
+            name: "Whirlwind",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 21,
+            name: "Twister",
+            type: attributes.dragon,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 25,
+            name: "Feather Dance",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 29,
+            name: "Agility",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 33,
+            name: "Wing Attack",
+            type: attributes.flying,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 37,
+            name: "Roost",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 41,
+            name: "Tailwind",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 45,
+            name: "Mirror Move",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 49,
+            name: "Air Slash",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 75,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 53,
+            name: "Hurricane",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 110,
+            accuracy: 70,
+            powerPoints: 10
+        },
+    ],
+    17: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 5,
+            name: "Sand Attack",
+            type: attributes.ground,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 9,
+            name: "Gust",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 13,
+            name: "Quick Attack",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 17,
+            name: "Whirlwind",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 22,
+            name: "Twister",
+            type: attributes.dragon,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 27,
+            name: "Feather Dance",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 32,
+            name: "Agility",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 37,
+            name: "Wing Attack",
+            type: attributes.flying,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 42,
+            name: "Roost",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 47,
+            name: "Tailwind",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 52,
+            name: "Mirror Move",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 57,
+            name: "Air Slash",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 75,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 62,
+            name: "Hurricane",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 110,
+            accuracy: 70,
+            powerPoints: 10
+        },
+    ],
+    18: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Sand Attack",
+            type: attributes.ground,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Gust",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Quick Attack",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 17,
+            name: "Whirlwind",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 22,
+            name: "Twister",
+            type: attributes.dragon,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 27,
+            name: "Feather Dance",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 32,
+            name: "Agility",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 38,
+            name: "Wing Attack",
+            type: attributes.flying,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 44,
+            name: "Roost",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 50,
+            name: "Tailwind",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 56,
+            name: "Mirror Move",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 62,
+            name: "Air Slash",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 75,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 68,
+            name: "Hurricane",
+            type: attributes.flying,
+            category: battleCategory.special,
+            power: 110,
+            accuracy: 70,
+            powerPoints: 10
+        },
+    ],
+    19: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Tail Whip",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 4,
+            name: "Quick Attack",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Focus Energy",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 10,
+            name: "Bite",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 13,
+            name: "Pursuit",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 16,
+            name: "Hyper Fang",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 80,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 19,
+            name: "Assurance",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 22,
+            name: "Crunch",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 22
+        },
+        {
+            level: 25,
+            name: "Sucker Punch",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 28,
+            name: "Super Fang",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 31,
+            name: "Double-Edge",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 34,
+            name: "Endeavor",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+    ],
+    20: [
+        {
+            level: 1,
+            name: "Swords Dance",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Tail Whip",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Quick Attack",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Focus Energy",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 10,
+            name: "Bite",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 13,
+            name: "Pursuit",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 16,
+            name: "Hyper Fang",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 80,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 19,
+            name: "Assurance",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 24,
+            name: "Crunch",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 29,
+            name: "Sucker Punch",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 34,
+            name: "Super Fang",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 39,
+            name: "Double-Edge",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 44,
+            name: "Endeavor",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+
+    ],
+    21: [
+        {
+            level: 1,
+            name: "Peck",
+            type: attributes.flying,
+            category: battleCategory.physical,
+            power: 35,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Growl",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 4,
+            name: "Leer",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 8,
+            name: "Pursuit",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Fury Attack",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Aerial Ace",
+            type: attributes.flying,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 18,
+            name: "Mirror Move",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 22,
+            name: "Assurance",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 25,
+            name: "Agility",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 29,
+            name: "Focus Energy",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 32,
+            name: "Roost",
+            type: attributes.flying,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 36,
+            name: "Drill Peck",
+            type: attributes.flying,
+            category: battleCategory.physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+    ],
+    22: [
+
+    ],
+    23: [
+
+    ],
+    24: [
+
     ],
 };
 

@@ -648,11 +648,11 @@ module.exports = {
     try {
       // for (let i = 0; i < 10000; i++)
       // {
-        let id = module.exports.randomInt(1, 4);
+        let id = module.exports.randomInt(1, 18);
       // console.log(id);
-        let bias = module.exports.rand(0, 36, 0.4);
+        let bias = module.exports.rand(0, 85, 0.4);
         while (bias > pokDex.returnDex()[id].spawnRate) {
-          id = module.exports.randomInt(1, 4);
+          id = module.exports.randomInt(1, 18);
         }
         //
         // let id = 1;
@@ -924,6 +924,8 @@ module.exports = {
         return "Fairy";
       case 17:
         return "Steel";
+      case 18:
+        return "Dark";
     }
   },
 
