@@ -7006,10 +7006,359 @@ const moveList = {
         },
     ],
     56: [
-
+        {
+            level: 1,
+            name: "Covet",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 1,
+            name: "Scratch",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Low Kick",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Leer",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Focus Energy",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 5,
+            name: "Fury Swipes",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 18,
+            accuracy: 80,
+            powerPoints: 15
+        },
+        {
+            level: 8,
+            name: "Karate Chop",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 12,
+            name: "Pursuit",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Seismic Toss",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Swagger",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 22,
+            name: "Cross Chop",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 26,
+            name: "Assurance",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 29,
+            name: "Punishment",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 33,
+            name: "Thrash",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 36,
+            name: "Close Combat",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 40,
+            name: "Screech",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 43,
+            name: "Stomping Tantrum",
+            type: attributes.ground,
+            category: battleCategory.physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 47,
+            name: "Outrage",
+            type: attributes.dragon,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 50,
+            name: "Final Gambit",
+            type: attributes.fight,
+            category: battleCategory.special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
     ],
     57: [
-
+        {
+            level: 1,
+            name: "Rage",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 20,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Fling",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Scratch",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Low Kick",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Leer",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Focus Energy",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 5,
+            name: "Fury Swipes",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 18,
+            accuracy: 80,
+            powerPoints: 15
+        },
+        {
+            level: 8,
+            name: "Karate Chop",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 12,
+            name: "Pursuit",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Seismic Toss",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Swagger",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 22,
+            name: "Cross Chop",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 26,
+            name: "Assurance",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 30,
+            name: "Punishment",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 35,
+            name: "Thrash",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 39,
+            name: "Close Combat",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 44,
+            name: "Screech",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 48,
+            name: "Stomping Tantrum",
+            type: attributes.ground,
+            category: battleCategory.physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 53,
+            name: "Outrage",
+            type: attributes.dragon,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 57,
+            name: "Final Gambit",
+            type: attributes.fight,
+            category: battleCategory.special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
     ],
     58: [
         {
@@ -7158,7 +7507,168 @@ const moveList = {
         },
     ],
     59: [
-
+        {
+            level: ,
+            name: "Extreme Speed",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: ,
+            name: "Burn Up",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 130,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: ,
+            name: "Flame Wheel",
+            type: attributes.fire,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: ,
+            name: "Helping Hand",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Agility",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 24,
+            name: "Fire Fang",
+            type: attributes.fire,
+            category: battleCategory.physical,
+            power: 65,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 28,
+            name: "Retaliate",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 32,
+            name: "Crunch",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 36,
+            name: "Take Down",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 40,
+            name: "Flamethrower",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 44,
+            name: "Roar",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 48,
+            name: "Play Rough",
+            type: attributes.fairy,
+            category: battleCategory.physical,
+            power: 90,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 52,
+            name: "Reversal",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 56,
+            name: "Flare Blitz",
+            type: attributes.fire,
+            category: battleCategory.physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: ,
+            name: "Ember",
+            type: attributes.fire,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: ,
+            name: "Leer",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: ,
+            name: "Howl",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: ,
+            name: "Bite",
+            type: attributes.dark,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
     ],
     60: [
 
