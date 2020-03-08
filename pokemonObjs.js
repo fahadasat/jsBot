@@ -7508,7 +7508,7 @@ const moveList = {
     ],
     59: [
         {
-            level: ,
+            level: 1,
             name: "Extreme Speed",
             type: attributes.normal,
             category: battleCategory.physical,
@@ -7517,7 +7517,7 @@ const moveList = {
             powerPoints: 5
         },
         {
-            level: ,
+            level: 1,
             name: "Burn Up",
             type: attributes.fire,
             category: battleCategory.special,
@@ -7526,7 +7526,7 @@ const moveList = {
             powerPoints: 5
         },
         {
-            level: ,
+            level: 1,
             name: "Flame Wheel",
             type: attributes.fire,
             category: battleCategory.physical,
@@ -7535,7 +7535,7 @@ const moveList = {
             powerPoints: 25
         },
         {
-            level: ,
+            level: 1,
             name: "Helping Hand",
             type: attributes.normal,
             category: battleCategory.status,
@@ -7544,7 +7544,7 @@ const moveList = {
             powerPoints: 20
         },
         {
-            level: 20,
+            level: 1,
             name: "Agility",
             type: attributes.psychic,
             category: battleCategory.status,
@@ -7553,7 +7553,7 @@ const moveList = {
             powerPoints: 30
         },
         {
-            level: 24,
+            level: 1,
             name: "Fire Fang",
             type: attributes.fire,
             category: battleCategory.physical,
@@ -7562,7 +7562,7 @@ const moveList = {
             powerPoints: 15
         },
         {
-            level: 28,
+            level: 1,
             name: "Retaliate",
             type: attributes.normal,
             category: battleCategory.physical,
@@ -7571,7 +7571,7 @@ const moveList = {
             powerPoints: 5
         },
         {
-            level: 32,
+            level: 1,
             name: "Crunch",
             type: attributes.dark,
             category: battleCategory.physical,
@@ -7580,7 +7580,7 @@ const moveList = {
             powerPoints: 20
         },
         {
-            level: 36,
+            level: 1,
             name: "Take Down",
             type: attributes.normal,
             category: battleCategory.physical,
@@ -7589,7 +7589,7 @@ const moveList = {
             powerPoints: 20
         },
         {
-            level: 40,
+            level: 1,
             name: "Flamethrower",
             type: attributes.fire,
             category: battleCategory.special,
@@ -7598,7 +7598,7 @@ const moveList = {
             powerPoints: 15
         },
         {
-            level: 44,
+            level: 1,
             name: "Roar",
             type: attributes.normal,
             category: battleCategory.status,
@@ -7607,7 +7607,7 @@ const moveList = {
             powerPoints: 20
         },
         {
-            level: 48,
+            level: 1,
             name: "Play Rough",
             type: attributes.fairy,
             category: battleCategory.physical,
@@ -7616,7 +7616,7 @@ const moveList = {
             powerPoints: 10
         },
         {
-            level: 52,
+            level: 1,
             name: "Reversal",
             type: attributes.fight,
             category: battleCategory.physical,
@@ -7625,7 +7625,7 @@ const moveList = {
             powerPoints: 15
         },
         {
-            level: 56,
+            level: 1,
             name: "Flare Blitz",
             type: attributes.fire,
             category: battleCategory.physical,
@@ -7634,7 +7634,7 @@ const moveList = {
             powerPoints: 15
         },
         {
-            level: ,
+            level: 1,
             name: "Ember",
             type: attributes.fire,
             category: battleCategory.special,
@@ -7643,7 +7643,7 @@ const moveList = {
             powerPoints: 25
         },
         {
-            level: ,
+            level: 1,
             name: "Leer",
             type: attributes.normal,
             category: battleCategory.status,
@@ -7652,7 +7652,7 @@ const moveList = {
             powerPoints: 30
         },
         {
-            level: ,
+            level: 1,
             name: "Howl",
             type: attributes.normal,
             category: battleCategory.status,
@@ -7661,7 +7661,7 @@ const moveList = {
             powerPoints: 40
         },
         {
-            level: ,
+            level: 1,
             name: "Bite",
             type: attributes.dark,
             category: battleCategory.physical,
@@ -7671,12 +7671,437 @@ const moveList = {
         },
     ],
     60: [
-
+        {
+            level: 1,
+            name: "Water Sport",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 5,
+            name: "Water Gun",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 8,
+            name: "Hypnosis",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Bubble",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 15,
+            name: "Double Slap",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 18,
+            name: "Rain Dance",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 21,
+            name: "Body Slam",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 85,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 25,
+            name: "Bubble Beam",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 28,
+            name: "Mud Shot",
+            type: attributes.ground,
+            category: battleCategory.special,
+            power: 55,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 31,
+            name: "Belly Drum",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 35,
+            name: "Wake-Up Slap",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 38,
+            name: "Hydro Pump",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 41,
+            name: "Mud Bomb",
+            type: attributes.ground,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 85,
+            powerPoints: 10
+        },
     ],
     61: [
-
+        {
+            level: 1,
+            name: "Water Sport",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 5,
+            name: "Water Gun",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 8,
+            name: "Hypnosis",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Bubble",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 15,
+            name: "Double Slap",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 18,
+            name: "Rain Dance",
+            type: attributes.water,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 21,
+            name: "Body Slam",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 85,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 27,
+            name: "Bubble Beam",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 32,
+            name: "Mud Shot",
+            type: attributes.ground,
+            category: battleCategory.special,
+            power: 55,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 37,
+            name: "Belly Drum",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 43,
+            name: "Wake-Up Slap",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 48,
+            name: "Hydro Pump",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 53,
+            name: "Mud Bomb",
+            type: attributes.ground,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 85,
+            powerPoints: 10
+        },
     ],
     62: [
+        {
+            level: 1,
+            name: "Submission",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 80,
+            accuracy: 80,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Bubble Beam",
+            type: attributes.water,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Hypnosis",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Double Slap",
+            type: attributes.normal,
+            category: battleCategory.physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 32,
+            name: "Dynamic Punch",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
+        {
+            level: 43,
+            name: "Mind Reader",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 53,
+            name: "Circle Throw",
+            type: attributes.fight,
+            category: battleCategory.physical,
+            power: 60,
+            accuracy: 90,
+            powerPoints: 10
+        },
+    ],
+    63: [
+        {
+            level: 1,
+            name: "Teleport",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+    ],
+    64: [
+        {
+            level: 1,
+            name: "Teleport",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 16,
+            name: "Confusion",
+            type: attributes.psychic,
+            category: battleCategory.special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: ,
+            name: "Disable",
+            type: attributes.normal,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: ,
+            name: "Psybeam",
+            type: attributes.psychic,
+            category: battleCategory.special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: ,
+            name: "Miracle Eye",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: ,
+            name: "Reflect",
+            type: attributes.psychic,
+            category: battleCategory.status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+
+    ],
+    65: [
+
+    ],
+    66: [
+
+    ],
+    67: [
+
+    ],
+    68: [
+
+    ],
+    69: [
+
+    ],
+    70: [
+
+    ],
+    71: [
+
+    ],
+    72: [
+
+    ],
+    73: [
+
+    ],
+    74: [
+
+    ],
+    75: [
+
+    ],
+    76: [
+
+    ],
+    77: [
+
+    ],
+    78: [
+
+    ],
+    79: [
+
+    ],
+    80: [
+
+    ],
+    81: [
+
+    ],
+    82: [
+
+    ],
+    83: [
+
+    ],
+    84: [
+
+    ],
+    85: [
 
     ],
 };
