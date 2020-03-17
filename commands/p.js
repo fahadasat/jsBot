@@ -434,9 +434,9 @@ exports.run = (client, message, args) => {
           if (tools.returnTreeVal(message.author.id).follower.currentMoves[j] !== null && tools.returnTreeVal(message.author.id).follower.currentMoves[j] !== "null") {
             let moves = {
               name: "**Move" + j + "**",
-              value: tools.returnTreeVal(message.author.id).follower.currentMoves[j].name + "\n" + tools.decodeType(tools.returnTreeVal(message.author.id).follower.currentMoves[j].type) + " " +
-                  tools.decodeCategory(tools.returnTreeVal(message.author.id).follower.currentMoves[j].category) + "\nPower:  " + tools.returnTreeVal(message.author.id).follower.currentMoves[j].power + " Accuracy:  " +
-                  tools.returnTreeVal(message.author.id).follower.currentMoves[j].accuracy + " PP:  " + tools.returnTreeVal(message.author.id).follower.currentMoves[j].powerPoints,
+              value: tools.returnTreeVal(message.author.id).follower.currentMoves[j].move.name + "\n" + tools.decodeType(tools.returnTreeVal(message.author.id).follower.currentMoves[j].move.type) + " " +
+                  tools.decodeCategory(tools.returnTreeVal(message.author.id).follower.currentMoves[j].move.category) + "\nPower:  " + tools.returnTreeVal(message.author.id).follower.currentMoves[j].move.power + " Accuracy:  " +
+                  tools.returnTreeVal(message.author.id).follower.currentMoves[j].move.accuracy + " PP:  " + tools.returnTreeVal(message.author.id).follower.currentMoves[j].move.powerPoints,
               inline: true,
             };
             let empty = {
@@ -608,9 +608,9 @@ exports.run = (client, message, args) => {
               if (tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j] !== null && tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j] !== "null") {
                 let moves = {
                   name: "**Move" + j + "**",
-                  value: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].name + "\n" + tools.decodeType(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].type) + " " +
-                      tools.decodeCategory(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].category) + "\nPower:  " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].power + " Accuracy:  " +
-                      tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].accuracy + " PP:  " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].powerPoints,
+                  value: tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].move.name + "\n" + tools.decodeType(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].move.type) + " " +
+                      tools.decodeCategory(tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].move.category) + "\nPower:  " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].move.power + " Accuracy:  " +
+                      tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].move.accuracy + " PP:  " + tools.returnTreeVal(message.author.id).pokemon.get(args[1]).currentMoves[j].move.powerPoints,
                   inline: true,
                 };
                 let empty = {
@@ -1053,29 +1053,18 @@ exports.run = (client, message, args) => {
               .setTitle(tools.getbattleManager()[i].fighter1.name + "'s Battle Menu")
               .setColor(0xd8eb34)
               .setTimestamp();
-          // console.log(tools.getbattleManager()[i].fighter1.follower.currentMoves[1].type);
+
           embed.addField("Enemy " + tools.getbattleManager()[i].fighter2.name + "'s HP Level: " + tools.getbattleManager()[i].fighter2.level, "**"
               + tools.returnHP(tools.getbattleManager()[i].fighter2, tools.getbattleManager()[i].currentHP2) + "**");
           embed.addField(name + "'s HP", "**" + tools.returnHP(tools.getbattleManager()[i].fighter1.follower, tools.getbattleManager()[i].currentHP1) + "**");
-          // embed.addField("\u200b", "\u200b");
-          // let moves = "";
-          // let counter = 1;
-          // while (counter < 5 && tools.getbattleManager()[i].fighter1.follower.currentMoves[counter]!== null && tools.getbattleManager()[i].fighter1.follower.currentMoves[counter] !== "null"
-          // && tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].name !== null && tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].name !== "null" ) {
-          //   moves = moves + "**" + counter + ") " + tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].name + "** \n**Type: **" + tools.decodeType(tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].type) +
-          //       "\n**Power: **" + tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].power + "\n**Accuracy: **" + tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].accuracy +
-          //       "\n**PP: **" + tools.getbattleManager()[i].fighter1.follower.currentMoves[counter].powerPoints + "\n";
-          //   counter++;
-          // }
-          // embed.addField(name + "'s Moves List", moves);
 
           for (let j = 1; j < 5; j++) {
             if (tools.getbattleManager()[i].fighter1.follower.currentMoves[j] !== null && tools.getbattleManager()[i].fighter1.follower.currentMoves[j] !== "null") {
               let moves = {
                 name: "**Move" + j + "**",
-                value: "**" + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].name + "**" + "\n" + tools.decodeType(tools.getbattleManager()[i].fighter1.follower.currentMoves[j].type) + " " +
-                    tools.decodeCategory(tools.getbattleManager()[i].fighter1.follower.currentMoves[j].category) + "\nPower:  " + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].power + " Accuracy: " +
-                    tools.getbattleManager()[i].fighter1.follower.currentMoves[j].accuracy + " PP:  " + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].powerPoints,
+                value: "**" + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].move.name + "**" + "\n" + tools.decodeType(tools.getbattleManager()[i].fighter1.follower.move.currentMoves[j].move.type) + " " +
+                    tools.decodeCategory(tools.getbattleManager()[i].fighter1.follower.currentMoves[j].move.category) + "\nPower:  " + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].move.power + " Accuracy: " +
+                    tools.getbattleManager()[i].fighter1.follower.currentMoves[j].move.accuracy + " PP:  " + tools.getbattleManager()[i].fighter1.follower.currentMoves[j].move.powerPoints,
                 inline: true,
               };
               let empty = {

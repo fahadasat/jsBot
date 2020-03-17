@@ -1,320 +1,137 @@
-const rarity = {
-    ultraCommon: 85,
-    common: 73,
-    uncommon: 55,
-    rare: 37,
-    ultraRare: 27,
-    legendary: 25
-};
-
-const attributes = {
-    bug: 1,
-    ground: 2,
-    dragon: 3,
-    ice: 4,
-    electric: 5,
-    normal: 6,
-    fight: 7,
-    poison: 8,
-    fire: 9,
-    psychic: 10,
-    flying: 11,
-    rock: 12,
-    ghost: 13,
-    water: 14,
-    grass: 15,
-    fairy: 16,
-    steel: 17,
-    dark: 18,
-};
-
-const battleCategory = {
-    physical : 1,
-    special : 2,
-    status : 3,
-};
+let moves = require('./movesList.js');
+let properties = require('./pokemonDetails.js');
 
 const moveList = {
     1: [
         {
             level: 1,
-            name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
-            power: 40,
-            accuracy: 100,
-            powerPoints: 35
+            move: moves.returnMoves().Tackle,
         },
         {
             level: 1,
-            name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 100,
-            powerPoints: 40
+            move: moves.returnMoves().Growl,
         },
         {
             level: 3,
-            name: "Vine Whip",
-            type: attributes.grass,
-            category: battleCategory.physical,
-            power: 45,
-            accuracy: 100,
-            powerPoints: 25
+            move: moves.returnMoves().VineWhip,
         },
         {
             level: 6,
-            name: "Growth",
-            type: attributes.normal,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 101,
-            powerPoints: 20
+            move: moves.returnMoves().Growth,
         },
         {
             level: 9,
-            name: "Leech Seed",
-            type: attributes.grass,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 90,
-            powerPoints: 10
+            move: moves.returnMoves().LeechSeed,
         },
         {
             level: 12,
-            name: "Razor Leaf",
-            type: attributes.grass,
-            category: battleCategory.physical,
-            power: 55,
-            accuracy: 95,
-            powerPoints: 25
+            move: moves.returnMoves().RazorLeaf,
         },
         {
             level: 15,
-            name: "Poison Power",
-            type: attributes.poison,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 75,
-            powerPoints: 35
+            move: moves.returnMoves().PoisonPowder,
         },
         {
             level: 15,
-            name: "Sleep Power",
-            type: attributes.grass,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 75,
-            powerPoints: 15
+            move: moves.returnMoves().SleepPowder,
         },
         {
             level: 18,
-            name: "Seed Bomb",
-            type: attributes.grass,
-            category: battleCategory.physical,
-            power: 80,
-            accuracy: 100,
-            powerPoints: 15
+            move: moves.returnMoves().SeedBomb,
         },
         {
             level: 21,
-            name: "Take Down",
-            type: attributes.normal,
-            category: battleCategory.physical,
-            power: 90,
-            accuracy: 85,
-            powerPoints: 20
+            move: moves.returnMoves().TakeDown,
         },
         {
             level: 24,
-            name: "Sweet Scent",
-            type: attributes.normal,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 101,
-            powerPoints: 20
+            move: moves.returnMoves().SweetScent,
         },
         {
             level: 27,
-            name: "Synthesis",
-            type: attributes.grass,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 101,
-            powerPoints: 5
+            move: moves.returnMoves().Synthesis,
         },
         {
             level: 30,
-            name: "Worry Seed",
-            type: attributes.grass,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 100,
-            powerPoints: 10
+            move: moves.returnMoves().WorrySeed,
         },
         {
             level: 33,
-            name: "Double-Edge",
-            type: attributes.normal,
-            category: battleCategory.physical,
-            power: 120,
-            accuracy: 100,
-            powerPoints: 15
+            move: moves.returnMoves().DoubleEdge,
         },
         {
             level: 36,
-            name: "Solar Beam",
-            type: attributes.grass,
-            category: battleCategory.special,
-            power: 120,
-            accuracy: 100,
-            powerPoints: 10
+            move: moves.returnMoves().SolarBeam,
         },
     ],
     2: [
         {
             level: 1,
-            name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 100,
-            powerPoints: 40
+            move: moves.returnMoves().Growl,
         },
         {
             level: 1,
-            name: "Growth",
-            type: attributes.normal,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 101,
-            powerPoints: 20
+            move: moves.returnMoves().Growth,
         },
         {
             level: 1,
-            name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
-            power: 45,
-            accuracy: 100,
-            powerPoints: 35
+            move: moves.returnMoves().Tackle,
         },
         {
             level: 1,
-            name: "Vine Whip",
-            type: attributes.grass,
-            category: battleCategory.physical,
-            power: 0,
-            accuracy: 100,
-            powerPoints: 25
+            move: moves.returnMoves().VineWhip,
         },
         {
             level: 9,
-            name: "Leech Seed",
-            type: attributes.grass,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 90,
-            powerPoints: 10
+            move: moves.returnMoves().LeechSeed,
         },
         {
             level: 12,
-            name: "Razor Leaf",
-            type: attributes.grass,
-            category: battleCategory.physical,
-            power: 55,
-            accuracy: 95,
-            powerPoints: 25
+            move: moves.returnMoves().RazorLeaf,
         },
         {
             level: 15,
-            name: "Poison Power",
-            type: attributes.poison,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 75,
-            powerPoints: 35
+            move: moves.returnMoves().PoisonPowder,
         },
         {
             level: 15,
-            name: "Sleep Power",
-            type: attributes.grass,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 75,
-            powerPoints: 15
+            move: moves.returnMoves().SleepPowder,
         },
         {
             level: 20,
-            name: "Seed Bomb",
-            type: attributes.grass,
-            category: battleCategory.physical,
-            power: 80,
-            accuracy: 100,
-            powerPoints: 15
+            move: moves.returnMoves().SeedBomb,
         },
         {
             level: 25,
-            name: "Take Down",
-            type: attributes.normal,
-            category: battleCategory.physical,
-            power: 90,
-            accuracy: 85,
-            powerPoints: 20
+            move: moves.returnMoves().TakeDown,
         },
         {
             level: 30,
-            name: "Sweet Scent",
-            type: attributes.normal,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 100,
-            powerPoints: 20
+            move: moves.returnMoves().SweetScent,
         },
         {
             level: 35,
-            name: "Synthesis",
-            type: attributes.grass,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 100,
-            powerPoints: 5
+            move: moves.returnMoves().Synthesis,
         },
         {
             level: 40,
-            name: "Worry Seed",
-            type: attributes.grass,
-            category: battleCategory.status,
-            power: 0,
-            accuracy: 100,
-            powerPoints: 10
+            move: moves.returnMoves().WorrySeed,
         },
         {
             level: 45,
-            name: "Double-Edge",
-            type: attributes.normal,
-            category: battleCategory.physical,
-            power: 120,
-            accuracy: 100,
-            powerPoints: 15
+            move: moves.returnMoves().DoubleEdge,
         },
         {
             level: 50,
-            name: "Solar Beam",
-            type: attributes.grass,
-            category: battleCategory.special,
-            power: 120,
-            accuracy: 100,
-            powerPoints: 10
+            move: moves.returnMoves().SolarBeam,
         },
     ],
     3: [
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -322,8 +139,8 @@ const moveList = {
         {
             level: 1,
             name: "Growth",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -331,8 +148,8 @@ const moveList = {
         {
             level: 1,
             name: "Petal Blizzard",
-            type: attributes.grass,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -340,8 +157,8 @@ const moveList = {
         {
             level: 1,
             name: "Petal Dance",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -349,8 +166,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -358,8 +175,8 @@ const moveList = {
         {
             level: 1,
             name: "Vine Whip",
-            type: attributes.grass,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
             power: 45,
             accuracy: 100,
             powerPoints: 25
@@ -367,8 +184,8 @@ const moveList = {
         {
             level: 9,
             name: "Leech Seed",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 90,
             powerPoints: 10
@@ -376,8 +193,8 @@ const moveList = {
         {
             level: 12,
             name: "Razor Leaf",
-            type: attributes.grass,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
             power: 55,
             accuracy: 95,
             powerPoints: 25
@@ -385,8 +202,8 @@ const moveList = {
         {
             level: 15,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -394,8 +211,8 @@ const moveList = {
         {
             level: 15,
             name: "Sleep Power",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 15
@@ -403,8 +220,8 @@ const moveList = {
         {
             level: 20,
             name: "Seed Bomb",
-            type: attributes.grass,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 15
@@ -412,8 +229,8 @@ const moveList = {
         {
             level: 25,
             name: "Take Down",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 85,
             powerPoints: 20
@@ -421,8 +238,8 @@ const moveList = {
         {
             level: 30,
             name: "Sweet Scent",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -430,8 +247,8 @@ const moveList = {
         {
             level: 37,
             name: "Synthesis",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 120,
             accuracy: 101,
             powerPoints: 5
@@ -439,8 +256,8 @@ const moveList = {
         {
             level: 44,
             name: "Worry Seed",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -448,8 +265,8 @@ const moveList = {
         {
             level: 51,
             name: "Double-Edge",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -457,8 +274,8 @@ const moveList = {
         {
             level: 58,
             name: "Solar Beam",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -468,8 +285,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -477,8 +294,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -486,8 +303,8 @@ const moveList = {
         {
             level: 4,
             name: "Ember",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -495,8 +312,8 @@ const moveList = {
         {
             level: 8,
             name: "Smokescreen",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -504,8 +321,8 @@ const moveList = {
         {
             level: 12,
             name: "Dragon Breath",
-            type: attributes.dragon,
-            category: battleCategory.special,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -513,8 +330,8 @@ const moveList = {
         {
             level: 17,
             name: "Fire Fang",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 95,
             powerPoints: 15
@@ -522,8 +339,8 @@ const moveList = {
         {
             level: 20,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -531,8 +348,8 @@ const moveList = {
         {
             level: 24,
             name: "Flamethrower",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -540,8 +357,8 @@ const moveList = {
         {
             level: 28,
             name: "Scary Face",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -549,8 +366,8 @@ const moveList = {
         {
             level: 32,
             name: "Fire Spin",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 35,
             accuracy: 85,
             powerPoints: 15
@@ -558,8 +375,8 @@ const moveList = {
         {
             level: 36,
             name: "Inferno",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 100,
             accuracy: 50,
             powerPoints: 5
@@ -567,8 +384,8 @@ const moveList = {
         {
             level: 40,
             name: "Flare Blitz",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -578,8 +395,8 @@ const moveList = {
         {
             level: 1,
             name: "Ember",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -587,8 +404,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -596,8 +413,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -605,8 +422,8 @@ const moveList = {
         {
             level: 1,
             name: "Smokescreen",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -614,8 +431,8 @@ const moveList = {
         {
             level: 12,
             name: "Dragon Breath",
-            type: attributes.dragon,
-            category: battleCategory.special,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -623,8 +440,8 @@ const moveList = {
         {
             level: 19,
             name: "Fire Fang",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 95,
             powerPoints: 15
@@ -632,8 +449,8 @@ const moveList = {
         {
             level: 24,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -641,8 +458,8 @@ const moveList = {
         {
             level: 30,
             name: "Flamethrower",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -650,8 +467,8 @@ const moveList = {
         {
             level: 37,
             name: "Scary Face",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -659,8 +476,8 @@ const moveList = {
         {
             level: 42,
             name: "Fire Spin",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 35,
             accuracy: 85,
             powerPoints: 15
@@ -668,8 +485,8 @@ const moveList = {
         {
             level: 48,
             name: "Inferno",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 100,
             accuracy: 50,
             powerPoints: 5
@@ -677,8 +494,8 @@ const moveList = {
         {
             level: 54,
             name: "Flare Blitz",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -688,8 +505,8 @@ const moveList = {
         {
             level: 1,
             name: "Air Slash",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 95,
             powerPoints: 15
@@ -697,8 +514,8 @@ const moveList = {
         {
             level: 1,
             name: "Dragon Claw",
-            type: attributes.dragon,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 15
@@ -706,8 +523,8 @@ const moveList = {
         {
             level: 1,
             name: "Heat Wave",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 95,
             accuracy: 90,
             powerPoints: 10
@@ -715,8 +532,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -724,8 +541,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -733,8 +550,8 @@ const moveList = {
         {
             level: 1,
             name: "Ember",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -742,8 +559,8 @@ const moveList = {
         {
             level: 1,
             name: "Smokescreen",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -751,8 +568,8 @@ const moveList = {
         {
             level: 12,
             name: "Dragon Breath",
-            type: attributes.dragon,
-            category: battleCategory.special,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -760,8 +577,8 @@ const moveList = {
         {
             level: 19,
             name: "Fire Fang",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 95,
             powerPoints: 15
@@ -769,8 +586,8 @@ const moveList = {
         {
             level: 24,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -778,8 +595,8 @@ const moveList = {
         {
             level: 30,
             name: "Flamethrower",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -787,8 +604,8 @@ const moveList = {
         {
             level: 39,
             name: "Scary Face",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -796,8 +613,8 @@ const moveList = {
         {
             level: 46,
             name: "Fire Spin",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 35,
             accuracy: 85,
             powerPoints: 15
@@ -805,8 +622,8 @@ const moveList = {
         {
             level: 54,
             name: "Inferno",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 100,
             accuracy: 50,
             powerPoints: 5
@@ -814,8 +631,8 @@ const moveList = {
         {
             level: 62,
             name: "Flare Blitz",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -825,8 +642,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -834,8 +651,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -843,8 +660,8 @@ const moveList = {
         {
             level: 3,
             name: "Water Gun",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -852,8 +669,8 @@ const moveList = {
         {
             level: 6,
             name: "Withdraw",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -861,8 +678,8 @@ const moveList = {
         {
             level: 9,
             name: "Rapid Spin",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 40
@@ -870,8 +687,8 @@ const moveList = {
         {
             level: 12,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -879,8 +696,8 @@ const moveList = {
         {
             level: 15,
             name: "Water Pulse",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -888,8 +705,8 @@ const moveList = {
         {
             level: 18,
             name: "Protect",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -897,8 +714,8 @@ const moveList = {
         {
             level: 21,
             name: "Rain Dance",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -906,8 +723,8 @@ const moveList = {
         {
             level: 24,
             name: "Aqua Tail",
-            type: attributes.water,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -915,8 +732,8 @@ const moveList = {
         {
             level: 27,
             name: "Shell Smash",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -924,8 +741,8 @@ const moveList = {
         {
             level: 30,
             name: "Iron Defense",
-            type: attributes.steel,
-            category: battleCategory.status,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -933,8 +750,8 @@ const moveList = {
         {
             level: 33,
             name: "Hydro Pump",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 80,
             powerPoints: 5
@@ -942,8 +759,8 @@ const moveList = {
         {
             level: 36,
             name: "Skull Bash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 130,
             accuracy: 100,
             powerPoints: 10
@@ -953,8 +770,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -962,8 +779,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -971,8 +788,8 @@ const moveList = {
         {
             level: 1,
             name: "Water Gun",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -980,8 +797,8 @@ const moveList = {
         {
             level: 1,
             name: "Withdraw",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -989,8 +806,8 @@ const moveList = {
         {
             level: 9,
             name: "Rapid Spin",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 40
@@ -998,8 +815,8 @@ const moveList = {
         {
             level: 12,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -1007,8 +824,8 @@ const moveList = {
         {
             level: 15,
             name: "Water Pulse",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -1016,8 +833,8 @@ const moveList = {
         {
             level: 20,
             name: "Protect",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -1025,8 +842,8 @@ const moveList = {
         {
             level: 25,
             name: "Rain Dance",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -1034,8 +851,8 @@ const moveList = {
         {
             level: 30,
             name: "Aqua Tail",
-            type: attributes.water,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -1043,8 +860,8 @@ const moveList = {
         {
             level: 35,
             name: "Shell Smash",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -1052,8 +869,8 @@ const moveList = {
         {
             level: 40,
             name: "Iron Defense",
-            type: attributes.steel,
-            category: battleCategory.status,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -1061,8 +878,8 @@ const moveList = {
         {
             level: 45,
             name: "Hydro Pump",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 80,
             powerPoints: 5
@@ -1070,8 +887,8 @@ const moveList = {
         {
             level: 50,
             name: "Skull Bash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 130,
             accuracy: 100,
             powerPoints: 10
@@ -1081,8 +898,8 @@ const moveList = {
         {
             level: 1,
             name: "Flash Cannon",
-            type: attributes.steel,
-            category: battleCategory.special,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().special,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -1090,8 +907,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1099,8 +916,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -1108,8 +925,8 @@ const moveList = {
         {
             level: 1,
             name: "Water Gun",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -1117,8 +934,8 @@ const moveList = {
         {
             level: 1,
             name: "Withdraw",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -1126,8 +943,8 @@ const moveList = {
         {
             level: 9,
             name: "Rapid Spin",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 40
@@ -1135,8 +952,8 @@ const moveList = {
         {
             level: 12,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -1144,8 +961,8 @@ const moveList = {
         {
             level: 15,
             name: "Water Pulse",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -1153,8 +970,8 @@ const moveList = {
         {
             level: 20,
             name: "Protect",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -1162,8 +979,8 @@ const moveList = {
         {
             level: 25,
             name: "Rain Dance",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -1171,8 +988,8 @@ const moveList = {
         {
             level: 30,
             name: "Aqua Tail",
-            type: attributes.water,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -1180,8 +997,8 @@ const moveList = {
         {
             level: 35,
             name: "Shell Smash",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -1189,8 +1006,8 @@ const moveList = {
         {
             level: 42,
             name: "Iron Defense",
-            type: attributes.steel,
-            category: battleCategory.status,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -1198,8 +1015,8 @@ const moveList = {
         {
             level: 49,
             name: "Hydro Pump",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 80,
             powerPoints: 5
@@ -1207,8 +1024,8 @@ const moveList = {
         {
             level: 56,
             name: "Skull Bash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 130,
             accuracy: 100,
             powerPoints: 10
@@ -1218,8 +1035,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1227,8 +1044,8 @@ const moveList = {
         {
             level: 1,
             name: "String Shot",
-            type: attributes.bug,
-            category: battleCategory.status,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 95,
             powerPoints: 40
@@ -1236,8 +1053,8 @@ const moveList = {
         {
             level: 9,
             name: "Bug Bite",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -1247,8 +1064,8 @@ const moveList = {
         {
             level: 1,
             name: "Harden",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -1258,8 +1075,8 @@ const moveList = {
         {
             level: 1,
             name: "Gust",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1267,8 +1084,8 @@ const moveList = {
         {
             level: 1,
             name: "Harden",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -1276,8 +1093,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1285,8 +1102,8 @@ const moveList = {
         {
             level: 1,
             name: "String Shot",
-            type: attributes.bug,
-            category: battleCategory.status,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 95,
             powerPoints: 40
@@ -1294,8 +1111,8 @@ const moveList = {
         {
             level: 1,
             name: "Bug Bite",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -1303,8 +1120,8 @@ const moveList = {
         {
             level: 4,
             name: "Supersonic",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 20
@@ -1312,8 +1129,8 @@ const moveList = {
         {
             level: 8,
             name: "Confusion",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 50,
             accuracy: 100,
             powerPoints: 25
@@ -1321,8 +1138,8 @@ const moveList = {
         {
             level: 12,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -1330,8 +1147,8 @@ const moveList = {
         {
             level: 12,
             name: "Stun Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 30
@@ -1339,8 +1156,8 @@ const moveList = {
         {
             level: 12,
             name: "Sleep Powder",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 15
@@ -1348,8 +1165,8 @@ const moveList = {
         {
             level: 16,
             name: "Psybeam",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 20
@@ -1357,8 +1174,8 @@ const moveList = {
         {
             level: 20,
             name: "Whirlwind",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1366,8 +1183,8 @@ const moveList = {
         {
             level: 24,
             name: "Air Slash",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 95,
             powerPoints: 15
@@ -1375,8 +1192,8 @@ const moveList = {
         {
             level: 28,
             name: "Safeguard",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 25
@@ -1384,8 +1201,8 @@ const moveList = {
         {
             level: 32,
             name: "Bug Buzz",
-            type: attributes.bug,
-            category: battleCategory.special,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -1393,8 +1210,8 @@ const moveList = {
         {
             level: 36,
             name: "Tailwind",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -1402,8 +1219,8 @@ const moveList = {
         {
             level: 40,
             name: "Rage Powder",
-            type: attributes.bug,
-            category: battleCategory.status,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1411,8 +1228,8 @@ const moveList = {
         {
             level: 44,
             name: "Quiver Dance",
-            type: attributes.bug,
-            category: battleCategory.status,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1422,8 +1239,8 @@ const moveList = {
         {
             level: 1,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -1431,8 +1248,8 @@ const moveList = {
         {
             level: 1,
             name: "String Shot",
-            type: attributes.bug,
-            category: battleCategory.status,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 95,
             powerPoints: 40
@@ -1440,8 +1257,8 @@ const moveList = {
         {
             level: 9,
             name: "Bug Bite",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -1451,8 +1268,8 @@ const moveList = {
         {
             level: 1,
             name: "Harden",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -1462,8 +1279,8 @@ const moveList = {
         {
             level: 1,
             name: "Twineedle",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 25,
             accuracy: 100,
             powerPoints: 20
@@ -1471,8 +1288,8 @@ const moveList = {
         {
             level: 11,
             name: "Fury Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 20
@@ -1480,8 +1297,8 @@ const moveList = {
         {
             level: 14,
             name: "Rage",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 20,
             accuracy: 100,
             powerPoints: 20
@@ -1489,8 +1306,8 @@ const moveList = {
         {
             level: 17,
             name: "Pursuit",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -1498,8 +1315,8 @@ const moveList = {
         {
             level: 20,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -1507,8 +1324,8 @@ const moveList = {
         {
             level: 23,
             name: "Venoshock",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 10
@@ -1516,8 +1333,8 @@ const moveList = {
         {
             level: 26,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -1525,8 +1342,8 @@ const moveList = {
         {
             level: 29,
             name: "Toxic Spikes",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1534,8 +1351,8 @@ const moveList = {
         {
             level: 32,
             name: "Pin Missile",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 25,
             accuracy: 95,
             powerPoints: 20
@@ -1543,8 +1360,8 @@ const moveList = {
         {
             level: 35,
             name: "Poison Jab",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 20
@@ -1552,8 +1369,8 @@ const moveList = {
         {
             level: 38,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -1561,8 +1378,8 @@ const moveList = {
         {
             level: 41,
             name: "Endeavor",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -1570,8 +1387,8 @@ const moveList = {
         {
             level: 44,
             name: "Fell Stinger",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 25
@@ -1581,8 +1398,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1590,8 +1407,8 @@ const moveList = {
         {
             level: 5,
             name: "Sand Attack",
-            type: attributes.ground,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -1599,8 +1416,8 @@ const moveList = {
         {
             level: 9,
             name: "Gust",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1608,8 +1425,8 @@ const moveList = {
         {
             level: 13,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -1617,8 +1434,8 @@ const moveList = {
         {
             level: 17,
             name: "Whirlwind",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1626,8 +1443,8 @@ const moveList = {
         {
             level: 21,
             name: "Twister",
-            type: attributes.dragon,
-            category: battleCategory.special,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -1635,8 +1452,8 @@ const moveList = {
         {
             level: 25,
             name: "Feather Dance",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -1644,8 +1461,8 @@ const moveList = {
         {
             level: 29,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -1653,8 +1470,8 @@ const moveList = {
         {
             level: 33,
             name: "Wing Attack",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 35
@@ -1662,8 +1479,8 @@ const moveList = {
         {
             level: 37,
             name: "Roost",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -1671,8 +1488,8 @@ const moveList = {
         {
             level: 41,
             name: "Tailwind",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -1680,8 +1497,8 @@ const moveList = {
         {
             level: 45,
             name: "Mirror Move",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1689,8 +1506,8 @@ const moveList = {
         {
             level: 49,
             name: "Air Slash",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 95,
             powerPoints: 15
@@ -1698,8 +1515,8 @@ const moveList = {
         {
             level: 53,
             name: "Hurricane",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 70,
             powerPoints: 10
@@ -1709,8 +1526,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1718,8 +1535,8 @@ const moveList = {
         {
             level: 5,
             name: "Sand Attack",
-            type: attributes.ground,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -1727,8 +1544,8 @@ const moveList = {
         {
             level: 9,
             name: "Gust",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1736,8 +1553,8 @@ const moveList = {
         {
             level: 13,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -1745,8 +1562,8 @@ const moveList = {
         {
             level: 17,
             name: "Whirlwind",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1754,8 +1571,8 @@ const moveList = {
         {
             level: 22,
             name: "Twister",
-            type: attributes.dragon,
-            category: battleCategory.special,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -1763,8 +1580,8 @@ const moveList = {
         {
             level: 27,
             name: "Feather Dance",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -1772,8 +1589,8 @@ const moveList = {
         {
             level: 32,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -1781,8 +1598,8 @@ const moveList = {
         {
             level: 37,
             name: "Wing Attack",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 35
@@ -1790,8 +1607,8 @@ const moveList = {
         {
             level: 42,
             name: "Roost",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -1799,8 +1616,8 @@ const moveList = {
         {
             level: 47,
             name: "Tailwind",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -1808,8 +1625,8 @@ const moveList = {
         {
             level: 52,
             name: "Mirror Move",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1817,8 +1634,8 @@ const moveList = {
         {
             level: 57,
             name: "Air Slash",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 95,
             powerPoints: 15
@@ -1826,8 +1643,8 @@ const moveList = {
         {
             level: 62,
             name: "Hurricane",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 70,
             powerPoints: 10
@@ -1837,8 +1654,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1846,8 +1663,8 @@ const moveList = {
         {
             level: 5,
             name: "Sand Attack",
-            type: attributes.ground,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -1855,8 +1672,8 @@ const moveList = {
         {
             level: 9,
             name: "Gust",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1864,8 +1681,8 @@ const moveList = {
         {
             level: 13,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -1873,8 +1690,8 @@ const moveList = {
         {
             level: 17,
             name: "Whirlwind",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1882,8 +1699,8 @@ const moveList = {
         {
             level: 22,
             name: "Twister",
-            type: attributes.dragon,
-            category: battleCategory.special,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -1891,8 +1708,8 @@ const moveList = {
         {
             level: 27,
             name: "Feather Dance",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -1900,8 +1717,8 @@ const moveList = {
         {
             level: 32,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -1909,8 +1726,8 @@ const moveList = {
         {
             level: 38,
             name: "Wing Attack",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 35
@@ -1918,8 +1735,8 @@ const moveList = {
         {
             level: 44,
             name: "Roost",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -1927,8 +1744,8 @@ const moveList = {
         {
             level: 50,
             name: "Tailwind",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -1936,8 +1753,8 @@ const moveList = {
         {
             level: 56,
             name: "Mirror Move",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -1945,8 +1762,8 @@ const moveList = {
         {
             level: 62,
             name: "Air Slash",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 95,
             powerPoints: 15
@@ -1954,8 +1771,8 @@ const moveList = {
         {
             level: 68,
             name: "Hurricane",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 70,
             powerPoints: 10
@@ -1965,8 +1782,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -1974,8 +1791,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -1983,8 +1800,8 @@ const moveList = {
         {
             level: 4,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -1992,8 +1809,8 @@ const moveList = {
         {
             level: 7,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2001,8 +1818,8 @@ const moveList = {
         {
             level: 10,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -2010,8 +1827,8 @@ const moveList = {
         {
             level: 13,
             name: "Pursuit",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -2019,8 +1836,8 @@ const moveList = {
         {
             level: 16,
             name: "Hyper Fang",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 90,
             powerPoints: 15
@@ -2028,8 +1845,8 @@ const moveList = {
         {
             level: 19,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -2037,8 +1854,8 @@ const moveList = {
         {
             level: 22,
             name: "Crunch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 22
@@ -2046,8 +1863,8 @@ const moveList = {
         {
             level: 25,
             name: "Sucker Punch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 5
@@ -2055,8 +1872,8 @@ const moveList = {
         {
             level: 28,
             name: "Super Fang",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 90,
             powerPoints: 10
@@ -2064,8 +1881,8 @@ const moveList = {
         {
             level: 31,
             name: "Double-Edge",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -2073,8 +1890,8 @@ const moveList = {
         {
             level: 34,
             name: "Endeavor",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -2084,8 +1901,8 @@ const moveList = {
         {
             level: 1,
             name: "Swords Dance",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -2093,8 +1910,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -2102,8 +1919,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -2111,8 +1928,8 @@ const moveList = {
         {
             level: 4,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -2120,8 +1937,8 @@ const moveList = {
         {
             level: 7,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2129,8 +1946,8 @@ const moveList = {
         {
             level: 10,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -2138,8 +1955,8 @@ const moveList = {
         {
             level: 13,
             name: "Pursuit",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -2147,8 +1964,8 @@ const moveList = {
         {
             level: 16,
             name: "Hyper Fang",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 90,
             powerPoints: 15
@@ -2156,8 +1973,8 @@ const moveList = {
         {
             level: 19,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -2165,8 +1982,8 @@ const moveList = {
         {
             level: 24,
             name: "Crunch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 20
@@ -2174,8 +1991,8 @@ const moveList = {
         {
             level: 29,
             name: "Sucker Punch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 5
@@ -2183,8 +2000,8 @@ const moveList = {
         {
             level: 34,
             name: "Super Fang",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 90,
             powerPoints: 10
@@ -2192,8 +2009,8 @@ const moveList = {
         {
             level: 39,
             name: "Double-Edge",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -2201,8 +2018,8 @@ const moveList = {
         {
             level: 44,
             name: "Endeavor",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -2213,8 +2030,8 @@ const moveList = {
         {
             level: 1,
             name: "Peck",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 35,
             accuracy: 100,
             powerPoints: 35
@@ -2222,8 +2039,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -2231,8 +2048,8 @@ const moveList = {
         {
             level: 4,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -2240,8 +2057,8 @@ const moveList = {
         {
             level: 8,
             name: "Pursuit",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -2249,8 +2066,8 @@ const moveList = {
         {
             level: 11,
             name: "Fury Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 20
@@ -2258,8 +2075,8 @@ const moveList = {
         {
             level: 15,
             name: "Aerial Ace",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 101,
             powerPoints: 20
@@ -2267,8 +2084,8 @@ const moveList = {
         {
             level: 18,
             name: "Mirror Move",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2276,8 +2093,8 @@ const moveList = {
         {
             level: 22,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -2285,8 +2102,8 @@ const moveList = {
         {
             level: 25,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2294,8 +2111,8 @@ const moveList = {
         {
             level: 29,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2303,8 +2120,8 @@ const moveList = {
         {
             level: 32,
             name: "Roost",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -2312,8 +2129,8 @@ const moveList = {
         {
             level: 36,
             name: "Drill Peck",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 20
@@ -2323,8 +2140,8 @@ const moveList = {
         {
             level: 1,
             name: "Pluck",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 35,
             accuracy: 100,
             powerPoints: 35
@@ -2332,8 +2149,8 @@ const moveList = {
         {
             level: 1,
             name: "Peck",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 35,
             accuracy: 100,
             powerPoints: 35
@@ -2341,8 +2158,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -2350,8 +2167,8 @@ const moveList = {
         {
             level: 4,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -2359,8 +2176,8 @@ const moveList = {
         {
             level: 8,
             name: "Pursuit",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -2368,8 +2185,8 @@ const moveList = {
         {
             level: 11,
             name: "Fury Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 20
@@ -2377,8 +2194,8 @@ const moveList = {
         {
             level: 15,
             name: "Aerial Ace",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 101,
             powerPoints: 20
@@ -2386,8 +2203,8 @@ const moveList = {
         {
             level: 18,
             name: "Mirror Move",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2395,8 +2212,8 @@ const moveList = {
         {
             level: 23,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -2404,8 +2221,8 @@ const moveList = {
         {
             level: 27,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2413,8 +2230,8 @@ const moveList = {
         {
             level: 32,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2422,8 +2239,8 @@ const moveList = {
         {
             level: 36,
             name: "Roost",
-            type: attributes.flying,
-            category: battleCategory.status,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -2431,8 +2248,8 @@ const moveList = {
         {
             level: 41,
             name: "Drill Peck",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 20
@@ -2440,8 +2257,8 @@ const moveList = {
         {
             level: 45,
             name: "Drill Run",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 95,
             powerPoints: 10
@@ -2451,8 +2268,8 @@ const moveList = {
         {
             level: 1,
             name: "Wrap",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 90,
             powerPoints: 20
@@ -2460,8 +2277,8 @@ const moveList = {
         {
             level: 1,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -2469,8 +2286,8 @@ const moveList = {
         {
             level: 4,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -2478,8 +2295,8 @@ const moveList = {
         {
             level: 9,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -2487,8 +2304,8 @@ const moveList = {
         {
             level: 12,
             name: "Glare",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -2496,8 +2313,8 @@ const moveList = {
         {
             level: 17,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -2505,8 +2322,8 @@ const moveList = {
         {
             level: 20,
             name: "Acid",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -2514,8 +2331,8 @@ const moveList = {
         {
             level: 25,
             name: "Stockpile",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2523,8 +2340,8 @@ const moveList = {
         {
             level: 25,
             name: "Swallow",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -2532,8 +2349,8 @@ const moveList = {
         {
             level: 25,
             name: "Spit Up",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -2541,8 +2358,8 @@ const moveList = {
         {
             level: 28,
             name: "Acid Spray",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -2550,8 +2367,8 @@ const moveList = {
         {
             level: 33,
             name: "Mud Bomb",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 85,
             powerPoints: 10
@@ -2559,8 +2376,8 @@ const moveList = {
         {
             level: 36,
             name: "Gastro Acid",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -2568,8 +2385,8 @@ const moveList = {
         {
             level: 38,
             name: "Belch",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 120,
             accuracy: 90,
             powerPoints: 10
@@ -2577,8 +2394,8 @@ const moveList = {
         {
             level: 41,
             name: "Haze",
-            type: attributes.ice,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2586,8 +2403,8 @@ const moveList = {
         {
             level: 44,
             name: "Coil",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2595,8 +2412,8 @@ const moveList = {
         {
             level: 49,
             name: "Gunk Shot",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 80,
             powerPoints: 5
@@ -2606,8 +2423,8 @@ const moveList = {
         {
             level: 1,
             name: "Ice Fang",
-            type: attributes.ice,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 95,
             powerPoints: 10
@@ -2615,8 +2432,8 @@ const moveList = {
         {
             level: 1,
             name: "Thunder Fang",
-            type: attributes.electric,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 95,
             powerPoints: 10
@@ -2624,8 +2441,8 @@ const moveList = {
         {
             level: 1,
             name: "Fire Fang",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 95,
             powerPoints: 15
@@ -2633,8 +2450,8 @@ const moveList = {
         {
             level: 1,
             name: "Wrap",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 90,
             powerPoints: 20
@@ -2642,8 +2459,8 @@ const moveList = {
         {
             level: 1,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -2651,8 +2468,8 @@ const moveList = {
         {
             level: 4,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -2660,8 +2477,8 @@ const moveList = {
         {
             level: 9,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -2669,8 +2486,8 @@ const moveList = {
         {
             level: 12,
             name: "Glare",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -2678,8 +2495,8 @@ const moveList = {
         {
             level: 17,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -2687,8 +2504,8 @@ const moveList = {
         {
             level: 20,
             name: "Acid",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -2696,8 +2513,8 @@ const moveList = {
         {
             level: 27,
             name: "Stockpile",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2705,8 +2522,8 @@ const moveList = {
         {
             level: 27,
             name: "Swallow",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -2714,8 +2531,8 @@ const moveList = {
         {
             level: 27,
             name: "Spit Up",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -2723,8 +2540,8 @@ const moveList = {
         {
             level: 32,
             name: "Acid Spray",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -2732,8 +2549,8 @@ const moveList = {
         {
             level: 39,
             name: "Mud Bomb",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 85,
             powerPoints: 10
@@ -2741,8 +2558,8 @@ const moveList = {
         {
             level: 44,
             name: "Gastro Acid",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -2750,8 +2567,8 @@ const moveList = {
         {
             level: 48,
             name: "Belch",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 120,
             accuracy: 90,
             powerPoints: 10
@@ -2761,8 +2578,8 @@ const moveList = {
         {
             level: 1,
             name: "Play Nice",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2770,8 +2587,8 @@ const moveList = {
         {
             level: 1,
             name: "Sweet Kiss",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 10
@@ -2779,8 +2596,8 @@ const moveList = {
         {
             level: 1,
             name: "Nuzzle",
-            type: attributes.electric,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
             power: 20,
             accuracy: 100,
             powerPoints: 20
@@ -2788,8 +2605,8 @@ const moveList = {
         {
             level: 1,
             name: "Nasty Plot",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2797,8 +2614,8 @@ const moveList = {
         {
             level: 1,
             name: "Charm",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -2806,8 +2623,8 @@ const moveList = {
         {
             level: 1,
             name: "Thunder Shock",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -2815,8 +2632,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -2824,8 +2641,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -2833,8 +2650,8 @@ const moveList = {
         {
             level: 1,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -2842,8 +2659,8 @@ const moveList = {
         {
             level: 4,
             name: "Thunder Wave",
-            type: attributes.electric,
-            category: battleCategory.status,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 90,
             powerPoints: 20
@@ -2851,8 +2668,8 @@ const moveList = {
         {
             level: 8,
             name: "Double Team",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -2860,8 +2677,8 @@ const moveList = {
         {
             level: 12,
             name: "Electro Ball",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -2869,8 +2686,8 @@ const moveList = {
         {
             level: 16,
             name: "Feint",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 10
@@ -2878,8 +2695,8 @@ const moveList = {
         {
             level: 20,
             name: "Spark",
-            type: attributes.electric,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 100,
             powerPoints: 20
@@ -2887,8 +2704,8 @@ const moveList = {
         {
             level: 24,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2896,8 +2713,8 @@ const moveList = {
         {
             level: 28,
             name: "Slam",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 75,
             powerPoints: 20
@@ -2905,8 +2722,8 @@ const moveList = {
         {
             level: 32,
             name: "Discharge",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 80,
             accuracy: 100,
             powerPoints: 15
@@ -2914,8 +2731,8 @@ const moveList = {
         {
             level: 36,
             name: "Thunderbolt",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -2923,8 +2740,8 @@ const moveList = {
         {
             level: 40,
             name: "Light Screen",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -2932,8 +2749,8 @@ const moveList = {
         {
             level: 44,
             name: "Thunder",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 70,
             powerPoints: 10
@@ -2944,8 +2761,8 @@ const moveList = {
         {
             level: 1,
             name: "Thunder Punch",
-            type: attributes.electric,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
             power: 75,
             accuracy: 100,
             powerPoints: 15
@@ -2953,8 +2770,8 @@ const moveList = {
         {
             level: 1,
             name: "Play Nice",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2962,8 +2779,8 @@ const moveList = {
         {
             level: 1,
             name: "Sweet Kiss",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 10
@@ -2971,8 +2788,8 @@ const moveList = {
         {
             level: 1,
             name: "Nuzzle",
-            type: attributes.electric,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
             power: 20,
             accuracy: 100,
             powerPoints: 20
@@ -2980,8 +2797,8 @@ const moveList = {
         {
             level: 1,
             name: "Nasty Plot",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -2989,8 +2806,8 @@ const moveList = {
         {
             level: 1,
             name: "Charm",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -2998,8 +2815,8 @@ const moveList = {
         {
             level: 1,
             name: "Thunder Wave",
-            type: attributes.electric,
-            category: battleCategory.status,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 90,
             powerPoints: 20
@@ -3007,8 +2824,8 @@ const moveList = {
         {
             level: 1,
             name: "Double Team",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -3016,8 +2833,8 @@ const moveList = {
         {
             level: 1,
             name: "Electro Ball",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -3025,8 +2842,8 @@ const moveList = {
         {
             level: 1,
             name: "Feint",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 10
@@ -3034,8 +2851,8 @@ const moveList = {
         {
             level: 1,
             name: "Spark",
-            type: attributes.electric,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 100,
             powerPoints: 20
@@ -3043,8 +2860,8 @@ const moveList = {
         {
             level: 1,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -3052,8 +2869,8 @@ const moveList = {
         {
             level: 1,
             name: "Slam",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 75,
             powerPoints: 20
@@ -3061,8 +2878,8 @@ const moveList = {
         {
             level: 1,
             name: "Discharge",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 80,
             accuracy: 100,
             powerPoints: 15
@@ -3070,8 +2887,8 @@ const moveList = {
         {
             level: 1,
             name: "Thunderbolt",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -3079,8 +2896,8 @@ const moveList = {
         {
             level: 1,
             name: "Light Screen",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -3088,8 +2905,8 @@ const moveList = {
         {
             level: 1,
             name: "Thunder",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 70,
             powerPoints: 10
@@ -3097,8 +2914,8 @@ const moveList = {
         {
             level: 1,
             name: "Thunder Shock",
-            type: attributes.electric,
-            category: battleCategory.special,
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -3106,8 +2923,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -3115,8 +2932,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -3124,8 +2941,8 @@ const moveList = {
         {
             level: 1,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -3135,8 +2952,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -3144,8 +2961,8 @@ const moveList = {
         {
             level: 1,
             name: "Defense Curl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -3153,8 +2970,8 @@ const moveList = {
         {
             level: 3,
             name: "Bide",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 0,
             powerPoints: 10
@@ -3162,8 +2979,8 @@ const moveList = {
         {
             level: 5,
             name: "Powder Snow",
-            type: attributes.ice,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -3171,8 +2988,8 @@ const moveList = {
         {
             level: 7,
             name: "Ice Ball",
-            type: attributes.ice,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 90,
             powerPoints: 20
@@ -3180,8 +2997,8 @@ const moveList = {
         {
             level: 9,
             name: "Rapid Spin",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 40
@@ -3189,8 +3006,8 @@ const moveList = {
         {
             level: 11,
             name: "Fury Cutter",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 95,
             powerPoints: 20
@@ -3198,8 +3015,8 @@ const moveList = {
         {
             level: 14,
             name: "Metal Claw",
-            type: attributes.steel,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 95,
             powerPoints: 35
@@ -3207,8 +3024,8 @@ const moveList = {
         {
             level: 17,
             name: "Swift",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 101,
             powerPoints: 20
@@ -3216,8 +3033,8 @@ const moveList = {
         {
             level: 20,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -3225,8 +3042,8 @@ const moveList = {
         {
             level: 23,
             name: "Iron Defense",
-            type: attributes.steel,
-            category: battleCategory.status,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -3234,8 +3051,8 @@ const moveList = {
         {
             level: 26,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -3243,8 +3060,8 @@ const moveList = {
         {
             level: 30,
             name: "Iron Head",
-            type: attributes.steel,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 15
@@ -3252,8 +3069,8 @@ const moveList = {
         {
             level: 34,
             name: "Gyro Ball",
-            type: attributes.steel,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -3261,8 +3078,8 @@ const moveList = {
         {
             level: 38,
             name: "Swords Dance",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -3270,8 +3087,8 @@ const moveList = {
         {
             level: 42,
             name: "Hail",
-            type: attributes.ice,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -3279,8 +3096,8 @@ const moveList = {
         {
             level: 46,
             name: "Blizzard",
-            type: attributes.ice,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 70,
             powerPoints: 5
@@ -3290,8 +3107,8 @@ const moveList = {
         {
             level: 1,
             name: "Crush Claw",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 75,
             accuracy: 95,
             powerPoints: 10
@@ -3299,8 +3116,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -3308,8 +3125,8 @@ const moveList = {
         {
             level: 1,
             name: "Defense Curl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -3317,8 +3134,8 @@ const moveList = {
         {
             level: 3,
             name: "Sand Attack",
-            type: attributes.ground,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -3326,8 +3143,8 @@ const moveList = {
         {
             level: 5,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -3335,8 +3152,8 @@ const moveList = {
         {
             level: 7,
             name: "Rollout",
-            type: attributes.rock,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 90,
             powerPoints: 20
@@ -3344,8 +3161,8 @@ const moveList = {
         {
             level: 9,
             name: "Rapid Spin",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 40
@@ -3353,8 +3170,8 @@ const moveList = {
         {
             level: 11,
             name: "Fury Cutter",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 95,
             powerPoints: 20
@@ -3362,8 +3179,8 @@ const moveList = {
         {
             level: 14,
             name: "Magnitude",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -3371,8 +3188,8 @@ const moveList = {
         {
             level: 17,
             name: "Swift",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 101,
             powerPoints: 20
@@ -3380,8 +3197,8 @@ const moveList = {
         {
             level: 20,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -3389,8 +3206,8 @@ const moveList = {
         {
             level: 24,
             name: "Sand Tomb",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 35,
             accuracy: 85,
             powerPoints: 15
@@ -3398,8 +3215,8 @@ const moveList = {
         {
             level: 28,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -3407,8 +3224,8 @@ const moveList = {
         {
             level: 33,
             name: "Dig",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -3416,8 +3233,8 @@ const moveList = {
         {
             level: 38,
             name: "Gyro Ball",
-            type: attributes.steel,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -3425,8 +3242,8 @@ const moveList = {
         {
             level: 43,
             name: "Swords Dance",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -3434,8 +3251,8 @@ const moveList = {
         {
             level: 48,
             name: "Sandstorm",
-            type: attributes.rock,
-            category: battleCategory.status,
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -3443,8 +3260,8 @@ const moveList = {
         {
             level: 53,
             name: "Earthquake",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 100,
             accuracy: 100,
             powerPoints: 10
@@ -3454,8 +3271,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -3463,8 +3280,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -3472,8 +3289,8 @@ const moveList = {
         {
             level: 7,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -3481,8 +3298,8 @@ const moveList = {
         {
             level: 9,
             name: "Double Kick",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 30
@@ -3490,8 +3307,8 @@ const moveList = {
         {
             level: 13,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -3499,8 +3316,8 @@ const moveList = {
         {
             level: 19,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -3508,8 +3325,8 @@ const moveList = {
         {
             level: 21,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -3517,8 +3334,8 @@ const moveList = {
         {
             level: 25,
             name: "Helping Hand",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -3526,8 +3343,8 @@ const moveList = {
         {
             level: 31,
             name: "Toxic Spikes",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -3535,8 +3352,8 @@ const moveList = {
         {
             level: 33,
             name: "Flatter",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -3544,8 +3361,8 @@ const moveList = {
         {
             level: 37,
             name: "Crunch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 20
@@ -3553,8 +3370,8 @@ const moveList = {
         {
             level: 43,
             name: "Captivate",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -3562,8 +3379,8 @@ const moveList = {
         {
             level: 45,
             name: "Poison Fang",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 15
@@ -3573,8 +3390,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -3582,8 +3399,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -3591,8 +3408,8 @@ const moveList = {
         {
             level: 7,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -3600,8 +3417,8 @@ const moveList = {
         {
             level: 9,
             name: "Double Kick",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 30
@@ -3609,8 +3426,8 @@ const moveList = {
         {
             level: 13,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -3618,8 +3435,8 @@ const moveList = {
         {
             level: 20,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -3627,8 +3444,8 @@ const moveList = {
         {
             level: 23,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -3636,8 +3453,8 @@ const moveList = {
         {
             level: 28,
             name: "Helping Hand",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -3645,8 +3462,8 @@ const moveList = {
         {
             level: 35,
             name: "Toxic Spikes",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -3654,8 +3471,8 @@ const moveList = {
         {
             level: 38,
             name: "Flatter",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -3663,8 +3480,8 @@ const moveList = {
         {
             level: 43,
             name: "Crunch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 20
@@ -3672,8 +3489,8 @@ const moveList = {
         {
             level: 50,
             name: "Captivate",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -3681,8 +3498,8 @@ const moveList = {
         {
             level: 58,
             name: "Poison Fang",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 15
@@ -3692,8 +3509,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -3701,8 +3518,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -3710,8 +3527,8 @@ const moveList = {
         {
             level: 1,
             name: "Double Kick",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 30
@@ -3719,8 +3536,8 @@ const moveList = {
         {
             level: 1,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -3728,8 +3545,8 @@ const moveList = {
         {
             level: 23,
             name: "Chip Away",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -3737,8 +3554,8 @@ const moveList = {
         {
             level: 35,
             name: "Body Slam",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 85,
             accuracy: 100,
             powerPoints: 15
@@ -3746,8 +3563,8 @@ const moveList = {
         {
             level: 43,
             name: "Earth Power",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -3755,8 +3572,8 @@ const moveList = {
         {
             level: 58,
             name: "Superpower",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 5
@@ -3766,8 +3583,8 @@ const moveList = {
         {
             level: 1,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -3775,8 +3592,8 @@ const moveList = {
         {
             level: 1,
             name: "Peck",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 35,
             accuracy: 100,
             powerPoints: 35
@@ -3784,8 +3601,8 @@ const moveList = {
         {
             level: 7,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -3793,8 +3610,8 @@ const moveList = {
         {
             level: 9,
             name: "Double Kick",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 30
@@ -3802,8 +3619,8 @@ const moveList = {
         {
             level: 13,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -3811,8 +3628,8 @@ const moveList = {
         {
             level: 19,
             name: "Fury Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 20
@@ -3820,8 +3637,8 @@ const moveList = {
         {
             level: 21,
             name: "Horn Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 100,
             powerPoints: 25
@@ -3829,8 +3646,8 @@ const moveList = {
         {
             level: 25,
             name: "Helping Hand",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -3838,8 +3655,8 @@ const moveList = {
         {
             level: 31,
             name: "Toxic Spikes",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -3847,8 +3664,8 @@ const moveList = {
         {
             level: 33,
             name: "Flatter",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -3856,8 +3673,8 @@ const moveList = {
         {
             level: 37,
             name: "Poison Jab",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 20
@@ -3865,8 +3682,8 @@ const moveList = {
         {
             level: 43,
             name: "Captivate",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -3874,8 +3691,8 @@ const moveList = {
         {
             level: 45,
             name: "Horn Drill",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 30,
             powerPoints: 5
@@ -3885,8 +3702,8 @@ const moveList = {
         {
             level: 1,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -3894,8 +3711,8 @@ const moveList = {
         {
             level: 1,
             name: "Peck",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 35,
             accuracy: 100,
             powerPoints: 35
@@ -3903,8 +3720,8 @@ const moveList = {
         {
             level: 7,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -3912,8 +3729,8 @@ const moveList = {
         {
             level: 9,
             name: "Double Kick",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 30
@@ -3921,8 +3738,8 @@ const moveList = {
         {
             level: 13,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -3930,8 +3747,8 @@ const moveList = {
         {
             level: 20,
             name: "Fury Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 20
@@ -3939,8 +3756,8 @@ const moveList = {
         {
             level: 23,
             name: "Horn Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 100,
             powerPoints: 25
@@ -3948,8 +3765,8 @@ const moveList = {
         {
             level: 28,
             name: "Helping Hand",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -3957,8 +3774,8 @@ const moveList = {
         {
             level: 35,
             name: "Toxic Spikes",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -3966,8 +3783,8 @@ const moveList = {
         {
             level: 38,
             name: "Flatter",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -3975,8 +3792,8 @@ const moveList = {
         {
             level: 43,
             name: "Poison Jab",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 20
@@ -3984,8 +3801,8 @@ const moveList = {
         {
             level: 50,
             name: "Captivate",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -3993,8 +3810,8 @@ const moveList = {
         {
             level: 58,
             name: "Horn Drill",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 30,
             powerPoints: 5
@@ -4004,8 +3821,8 @@ const moveList = {
         {
             level: 1,
             name: "Peck",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 35,
             accuracy: 100,
             powerPoints: 35
@@ -4013,8 +3830,8 @@ const moveList = {
         {
             level: 1,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -4022,8 +3839,8 @@ const moveList = {
         {
             level: 1,
             name: "Double Kick",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 30
@@ -4031,8 +3848,8 @@ const moveList = {
         {
             level: 1,
             name: "Poison Sting",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 100,
             powerPoints: 35
@@ -4040,8 +3857,8 @@ const moveList = {
         {
             level: 23,
             name: "Chip Away",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -4049,8 +3866,8 @@ const moveList = {
         {
             level: 35,
             name: "Thrash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -4058,8 +3875,8 @@ const moveList = {
         {
             level: 43,
             name: "Earth Power",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -4067,8 +3884,8 @@ const moveList = {
         {
             level: 58,
             name: "Megahorn",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 85,
             powerPoints: 10
@@ -4078,8 +3895,8 @@ const moveList = {
         {
             level: 1,
             name: "Sing",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 15
@@ -4087,8 +3904,8 @@ const moveList = {
         {
             level: 1,
             name: "Sweet Kiss",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 10
@@ -4096,8 +3913,8 @@ const moveList = {
         {
             level: 1,
             name: "Disarming Voice",
-            type: attributes.fairy,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 101,
             powerPoints: 15
@@ -4105,8 +3922,8 @@ const moveList = {
         {
             level: 1,
             name: "Encore",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -4114,8 +3931,8 @@ const moveList = {
         {
             level: 1,
             name: "Charm",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -4123,8 +3940,8 @@ const moveList = {
         {
             level: 1,
             name: "Splash",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -4132,8 +3949,8 @@ const moveList = {
         {
             level: 1,
             name: "Pound",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -4141,8 +3958,8 @@ const moveList = {
         {
             level: 1,
             name: "Copycat",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4150,8 +3967,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -4159,8 +3976,8 @@ const moveList = {
         {
             level: 1,
             name: "Defense Curl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -4168,8 +3985,8 @@ const moveList = {
         {
             level: 4,
             name: "Stored Power",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 10
@@ -4177,8 +3994,8 @@ const moveList = {
         {
             level: 8,
             name: "Minimize",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4186,8 +4003,8 @@ const moveList = {
         {
             level: 12,
             name: "After You",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -4195,8 +4012,8 @@ const moveList = {
         {
             level: 16,
             name: "Life Dew",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4204,8 +4021,8 @@ const moveList = {
         {
             level: 20,
             name: "Metronome",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4213,8 +4030,8 @@ const moveList = {
         {
             level: 24,
             name: "Moonlight",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -4222,8 +4039,8 @@ const moveList = {
         {
             level: 28,
             name: "Gravity",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -4231,8 +4048,8 @@ const moveList = {
         {
             level: 32,
             name: "Meteor Mash",
-            type: attributes.steel,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -4240,8 +4057,8 @@ const moveList = {
         {
             level: 36,
             name: "Follow Me",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4249,8 +4066,8 @@ const moveList = {
         {
             level: 40,
             name: "Cosmic Power",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4258,8 +4075,8 @@ const moveList = {
         {
             level: 44,
             name: "Moonblast",
-            type: attributes.fairy,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
             power: 95,
             accuracy: 100,
             powerPoints: 15
@@ -4267,8 +4084,8 @@ const moveList = {
         {
             level: 48,
             name: "Healing Wish",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4278,8 +4095,8 @@ const moveList = {
         {
             level: 1,
             name: "Sing",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 15
@@ -4287,8 +4104,8 @@ const moveList = {
         {
             level: 1,
             name: "Sweet Kiss",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 10
@@ -4296,8 +4113,8 @@ const moveList = {
         {
             level: 1,
             name: "Disarming Voice",
-            type: attributes.fairy,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 101,
             powerPoints: 15
@@ -4305,8 +4122,8 @@ const moveList = {
         {
             level: 1,
             name: "Encore",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -4314,8 +4131,8 @@ const moveList = {
         {
             level: 1,
             name: "Charm",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -4323,8 +4140,8 @@ const moveList = {
         {
             level: 1,
             name: "Stored Power",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 10
@@ -4332,8 +4149,8 @@ const moveList = {
         {
             level: 1,
             name: "Minimize",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4341,8 +4158,8 @@ const moveList = {
         {
             level: 1,
             name: "After You",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -4350,8 +4167,8 @@ const moveList = {
         {
             level: 1,
             name: "Life Dew",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4359,8 +4176,8 @@ const moveList = {
         {
             level: 1,
             name: "Metronome",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4368,8 +4185,8 @@ const moveList = {
         {
             level: 1,
             name: "Moonlight",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -4377,8 +4194,8 @@ const moveList = {
         {
             level: 1,
             name: "Gravity",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -4386,8 +4203,8 @@ const moveList = {
         {
             level: 1,
             name: "Meteor Mash",
-            type: attributes.steel,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -4395,8 +4212,8 @@ const moveList = {
         {
             level: 1,
             name: "Follow Me",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4404,8 +4221,8 @@ const moveList = {
         {
             level: 1,
             name: "Cosmic Power",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4413,8 +4230,8 @@ const moveList = {
         {
             level: 1,
             name: "Moonblast",
-            type: attributes.fairy,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
             power: 95,
             accuracy: 100,
             powerPoints: 15
@@ -4422,8 +4239,8 @@ const moveList = {
         {
             level: 1,
             name: "Healing Wish",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4431,8 +4248,8 @@ const moveList = {
         {
             level: 1,
             name: "Splash",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -4440,8 +4257,8 @@ const moveList = {
         {
             level: 1,
             name: "Pound",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -4449,8 +4266,8 @@ const moveList = {
         {
             level: 1,
             name: "Copycat",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4458,8 +4275,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -4467,8 +4284,8 @@ const moveList = {
         {
             level: 1,
             name: "Defense Curl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -4478,8 +4295,8 @@ const moveList = {
         {
             level: 1,
             name: "Ember",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -4487,8 +4304,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -4496,8 +4313,8 @@ const moveList = {
         {
             level: 4,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -4505,8 +4322,8 @@ const moveList = {
         {
             level: 8,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -4514,8 +4331,8 @@ const moveList = {
         {
             level: 12,
             name: "Spite",
-            type: attributes.ghost,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -4523,8 +4340,8 @@ const moveList = {
         {
             level: 16,
             name: "Incinerate",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 15
@@ -4532,8 +4349,8 @@ const moveList = {
         {
             level: 20,
             name: "Confuse Ray",
-            type: attributes.ghost,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -4541,8 +4358,8 @@ const moveList = {
         {
             level: 24,
             name: "Will-O-Wisp",
-            type: attributes.fire,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 15
@@ -4550,8 +4367,8 @@ const moveList = {
         {
             level: 28,
             name: "Extrasensory",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 80,
             accuracy: 100,
             powerPoints: 20
@@ -4559,8 +4376,8 @@ const moveList = {
         {
             level: 32,
             name: "Flamethrower",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -4568,8 +4385,8 @@ const moveList = {
         {
             level: 36,
             name: "Imprison",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4577,8 +4394,8 @@ const moveList = {
         {
             level: 40,
             name: "Fire Spin",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 35,
             accuracy: 85,
             powerPoints: 15
@@ -4586,8 +4403,8 @@ const moveList = {
         {
             level: 44,
             name: "Safeguard",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 25
@@ -4595,8 +4412,8 @@ const moveList = {
         {
             level: 48,
             name: "Inferno",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 100,
             accuracy: 50,
             powerPoints: 5
@@ -4604,8 +4421,8 @@ const moveList = {
         {
             level: 52,
             name: "Grudge",
-            type: attributes.ghost,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -4613,8 +4430,8 @@ const moveList = {
         {
             level: 56,
             name: "Fire Blast",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 85,
             powerPoints: 5
@@ -4624,8 +4441,8 @@ const moveList = {
         {
             level: 1,
             name: "Nasty Plot",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4633,8 +4450,8 @@ const moveList = {
         {
             level: 1,
             name: "Incinerate",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 15
@@ -4642,8 +4459,8 @@ const moveList = {
         {
             level: 1,
             name: "Spite",
-            type: attributes.ghost,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -4651,8 +4468,8 @@ const moveList = {
         {
             level: 1,
             name: "Incinerate",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 15
@@ -4660,8 +4477,8 @@ const moveList = {
         {
             level: 1,
             name: "Confuse Ray",
-            type: attributes.ghost,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -4669,8 +4486,8 @@ const moveList = {
         {
             level: 1,
             name: "Will-O-Wisp",
-            type: attributes.fire,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 15
@@ -4678,8 +4495,8 @@ const moveList = {
         {
             level: 1,
             name: "Extrasensory",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 80,
             accuracy: 100,
             powerPoints: 20
@@ -4687,8 +4504,8 @@ const moveList = {
         {
             level: 1,
             name: "Flamethrower",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -4696,8 +4513,8 @@ const moveList = {
         {
             level: 1,
             name: "Imprison",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4705,8 +4522,8 @@ const moveList = {
         {
             level: 1,
             name: "Fire Spin",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 35,
             accuracy: 85,
             powerPoints: 15
@@ -4714,8 +4531,8 @@ const moveList = {
         {
             level: 1,
             name: "Ember",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -4723,8 +4540,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -4732,8 +4549,8 @@ const moveList = {
         {
             level: 1,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -4741,8 +4558,8 @@ const moveList = {
         {
             level: 1,
             name: "Quick Attack",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -4752,8 +4569,8 @@ const moveList = {
         {
             level: 1,
             name: "Sing",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 15
@@ -4761,8 +4578,8 @@ const moveList = {
         {
             level: 3,
             name: "Defense Curl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -4770,8 +4587,8 @@ const moveList = {
         {
             level: 5,
             name: "Pound",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -4779,8 +4596,8 @@ const moveList = {
         {
             level: 9,
             name: "Play Nice",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4788,8 +4605,8 @@ const moveList = {
         {
             level: 11,
             name: "Disarming Voice",
-            type: attributes.fairy,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 101,
             powerPoints: 15
@@ -4797,8 +4614,8 @@ const moveList = {
         {
             level: 14,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -4806,8 +4623,8 @@ const moveList = {
         {
             level: 17,
             name: "Double Slap",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 10
@@ -4815,8 +4632,8 @@ const moveList = {
         {
             level: 20,
             name: "Rollout",
-            type: attributes.rock,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 90,
             powerPoints: 20
@@ -4824,8 +4641,8 @@ const moveList = {
         {
             level: 22,
             name: "Round",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 15
@@ -4833,8 +4650,8 @@ const moveList = {
         {
             level: 25,
             name: "Stockpile",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -4842,8 +4659,8 @@ const moveList = {
         {
             level: 25,
             name: "Swallow",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4851,8 +4668,8 @@ const moveList = {
         {
             level: 25,
             name: "Spit Up",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -4860,8 +4677,8 @@ const moveList = {
         {
             level: 27,
             name: "Wake-Up Slap",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 10
@@ -4869,8 +4686,8 @@ const moveList = {
         {
             level: 30,
             name: "Rest",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -4878,8 +4695,8 @@ const moveList = {
         {
             level: 32,
             name: "Body Slam",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 85,
             accuracy: 100,
             powerPoints: 15
@@ -4887,8 +4704,8 @@ const moveList = {
         {
             level: 35,
             name: "Gyro Ball",
-            type: attributes.steel,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -4896,8 +4713,8 @@ const moveList = {
         {
             level: 38,
             name: "Mimic",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -4905,8 +4722,8 @@ const moveList = {
         {
             level: 41,
             name: "Hyper Voice",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -4914,8 +4731,8 @@ const moveList = {
         {
             level: 45,
             name: "Double-Edge",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -4925,8 +4742,8 @@ const moveList = {
         {
             level: 1,
             name: "Double-Edge",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -4934,8 +4751,8 @@ const moveList = {
         {
             level: 1,
             name: "Play Rough",
-            type: attributes.fairy,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -4943,8 +4760,8 @@ const moveList = {
         {
             level: 1,
             name: "Sing",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 15
@@ -4952,8 +4769,8 @@ const moveList = {
         {
             level: 1,
             name: "Defense Curl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -4961,8 +4778,8 @@ const moveList = {
         {
             level: 1,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -4970,8 +4787,8 @@ const moveList = {
         {
             level: 1,
             name: "Double Slap",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 10
@@ -4981,8 +4798,8 @@ const moveList = {
         {
             level: 1,
             name: "Absorb",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 25
@@ -4990,8 +4807,8 @@ const moveList = {
         {
             level: 5,
             name: "Supersonic",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 20
@@ -4999,8 +4816,8 @@ const moveList = {
         {
             level: 7,
             name: "Astonish",
-            type: attributes.ghost,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 15
@@ -5008,8 +4825,8 @@ const moveList = {
         {
             level: 11,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -5017,8 +4834,8 @@ const moveList = {
         {
             level: 13,
             name: "Wing Attack",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 35
@@ -5026,8 +4843,8 @@ const moveList = {
         {
             level: 17,
             name: "Confuse Ray",
-            type: attributes.ghost,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -5035,8 +4852,8 @@ const moveList = {
         {
             level: 19,
             name: "Air Cutter",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 95,
             powerPoints: 25
@@ -5044,8 +4861,8 @@ const moveList = {
         {
             level: 23,
             name: "Swift",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 101,
             powerPoints: 20
@@ -5053,8 +4870,8 @@ const moveList = {
         {
             level: 25,
             name: "Poison Fang",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 15
@@ -5062,8 +4879,8 @@ const moveList = {
         {
             level: 29,
             name: "Mean Look",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5071,8 +4888,8 @@ const moveList = {
         {
             level: 31,
             name: "Leech Life",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -5080,8 +4897,8 @@ const moveList = {
         {
             level: 35,
             name: "Haze",
-            type: attributes.ice,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -5089,8 +4906,8 @@ const moveList = {
         {
             level: 37,
             name: "Venoshock",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 10
@@ -5098,8 +4915,8 @@ const moveList = {
         {
             level: 41,
             name: "Air Slash",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 95,
             powerPoints: 15
@@ -5107,8 +4924,8 @@ const moveList = {
         {
             level: 43,
             name: "Quick Guard",
-            type: attributes.fight,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -5118,8 +4935,8 @@ const moveList = {
         {
             level: 1,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -5127,8 +4944,8 @@ const moveList = {
         {
             level: 1,
             name: "Absorb",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 25
@@ -5136,8 +4953,8 @@ const moveList = {
         {
             level: 5,
             name: "Supersonic",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 20
@@ -5145,8 +4962,8 @@ const moveList = {
         {
             level: 7,
             name: "Astonish",
-            type: attributes.ghost,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 15
@@ -5154,8 +4971,8 @@ const moveList = {
         {
             level: 11,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -5163,8 +4980,8 @@ const moveList = {
         {
             level: 13,
             name: "Wing Attack",
-            type: attributes.flying,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 35
@@ -5172,8 +4989,8 @@ const moveList = {
         {
             level: 17,
             name: "Confuse Ray",
-            type: attributes.ghost,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -5181,8 +4998,8 @@ const moveList = {
         {
             level: 19,
             name: "Air Cutter",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 95,
             powerPoints: 25
@@ -5190,8 +5007,8 @@ const moveList = {
         {
             level: 24,
             name: "Swift",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 101,
             powerPoints: 20
@@ -5199,8 +5016,8 @@ const moveList = {
         {
             level: 27,
             name: "Poison Fang",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 15
@@ -5208,8 +5025,8 @@ const moveList = {
         {
             level: 32,
             name: "Mean Look",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5217,8 +5034,8 @@ const moveList = {
         {
             level: 35,
             name: "Leech Life",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -5226,8 +5043,8 @@ const moveList = {
         {
             level: 40,
             name: "Haze",
-            type: attributes.ice,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -5235,8 +5052,8 @@ const moveList = {
         {
             level: 43,
             name: "Venoshock",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 10
@@ -5244,8 +5061,8 @@ const moveList = {
         {
             level: 48,
             name: "Air Slash",
-            type: attributes.flying,
-            category: battleCategory.special,
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 95,
             powerPoints: 15
@@ -5253,8 +5070,8 @@ const moveList = {
         {
             level: 51,
             name: "Quick Guard",
-            type: attributes.fight,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -5264,8 +5081,8 @@ const moveList = {
         {
             level: 1,
             name: "Absorb",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 25
@@ -5273,8 +5090,8 @@ const moveList = {
         {
             level: 1,
             name: "Growth",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -5282,8 +5099,8 @@ const moveList = {
         {
             level: 4,
             name: "Acid",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -5291,8 +5108,8 @@ const moveList = {
         {
             level: 8,
             name: "Sweet Scent",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -5300,8 +5117,8 @@ const moveList = {
         {
             level: 12,
             name: "Mega Drain",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 15
@@ -5309,8 +5126,8 @@ const moveList = {
         {
             level: 14,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -5318,8 +5135,8 @@ const moveList = {
         {
             level: 16,
             name: "Stun Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 30
@@ -5327,8 +5144,8 @@ const moveList = {
         {
             level: 18,
             name: "Sleep Powder",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 15
@@ -5336,8 +5153,8 @@ const moveList = {
         {
             level: 20,
             name: "Giga Drain",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 100,
             powerPoints: 10
@@ -5345,8 +5162,8 @@ const moveList = {
         {
             level: 24,
             name: "Toxic",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 90,
             powerPoints: 10
@@ -5354,8 +5171,8 @@ const moveList = {
         {
             level: 28,
             name: "Moonblast",
-            type: attributes.fairy,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
             power: 95,
             accuracy: 100,
             powerPoints: 15
@@ -5363,8 +5180,8 @@ const moveList = {
         {
             level: 32,
             name: "Grassy Terrain",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5372,8 +5189,8 @@ const moveList = {
         {
             level: 36,
             name: "Moonlight",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5381,8 +5198,8 @@ const moveList = {
         {
             level: 40,
             name: "Petal Dance",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -5392,8 +5209,8 @@ const moveList = {
         {
             level: 1,
             name: "Absorb",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 25
@@ -5401,8 +5218,8 @@ const moveList = {
         {
             level: 1,
             name: "Growth",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -5410,8 +5227,8 @@ const moveList = {
         {
             level: 1,
             name: "Acid",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -5419,8 +5236,8 @@ const moveList = {
         {
             level: 1,
             name: "Sweet Scent",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -5428,8 +5245,8 @@ const moveList = {
         {
             level: 12,
             name: "Mega Drain",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 15
@@ -5437,8 +5254,8 @@ const moveList = {
         {
             level: 14,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -5446,8 +5263,8 @@ const moveList = {
         {
             level: 16,
             name: "Stun Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 30
@@ -5455,8 +5272,8 @@ const moveList = {
         {
             level: 18,
             name: "Sleep Powder",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 15
@@ -5464,8 +5281,8 @@ const moveList = {
         {
             level: 20,
             name: "Giga Drain",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 100,
             powerPoints: 10
@@ -5473,8 +5290,8 @@ const moveList = {
         {
             level: 26,
             name: "Toxic",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 90,
             powerPoints: 10
@@ -5482,8 +5299,8 @@ const moveList = {
         {
             level: 32,
             name: "Moonblast",
-            type: attributes.fairy,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
             power: 95,
             accuracy: 100,
             powerPoints: 15
@@ -5491,8 +5308,8 @@ const moveList = {
         {
             level: 38,
             name: "Grassy Terrain",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5500,8 +5317,8 @@ const moveList = {
         {
             level: 44,
             name: "Moonlight",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5509,8 +5326,8 @@ const moveList = {
         {
             level: 50,
             name: "Petal Dance",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -5520,8 +5337,8 @@ const moveList = {
         {
             level: 1,
             name: "Petal Blizzard",
-            type: attributes.grass,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -5529,8 +5346,8 @@ const moveList = {
         {
             level: 1,
             name: "Aromatherapy",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5538,8 +5355,8 @@ const moveList = {
         {
             level: 1,
             name: "Mega Drain",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 15
@@ -5547,8 +5364,8 @@ const moveList = {
         {
             level: 1,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -5556,8 +5373,8 @@ const moveList = {
         {
             level: 1,
             name: "Stun Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 30
@@ -5565,8 +5382,8 @@ const moveList = {
         {
             level: 1,
             name: "Sleep Powder",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 15
@@ -5574,8 +5391,8 @@ const moveList = {
         {
             level: 1,
             name: "Giga Drain",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 100,
             powerPoints: 10
@@ -5583,8 +5400,8 @@ const moveList = {
         {
             level: 1,
             name: "Toxic",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 90,
             powerPoints: 10
@@ -5592,8 +5409,8 @@ const moveList = {
         {
             level: 1,
             name: "Moonblast",
-            type: attributes.fairy,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
             power: 95,
             accuracy: 100,
             powerPoints: 15
@@ -5601,8 +5418,8 @@ const moveList = {
         {
             level: 1,
             name: "Grassy Terrain",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5610,8 +5427,8 @@ const moveList = {
         {
             level: 1,
             name: "Moonlight",
-            type: attributes.fairy,
-            category: battleCategory.status,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5619,8 +5436,8 @@ const moveList = {
         {
             level: 1,
             name: "Petal Dance",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -5628,8 +5445,8 @@ const moveList = {
         {
             level: 1,
             name: "Absorb",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 25
@@ -5637,8 +5454,8 @@ const moveList = {
         {
             level: 1,
             name: "Growth",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -5646,8 +5463,8 @@ const moveList = {
         {
             level: 1,
             name: "Acid",
-            type: attributes.poison,
-            category: battleCategory.special,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -5655,8 +5472,8 @@ const moveList = {
         {
             level: 1,
             name: "Sweet Scent",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -5666,8 +5483,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -5675,8 +5492,8 @@ const moveList = {
         {
             level: 6,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -5684,8 +5501,8 @@ const moveList = {
         {
             level: 6,
             name: "Stun Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 30
@@ -5693,8 +5510,8 @@ const moveList = {
         {
             level: 11,
             name: "Absorb",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 25
@@ -5702,8 +5519,8 @@ const moveList = {
         {
             level: 17,
             name: "Fury Cutter",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 95,
             powerPoints: 20
@@ -5711,8 +5528,8 @@ const moveList = {
         {
             level: 22,
             name: "Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -5720,8 +5537,8 @@ const moveList = {
         {
             level: 27,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -5729,8 +5546,8 @@ const moveList = {
         {
             level: 33,
             name: "Growth",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -5738,8 +5555,8 @@ const moveList = {
         {
             level: 38,
             name: "Giga Drain",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 100,
             powerPoints: 10
@@ -5747,8 +5564,8 @@ const moveList = {
         {
             level: 43,
             name: "Aromatherapy",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5756,8 +5573,8 @@ const moveList = {
         {
             level: 49,
             name: "Rage Powder",
-            type: attributes.bug,
-            category: battleCategory.status,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -5765,8 +5582,8 @@ const moveList = {
         {
             level: 54,
             name: "X-Scissor",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 15
@@ -5776,8 +5593,8 @@ const moveList = {
         {
             level: 1,
             name: "Cross Poison",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -5785,8 +5602,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -5794,8 +5611,8 @@ const moveList = {
         {
             level: 6,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -5803,8 +5620,8 @@ const moveList = {
         {
             level: 6,
             name: "Stun Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 30
@@ -5812,8 +5629,8 @@ const moveList = {
         {
             level: 11,
             name: "Absorb",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 25
@@ -5821,8 +5638,8 @@ const moveList = {
         {
             level: 17,
             name: "Fury Cutter",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 95,
             powerPoints: 20
@@ -5830,8 +5647,8 @@ const moveList = {
         {
             level: 22,
             name: "Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -5839,8 +5656,8 @@ const moveList = {
         {
             level: 29,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -5848,8 +5665,8 @@ const moveList = {
         {
             level: 37,
             name: "Growth",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -5857,8 +5674,8 @@ const moveList = {
         {
             level: 44,
             name: "Giga Drain",
-            type: attributes.grass,
-            category: battleCategory.special,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 100,
             powerPoints: 10
@@ -5866,8 +5683,8 @@ const moveList = {
         {
             level: 51,
             name: "Aromatherapy",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -5875,8 +5692,8 @@ const moveList = {
         {
             level: 59,
             name: "Rage Powder",
-            type: attributes.bug,
-            category: battleCategory.status,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -5884,8 +5701,8 @@ const moveList = {
         {
             level: 66,
             name: "X-Scissor",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 15
@@ -5895,8 +5712,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -5904,8 +5721,8 @@ const moveList = {
         {
             level: 1,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -5913,8 +5730,8 @@ const moveList = {
         {
             level: 1,
             name: "Foresight",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -5922,8 +5739,8 @@ const moveList = {
         {
             level: 5,
             name: "Supersonic",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 20
@@ -5931,8 +5748,8 @@ const moveList = {
         {
             level: 11,
             name: "Confusion",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 50,
             accuracy: 100,
             powerPoints: 25
@@ -5940,8 +5757,8 @@ const moveList = {
         {
             level: 13,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -5949,8 +5766,8 @@ const moveList = {
         {
             level: 17,
             name: "Psybeam",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 20
@@ -5958,8 +5775,8 @@ const moveList = {
         {
             level: 23,
             name: "Stun Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 30
@@ -5967,8 +5784,8 @@ const moveList = {
         {
             level: 25,
             name: "Signal Beam",
-            type: attributes.bug,
-            category: battleCategory.special,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 100,
             powerPoints: 15
@@ -5976,8 +5793,8 @@ const moveList = {
         {
             level: 29,
             name: "Sleep Powder",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 15
@@ -5985,8 +5802,8 @@ const moveList = {
         {
             level: 35,
             name: "Leech Life",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -5994,8 +5811,8 @@ const moveList = {
         {
             level: 37,
             name: "Zen Headbutt",
-            type: attributes.psychic,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 90,
             powerPoints: 15
@@ -6003,8 +5820,8 @@ const moveList = {
         {
             level: 41,
             name: "Poison Fang",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 15
@@ -6012,8 +5829,8 @@ const moveList = {
         {
             level: 47,
             name: "Psychic",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -6023,8 +5840,8 @@ const moveList = {
         {
             level: 1,
             name: "Silver Wind",
-            type: attributes.bug,
-            category: battleCategory.special,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 5
@@ -6032,8 +5849,8 @@ const moveList = {
         {
             level: 1,
             name: "Tackle",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -6041,8 +5858,8 @@ const moveList = {
         {
             level: 1,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -6050,8 +5867,8 @@ const moveList = {
         {
             level: 1,
             name: "Foresight",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -6059,8 +5876,8 @@ const moveList = {
         {
             level: 5,
             name: "Supersonic",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 55,
             powerPoints: 20
@@ -6068,8 +5885,8 @@ const moveList = {
         {
             level: 11,
             name: "Confusion",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 50,
             accuracy: 100,
             powerPoints: 25
@@ -6077,8 +5894,8 @@ const moveList = {
         {
             level: 13,
             name: "Poison Powder",
-            type: attributes.poison,
-            category: battleCategory.status,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 35
@@ -6086,8 +5903,8 @@ const moveList = {
         {
             level: 17,
             name: "Psybeam",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 20
@@ -6095,8 +5912,8 @@ const moveList = {
         {
             level: 23,
             name: "Stun Spore",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 30
@@ -6104,8 +5921,8 @@ const moveList = {
         {
             level: 25,
             name: "Signal Beam",
-            type: attributes.bug,
-            category: battleCategory.special,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().special,
             power: 75,
             accuracy: 100,
             powerPoints: 15
@@ -6113,8 +5930,8 @@ const moveList = {
         {
             level: 29,
             name: "Sleep Powder",
-            type: attributes.grass,
-            category: battleCategory.status,
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 75,
             powerPoints: 15
@@ -6122,8 +5939,8 @@ const moveList = {
         {
             level: 37,
             name: "Leech Life",
-            type: attributes.bug,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -6131,8 +5948,8 @@ const moveList = {
         {
             level: 41,
             name: "Zen Headbutt",
-            type: attributes.psychic,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 90,
             powerPoints: 15
@@ -6140,8 +5957,8 @@ const moveList = {
         {
             level: 47,
             name: "Poison Fang",
-            type: attributes.poison,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 15
@@ -6149,8 +5966,8 @@ const moveList = {
         {
             level: 55,
             name: "Psychic",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -6158,8 +5975,8 @@ const moveList = {
         {
             level: 59,
             name: "Bug Buzz",
-            type: attributes.bug,
-            category: battleCategory.special,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -6167,8 +5984,8 @@ const moveList = {
         {
             level: 63,
             name: "Quiver Dance",
-            type: attributes.bug,
-            category: battleCategory.status,
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -6178,8 +5995,8 @@ const moveList = {
         {
             level: 1,
             name: "Sand Attack",
-            type: attributes.ground,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -6187,8 +6004,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -6196,8 +6013,8 @@ const moveList = {
         {
             level: 4,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -6205,8 +6022,8 @@ const moveList = {
         {
             level: 8,
             name: "Astonish",
-            type: attributes.ghost,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 15
@@ -6214,8 +6031,8 @@ const moveList = {
         {
             level: 12,
             name: "Mud-Slap",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 10
@@ -6223,8 +6040,8 @@ const moveList = {
         {
             level: 16,
             name: "Bulldoze",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -6232,8 +6049,8 @@ const moveList = {
         {
             level: 20,
             name: "Sucker Punch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 5
@@ -6241,8 +6058,8 @@ const moveList = {
         {
             level: 24,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -6250,8 +6067,8 @@ const moveList = {
         {
             level: 28,
             name: "Sandstorm",
-            type: attributes.rock,
-            category: battleCategory.status,
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -6259,8 +6076,8 @@ const moveList = {
         {
             level: 32,
             name: "Dig",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -6268,8 +6085,8 @@ const moveList = {
         {
             level: 36,
             name: "Earth Power",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -6277,8 +6094,8 @@ const moveList = {
         {
             level: 40,
             name: "Earthquake",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 100,
             accuracy: 100,
             powerPoints: 10
@@ -6286,8 +6103,8 @@ const moveList = {
         {
             level: 44,
             name: "Fissure",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 30,
             powerPoints:  5
@@ -6297,8 +6114,8 @@ const moveList = {
         {
             level: 1,
             name: "Sand Tomb",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 35,
             accuracy: 85,
             powerPoints: 15
@@ -6306,8 +6123,8 @@ const moveList = {
         {
             level: 1,
             name: "Night Slash",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 15
@@ -6315,8 +6132,8 @@ const moveList = {
         {
             level: 1,
             name: "Tri Attack",
-            type: attributes.normal,
-            category: battleCategory.special,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -6324,8 +6141,8 @@ const moveList = {
         {
             level: 1,
             name: "Sand Attack",
-            type: attributes.ground,
-            category: battleCategory.status,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -6333,8 +6150,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -6342,8 +6159,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -6351,8 +6168,8 @@ const moveList = {
         {
             level: 1,
             name: "Astonish",
-            type: attributes.ghost,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 15
@@ -6360,8 +6177,8 @@ const moveList = {
         {
             level: 12,
             name: "Mud-Slap",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 20,
             accuracy: 100,
             powerPoints: 10
@@ -6369,8 +6186,8 @@ const moveList = {
         {
             level: 16,
             name: "Bulldoze",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -6378,8 +6195,8 @@ const moveList = {
         {
             level: 20,
             name: "Sucker Punch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 5
@@ -6387,8 +6204,8 @@ const moveList = {
         {
             level: 24,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -6396,8 +6213,8 @@ const moveList = {
         {
             level: 30,
             name: "Sandstorm",
-            type: attributes.rock,
-            category: battleCategory.status,
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -6405,8 +6222,8 @@ const moveList = {
         {
             level: 36,
             name: "Dig",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 10
@@ -6414,8 +6231,8 @@ const moveList = {
         {
             level: 42,
             name: "Earth Power",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 10
@@ -6423,8 +6240,8 @@ const moveList = {
         {
             level: 48,
             name: "Earthquake",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 100,
             accuracy: 100,
             powerPoints: 10
@@ -6432,8 +6249,8 @@ const moveList = {
         {
             level: 54,
             name: "Fissure",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 30,
             powerPoints:  5
@@ -6443,8 +6260,8 @@ const moveList = {
         {
             level: 1,
             name: "Fake Out",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 10
@@ -6452,8 +6269,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -6461,8 +6278,8 @@ const moveList = {
         {
             level: 4,
             name: "Feint",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 10
@@ -6470,8 +6287,8 @@ const moveList = {
         {
             level: 8,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -6479,8 +6296,8 @@ const moveList = {
         {
             level: 12,
             name: "Pay Day",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -6488,8 +6305,8 @@ const moveList = {
         {
             level: 16,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -6497,8 +6314,8 @@ const moveList = {
         {
             level: 20,
             name: "Taunt",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -6506,8 +6323,8 @@ const moveList = {
         {
             level: 24,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -6515,8 +6332,8 @@ const moveList = {
         {
             level: 29,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -6524,8 +6341,8 @@ const moveList = {
         {
             level: 32,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -6533,8 +6350,8 @@ const moveList = {
         {
             level: 36,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -6542,8 +6359,8 @@ const moveList = {
         {
             level: 40,
             name: "Nasty Plot",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -6551,8 +6368,8 @@ const moveList = {
         {
             level: 44,
             name: "Play Rough",
-            type: attributes.fairy,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -6562,8 +6379,8 @@ const moveList = {
         {
             level: 1,
             name: "Power Gem",
-            type: attributes.rock,
-            category: battleCategory.special,
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().special,
             power: 80,
             accuracy: 100,
             powerPoints: 20
@@ -6571,8 +6388,8 @@ const moveList = {
         {
             level: 1,
             name: "Switcheroo",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -6580,8 +6397,8 @@ const moveList = {
         {
             level: 1,
             name: "Fake Out",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 10
@@ -6589,8 +6406,8 @@ const moveList = {
         {
             level: 1,
             name: "Growl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 40
@@ -6598,8 +6415,8 @@ const moveList = {
         {
             level: 1,
             name: "Feint",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 30,
             accuracy: 100,
             powerPoints: 10
@@ -6607,8 +6424,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -6616,8 +6433,8 @@ const moveList = {
         {
             level: 12,
             name: "Pay Day",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -6625,8 +6442,8 @@ const moveList = {
         {
             level: 16,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -6634,8 +6451,8 @@ const moveList = {
         {
             level: 20,
             name: "Taunt",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -6643,8 +6460,8 @@ const moveList = {
         {
             level: 24,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -6652,8 +6469,8 @@ const moveList = {
         {
             level: 31,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -6661,8 +6478,8 @@ const moveList = {
         {
             level: 36,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -6670,8 +6487,8 @@ const moveList = {
         {
             level: 42,
             name: "Slash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 20
@@ -6679,8 +6496,8 @@ const moveList = {
         {
             level: 48,
             name: "Nasty Plot",
-            type: attributes.dark,
-            category: battleCategory.status,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -6688,8 +6505,8 @@ const moveList = {
         {
             level: 54,
             name: "Play Rough",
-            type: attributes.fairy,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -6699,8 +6516,8 @@ const moveList = {
         {
             level: 1,
             name: "Water Sport",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -6708,8 +6525,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -6717,8 +6534,8 @@ const moveList = {
         {
             level: 4,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -6726,8 +6543,8 @@ const moveList = {
         {
             level: 7,
             name: "Water Gun",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -6735,8 +6552,8 @@ const moveList = {
         {
             level: 10,
             name: "Confusion",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 50,
             accuracy: 100,
             powerPoints: 25
@@ -6744,8 +6561,8 @@ const moveList = {
         {
             level: 13,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -6753,8 +6570,8 @@ const moveList = {
         {
             level: 16,
             name: "Water Pulse",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -6762,8 +6579,8 @@ const moveList = {
         {
             level: 19,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -6771,8 +6588,8 @@ const moveList = {
         {
             level: 22,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -6780,8 +6597,8 @@ const moveList = {
         {
             level: 25,
             name: "Zen Headbutt",
-            type: attributes.psychic,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 90,
             powerPoints: 15
@@ -6789,8 +6606,8 @@ const moveList = {
         {
             level: 28,
             name: "Aqua Tail",
-            type: attributes.water,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -6798,8 +6615,8 @@ const moveList = {
         {
             level: 31,
             name: "Soak",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -6807,8 +6624,8 @@ const moveList = {
         {
             level: 34,
             name: "Psych Up",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -6816,8 +6633,8 @@ const moveList = {
         {
             level: 37,
             name: "Amnesia",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -6825,8 +6642,8 @@ const moveList = {
         {
             level: 40,
             name: "Hydro Pump",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 80,
             powerPoints: 5
@@ -6834,8 +6651,8 @@ const moveList = {
         {
             level: 43,
             name: "Wonder Room",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints:10
@@ -6845,8 +6662,8 @@ const moveList = {
         {
             level: 1,
             name: "Me First",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -6854,8 +6671,8 @@ const moveList = {
         {
             level: 1,
             name: "Aqua Jet",
-            type: attributes.water,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -6863,8 +6680,8 @@ const moveList = {
         {
             level: 1,
             name: "Water Sport",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -6872,8 +6689,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -6881,8 +6698,8 @@ const moveList = {
         {
             level: 1,
             name: "Tail Whip",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -6890,8 +6707,8 @@ const moveList = {
         {
             level: 1,
             name: "Water Gun",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -6899,8 +6716,8 @@ const moveList = {
         {
             level: 10,
             name: "Confusion",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 50,
             accuracy: 100,
             powerPoints: 25
@@ -6908,8 +6725,8 @@ const moveList = {
         {
             level: 13,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -6917,8 +6734,8 @@ const moveList = {
         {
             level: 16,
             name: "Water Pulse",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 60,
             accuracy: 100,
             powerPoints: 20
@@ -6926,8 +6743,8 @@ const moveList = {
         {
             level: 19,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -6935,8 +6752,8 @@ const moveList = {
         {
             level: 22,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -6944,8 +6761,8 @@ const moveList = {
         {
             level: 25,
             name: "Zen Headbutt",
-            type: attributes.psychic,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 90,
             powerPoints: 15
@@ -6953,8 +6770,8 @@ const moveList = {
         {
             level: 28,
             name: "Aqua Tail",
-            type: attributes.water,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -6962,8 +6779,8 @@ const moveList = {
         {
             level: 31,
             name: "Soak",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -6971,8 +6788,8 @@ const moveList = {
         {
             level: 36,
             name: "Psych Up",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -6980,8 +6797,8 @@ const moveList = {
         {
             level: 41,
             name: "Amnesia",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -6989,8 +6806,8 @@ const moveList = {
         {
             level: 46,
             name: "Hydro Pump",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 80,
             powerPoints: 5
@@ -6998,8 +6815,8 @@ const moveList = {
         {
             level: 51,
             name: "Wonder Room",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints:10
@@ -7009,8 +6826,8 @@ const moveList = {
         {
             level: 1,
             name: "Covet",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -7018,8 +6835,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -7027,8 +6844,8 @@ const moveList = {
         {
             level: 1,
             name: "Low Kick",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -7036,8 +6853,8 @@ const moveList = {
         {
             level: 1,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -7045,8 +6862,8 @@ const moveList = {
         {
             level: 1,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -7054,8 +6871,8 @@ const moveList = {
         {
             level: 5,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -7063,8 +6880,8 @@ const moveList = {
         {
             level: 8,
             name: "Karate Chop",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 25
@@ -7072,8 +6889,8 @@ const moveList = {
         {
             level: 12,
             name: "Pursuit",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -7081,8 +6898,8 @@ const moveList = {
         {
             level: 15,
             name: "Seismic Toss",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -7090,8 +6907,8 @@ const moveList = {
         {
             level: 19,
             name: "Swagger",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 85,
             powerPoints: 15
@@ -7099,8 +6916,8 @@ const moveList = {
         {
             level: 22,
             name: "Cross Chop",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 100,
             accuracy: 80,
             powerPoints: 5
@@ -7108,8 +6925,8 @@ const moveList = {
         {
             level: 26,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -7117,8 +6934,8 @@ const moveList = {
         {
             level: 29,
             name: "Punishment",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -7126,8 +6943,8 @@ const moveList = {
         {
             level: 33,
             name: "Thrash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -7135,8 +6952,8 @@ const moveList = {
         {
             level: 36,
             name: "Close Combat",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 5
@@ -7144,8 +6961,8 @@ const moveList = {
         {
             level: 40,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -7153,8 +6970,8 @@ const moveList = {
         {
             level: 43,
             name: "Stomping Tantrum",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 75,
             accuracy: 100,
             powerPoints: 10
@@ -7162,8 +6979,8 @@ const moveList = {
         {
             level: 47,
             name: "Outrage",
-            type: attributes.dragon,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -7171,8 +6988,8 @@ const moveList = {
         {
             level: 50,
             name: "Final Gambit",
-            type: attributes.fight,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().special,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -7182,8 +6999,8 @@ const moveList = {
         {
             level: 1,
             name: "Rage",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 20,
             accuracy: 100,
             powerPoints: 20
@@ -7191,8 +7008,8 @@ const moveList = {
         {
             level: 1,
             name: "Fling",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 10
@@ -7200,8 +7017,8 @@ const moveList = {
         {
             level: 1,
             name: "Scratch",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 35
@@ -7209,8 +7026,8 @@ const moveList = {
         {
             level: 1,
             name: "Low Kick",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -7218,8 +7035,8 @@ const moveList = {
         {
             level: 1,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -7227,8 +7044,8 @@ const moveList = {
         {
             level: 1,
             name: "Focus Energy",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -7236,8 +7053,8 @@ const moveList = {
         {
             level: 5,
             name: "Fury Swipes",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 18,
             accuracy: 80,
             powerPoints: 15
@@ -7245,8 +7062,8 @@ const moveList = {
         {
             level: 8,
             name: "Karate Chop",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 50,
             accuracy: 100,
             powerPoints: 25
@@ -7254,8 +7071,8 @@ const moveList = {
         {
             level: 12,
             name: "Pursuit",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 40,
             accuracy: 100,
             powerPoints: 20
@@ -7263,8 +7080,8 @@ const moveList = {
         {
             level: 15,
             name: "Seismic Toss",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 20
@@ -7272,8 +7089,8 @@ const moveList = {
         {
             level: 19,
             name: "Swagger",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 85,
             powerPoints: 15
@@ -7281,8 +7098,8 @@ const moveList = {
         {
             level: 22,
             name: "Cross Chop",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 100,
             accuracy: 80,
             powerPoints: 5
@@ -7290,8 +7107,8 @@ const moveList = {
         {
             level: 26,
             name: "Assurance",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 10
@@ -7299,8 +7116,8 @@ const moveList = {
         {
             level: 30,
             name: "Punishment",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -7308,8 +7125,8 @@ const moveList = {
         {
             level: 35,
             name: "Thrash",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -7317,8 +7134,8 @@ const moveList = {
         {
             level: 39,
             name: "Close Combat",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 5
@@ -7326,8 +7143,8 @@ const moveList = {
         {
             level: 44,
             name: "Screech",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 85,
             powerPoints: 40
@@ -7335,8 +7152,8 @@ const moveList = {
         {
             level: 48,
             name: "Stomping Tantrum",
-            type: attributes.ground,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
             power: 75,
             accuracy: 100,
             powerPoints: 10
@@ -7344,8 +7161,8 @@ const moveList = {
         {
             level: 53,
             name: "Outrage",
-            type: attributes.dragon,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 10
@@ -7353,8 +7170,8 @@ const moveList = {
         {
             level: 57,
             name: "Final Gambit",
-            type: attributes.fight,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().special,
             power: 0,
             accuracy: 100,
             powerPoints: 5
@@ -7364,8 +7181,8 @@ const moveList = {
         {
             level: 1,
             name: "Ember",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -7373,8 +7190,8 @@ const moveList = {
         {
             level: 1,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -7382,8 +7199,8 @@ const moveList = {
         {
             level: 4,
             name: "Howl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -7391,8 +7208,8 @@ const moveList = {
         {
             level: 8,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -7400,8 +7217,8 @@ const moveList = {
         {
             level: 12,
             name: "Flame Wheel",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -7409,8 +7226,8 @@ const moveList = {
         {
             level: 16,
             name: "Helping Hand",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -7418,8 +7235,8 @@ const moveList = {
         {
             level: 20,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -7427,8 +7244,8 @@ const moveList = {
         {
             level: 24,
             name: "Fire Fang",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 95,
             powerPoints: 15
@@ -7436,8 +7253,8 @@ const moveList = {
         {
             level: 28,
             name: "Retaliate",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 5
@@ -7445,8 +7262,8 @@ const moveList = {
         {
             level: 32,
             name: "Crunch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 20
@@ -7454,8 +7271,8 @@ const moveList = {
         {
             level: 36,
             name: "Take Down",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 85,
             powerPoints: 20
@@ -7463,8 +7280,8 @@ const moveList = {
         {
             level: 40,
             name: "Flamethrower",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -7472,8 +7289,8 @@ const moveList = {
         {
             level: 44,
             name: "Roar",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -7481,8 +7298,8 @@ const moveList = {
         {
             level: 48,
             name: "Play Rough",
-            type: attributes.fairy,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -7490,8 +7307,8 @@ const moveList = {
         {
             level: 52,
             name: "Reversal",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -7499,8 +7316,8 @@ const moveList = {
         {
             level: 56,
             name: "Flare Blitz",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -7510,8 +7327,8 @@ const moveList = {
         {
             level: 1,
             name: "Extreme Speed",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 100,
             powerPoints: 5
@@ -7519,8 +7336,8 @@ const moveList = {
         {
             level: 1,
             name: "Burn Up",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 130,
             accuracy: 100,
             powerPoints: 5
@@ -7528,8 +7345,8 @@ const moveList = {
         {
             level: 1,
             name: "Flame Wheel",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -7537,8 +7354,8 @@ const moveList = {
         {
             level: 1,
             name: "Helping Hand",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -7546,8 +7363,8 @@ const moveList = {
         {
             level: 1,
             name: "Agility",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 30
@@ -7555,8 +7372,8 @@ const moveList = {
         {
             level: 1,
             name: "Fire Fang",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 65,
             accuracy: 95,
             powerPoints: 15
@@ -7564,8 +7381,8 @@ const moveList = {
         {
             level: 1,
             name: "Retaliate",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 5
@@ -7573,8 +7390,8 @@ const moveList = {
         {
             level: 1,
             name: "Crunch",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 20
@@ -7582,8 +7399,8 @@ const moveList = {
         {
             level: 1,
             name: "Take Down",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 85,
             powerPoints: 20
@@ -7591,8 +7408,8 @@ const moveList = {
         {
             level: 1,
             name: "Flamethrower",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 90,
             accuracy: 100,
             powerPoints: 15
@@ -7600,8 +7417,8 @@ const moveList = {
         {
             level: 1,
             name: "Roar",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -7609,8 +7426,8 @@ const moveList = {
         {
             level: 1,
             name: "Play Rough",
-            type: attributes.fairy,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().physical,
             power: 90,
             accuracy: 90,
             powerPoints: 10
@@ -7618,8 +7435,8 @@ const moveList = {
         {
             level: 1,
             name: "Reversal",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 0,
             accuracy: 100,
             powerPoints: 15
@@ -7627,8 +7444,8 @@ const moveList = {
         {
             level: 1,
             name: "Flare Blitz",
-            type: attributes.fire,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
             power: 120,
             accuracy: 100,
             powerPoints: 15
@@ -7636,8 +7453,8 @@ const moveList = {
         {
             level: 1,
             name: "Ember",
-            type: attributes.fire,
-            category: battleCategory.special,
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -7645,8 +7462,8 @@ const moveList = {
         {
             level: 1,
             name: "Leer",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 30
@@ -7654,8 +7471,8 @@ const moveList = {
         {
             level: 1,
             name: "Howl",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
@@ -7663,8 +7480,8 @@ const moveList = {
         {
             level: 1,
             name: "Bite",
-            type: attributes.dark,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 100,
             powerPoints: 25
@@ -7674,8 +7491,8 @@ const moveList = {
         {
             level: 1,
             name: "Water Sport",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -7683,8 +7500,8 @@ const moveList = {
         {
             level: 5,
             name: "Water Gun",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -7692,8 +7509,8 @@ const moveList = {
         {
             level: 8,
             name: "Hypnosis",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 60,
             powerPoints: 20
@@ -7701,8 +7518,8 @@ const moveList = {
         {
             level: 11,
             name: "Bubble",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -7710,8 +7527,8 @@ const moveList = {
         {
             level: 15,
             name: "Double Slap",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 10
@@ -7719,8 +7536,8 @@ const moveList = {
         {
             level: 18,
             name: "Rain Dance",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -7728,8 +7545,8 @@ const moveList = {
         {
             level: 21,
             name: "Body Slam",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 85,
             accuracy: 100,
             powerPoints: 15
@@ -7737,8 +7554,8 @@ const moveList = {
         {
             level: 25,
             name: "Bubble Beam",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 20
@@ -7746,8 +7563,8 @@ const moveList = {
         {
             level: 28,
             name: "Mud Shot",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 55,
             accuracy: 95,
             powerPoints: 15
@@ -7755,8 +7572,8 @@ const moveList = {
         {
             level: 31,
             name: "Belly Drum",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -7764,8 +7581,8 @@ const moveList = {
         {
             level: 35,
             name: "Wake-Up Slap",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 10
@@ -7773,8 +7590,8 @@ const moveList = {
         {
             level: 38,
             name: "Hydro Pump",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 80,
             powerPoints: 5
@@ -7782,8 +7599,8 @@ const moveList = {
         {
             level: 41,
             name: "Mud Bomb",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 85,
             powerPoints: 10
@@ -7793,8 +7610,8 @@ const moveList = {
         {
             level: 1,
             name: "Water Sport",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 15
@@ -7802,8 +7619,8 @@ const moveList = {
         {
             level: 5,
             name: "Water Gun",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 25
@@ -7811,8 +7628,8 @@ const moveList = {
         {
             level: 8,
             name: "Hypnosis",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 60,
             powerPoints: 20
@@ -7820,8 +7637,8 @@ const moveList = {
         {
             level: 11,
             name: "Bubble",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 40,
             accuracy: 100,
             powerPoints: 30
@@ -7829,8 +7646,8 @@ const moveList = {
         {
             level: 15,
             name: "Double Slap",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 10
@@ -7838,8 +7655,8 @@ const moveList = {
         {
             level: 18,
             name: "Rain Dance",
-            type: attributes.water,
-            category: battleCategory.status,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -7847,8 +7664,8 @@ const moveList = {
         {
             level: 21,
             name: "Body Slam",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 85,
             accuracy: 100,
             powerPoints: 15
@@ -7856,8 +7673,8 @@ const moveList = {
         {
             level: 27,
             name: "Bubble Beam",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 20
@@ -7865,8 +7682,8 @@ const moveList = {
         {
             level: 32,
             name: "Mud Shot",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 55,
             accuracy: 95,
             powerPoints: 15
@@ -7874,8 +7691,8 @@ const moveList = {
         {
             level: 37,
             name: "Belly Drum",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 10
@@ -7883,8 +7700,8 @@ const moveList = {
         {
             level: 43,
             name: "Wake-Up Slap",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 70,
             accuracy: 100,
             powerPoints: 10
@@ -7892,8 +7709,8 @@ const moveList = {
         {
             level: 48,
             name: "Hydro Pump",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 110,
             accuracy: 80,
             powerPoints: 5
@@ -7901,8 +7718,8 @@ const moveList = {
         {
             level: 53,
             name: "Mud Bomb",
-            type: attributes.ground,
-            category: battleCategory.special,
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 85,
             powerPoints: 10
@@ -7912,8 +7729,8 @@ const moveList = {
         {
             level: 1,
             name: "Submission",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 80,
             accuracy: 80,
             powerPoints: 20
@@ -7921,8 +7738,8 @@ const moveList = {
         {
             level: 1,
             name: "Bubble Beam",
-            type: attributes.water,
-            category: battleCategory.special,
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 20
@@ -7930,8 +7747,8 @@ const moveList = {
         {
             level: 1,
             name: "Hypnosis",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 60,
             powerPoints: 20
@@ -7939,8 +7756,8 @@ const moveList = {
         {
             level: 1,
             name: "Double Slap",
-            type: attributes.normal,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
             power: 15,
             accuracy: 85,
             powerPoints: 10
@@ -7948,8 +7765,8 @@ const moveList = {
         {
             level: 32,
             name: "Dynamic Punch",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 100,
             accuracy: 50,
             powerPoints: 5
@@ -7957,8 +7774,8 @@ const moveList = {
         {
             level: 43,
             name: "Mind Reader",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 5
@@ -7966,8 +7783,8 @@ const moveList = {
         {
             level: 53,
             name: "Circle Throw",
-            type: attributes.fight,
-            category: battleCategory.physical,
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
             power: 60,
             accuracy: 90,
             powerPoints: 10
@@ -7977,8 +7794,8 @@ const moveList = {
         {
             level: 1,
             name: "Teleport",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -7988,8 +7805,8 @@ const moveList = {
         {
             level: 1,
             name: "Teleport",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
@@ -7997,111 +7814,7807 @@ const moveList = {
         {
             level: 16,
             name: "Confusion",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 50,
             accuracy: 100,
             powerPoints: 25
         },
         {
-            level: ,
+            level: 18,
             name: "Disable",
-            type: attributes.normal,
-            category: battleCategory.status,
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20
         },
         {
-            level: ,
+            level: 21,
             name: "Psybeam",
-            type: attributes.psychic,
-            category: battleCategory.special,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
             power: 65,
             accuracy: 100,
             powerPoints: 20
         },
         {
-            level: ,
+            level: 23,
             name: "Miracle Eye",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 40
         },
         {
-            level: ,
+            level: 26,
             name: "Reflect",
-            type: attributes.psychic,
-            category: battleCategory.status,
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
             power: 0,
             accuracy: 101,
             powerPoints: 20
         },
-
+        {
+            level: 28,
+            name: "Psycho Cut",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 31,
+            name: "Recover",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Telekinesis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 36,
+            name: "Ally Switch",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 38,
+            name: "Psychic",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 41,
+            name: "Role Play",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 43,
+            name: "Future Sight",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 46,
+            name: "Trick",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
     ],
     65: [
-
+        {
+            level: 1,
+            name: "Kinesis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 80,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Teleport",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 16,
+            name: "Confusion",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 18,
+            name: "Disable",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 21,
+            name: "Psybeam",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 23,
+            name: "Miracle Eye",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 26,
+            name: "Reflect",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 28,
+            name: "Psycho Cut",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 31,
+            name: "Recover",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Telekinesis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 36,
+            name: "Ally Switch",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 38,
+            name: "Psychic",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 41,
+            name: "Calm Mind",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 43,
+            name: "Future Sight",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 46,
+            name: "Trick",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
     ],
     66: [
-
+        {
+            level: 1,
+            name: "Low Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 3,
+            name: "Focus Energy",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Karate Chop",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 9,
+            name: "Foresight",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 13,
+            name: "Low Sweep",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Seismic Toss",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Revenge",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 21,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 25,
+            name: "Vital Throw",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 27,
+            name: "Wake-Up Slap",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 31,
+            name: "Dual Chop",
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 33,
+            name: "Submission",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 80,
+            powerPoints: 20
+        },
+        {
+            level: 37,
+            name: "Bulk Up",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 39,
+            name: "Cross Chop",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 43,
+            name: "Scary Face",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 45,
+            name: "Dynamic Punch",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
     ],
     67: [
-
+        {
+            level: 1,
+            name: "Low Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 3,
+            name: "Focus Energy",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Karate Chop",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 9,
+            name: "Foresight",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 13,
+            name: "Low Sweep",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Seismic Toss",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Revenge",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 21,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 25,
+            name: "Vital Throw",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 27,
+            name: "Wake-Up Slap",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Dual Chop",
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 37,
+            name: "Submission",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 80,
+            powerPoints: 20
+        },
+        {
+            level: 43,
+            name: "Bulk Up",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 47,
+            name: "Cross Chop",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 53,
+            name: "Scary Face",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 57,
+            name: "Dynamic Punch",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
     ],
     68: [
-
+        {
+            level: 1,
+            name: "Strength",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Wide Guard",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Low Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 3,
+            name: "Focus Energy",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Karate Chop",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 9,
+            name: "Foresight",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 13,
+            name: "Low Sweep",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Seismic Toss",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Revenge",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 21,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 25,
+            name: "Vital Throw",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 27,
+            name: "Wake-Up Slap",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Dual Chop",
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 37,
+            name: "Submission",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 80,
+            powerPoints: 20
+        },
+        {
+            level: 43,
+            name: "Bulk Up",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 47,
+            name: "Cross Chop",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 53,
+            name: "Scary Face",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 57,
+            name: "Dynamic Punch",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
     ],
     69: [
-
+        {
+            level: 1,
+            name: "Vine Whip",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 45,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 7,
+            name: "Growth",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Wrap",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 13,
+            name: "Sleep Powder",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 15
+        },
+        {
+            level: 15,
+            name: "Poison Powder",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 35
+        },
+        {
+            level: 17,
+            name: "Stun Spore",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 30
+        },
+        {
+            level: 23,
+            name: "Acid",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 27,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 29,
+            name: "Sweet Scent",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 35,
+            name: "Gastro Acid",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 39,
+            name: "Razor Leaf",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 55,
+            accuracy: 95,
+            powerPoints: 25
+        },
+        {
+            level: 41,
+            name: "Poison Jab",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 47,
+            name: "Slam",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 75,
+            powerPoints: 20
+        },
+        {
+            level: 50,
+            name: "Wring Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
     ],
     70: [
-
+        {
+            level: 1,
+            name: "Vine Whip",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 45,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 7,
+            name: "Growth",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Wrap",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 13,
+            name: "Sleep Powder",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 15
+        },
+        {
+            level: 15,
+            name: "Poison Powder",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 35
+        },
+        {
+            level: 17,
+            name: "Stun Spore",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 30
+        },
+        {
+            level: 24,
+            name: "Acid",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 29,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 32,
+            name: "Sweet Scent",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 39,
+            name: "Gastro Acid",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 44,
+            name: "Razor Leaf",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 55,
+            accuracy: 95,
+            powerPoints: 25
+        },
+        {
+            level: 47,
+            name: "Poison Jab",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 54,
+            name: "Slam",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 75,
+            powerPoints: 20
+        },
+        {
+            level: 58,
+            name: "Wring Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
     ],
     71: [
-
+        {
+            level: 1,
+            name: "Leaf Tornado",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Stockpile",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Swallow",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Spit Up",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Vine Whip",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 45,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 1,
+            name: "Sleep Powder",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Sweet Scent",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Razor Leaf",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 55,
+            accuracy: 95,
+            powerPoints: 25
+        },
+        {
+            level: 32,
+            name: "Leaf Storm",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
+            power: 130,
+            accuracy: 90,
+            powerPoints: 5
+        },
+        {
+            level: 44,
+            name: "Leaf Blade",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 15
+        },
     ],
     72: [
-
+        {
+            level: 1,
+            name: "Poison Sting",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 4,
+            name: "Supersonic",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 20
+        },
+        {
+            level: 7,
+            name: "Constrict",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 10,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 10,
+            name: "Acid",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 13,
+            name: "Toxic Spikes",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 16,
+            name: "Water Pulse",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Wrap",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 22,
+            name: "Acid Spray",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 25,
+            name: "Bubble Beam",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 28,
+            name: "Barrier",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 31,
+            name: "Poison Jab",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 34,
+            name: "Brine",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 40,
+            name: "Hex",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 43,
+            name: "Sludge wave",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 95,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 46,
+            name: "Hydro Pump",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 49,
+            name: "Wring Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
     ],
     73: [
-
+        {
+            level: 1,
+            name: "Reflect Type",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Poison Sting",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 4,
+            name: "Supersonic",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 20
+        },
+        {
+            level: 7,
+            name: "Constrict",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 10,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 10,
+            name: "Acid",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 13,
+            name: "Toxic Spikes",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 16,
+            name: "Water Pulse",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Wrap",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 22,
+            name: "Acid Spray",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 25,
+            name: "Bubble Beam",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 28,
+            name: "Barrier",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 32,
+            name: "Poison Jab",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 36,
+            name: "Brine",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 40,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 44,
+            name: "Hex",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 48,
+            name: "Sludge wave",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 95,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 52,
+            name: "Hydro Pump",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 56,
+            name: "Wring Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
     ],
     74: [
-
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Defense Curl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 4,
+            name: "Mud Sport",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 6,
+            name: "Rock Polish",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 10,
+            name: "Rollout",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Magnitude",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 16,
+            name: "Rock Throw",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 18,
+            name: "Smack Down",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 22,
+            name: "Bulldoze",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 24,
+            name: "Self-Destruct",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 200,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 28,
+            name: "Stealth Rock",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 30,
+            name: "Rock Blast",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 34,
+            name: "Earthquake",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 36,
+            name: "Explosion",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 250,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 40,
+            name: "Double-Edge",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 42,
+            name: "Stone Edge",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
     ],
     75: [
-
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Defense Curl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 4,
+            name: "Mud Sport",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 6,
+            name: "Rock Polish",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 10,
+            name: "Rollout",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Magnitude",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 16,
+            name: "Rock Throw",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 18,
+            name: "Smack Down",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 22,
+            name: "Bulldoze",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 24,
+            name: "Self-Destruct",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 200,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 30,
+            name: "Stealth Rock",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 34,
+            name: "Rock Blast",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 40,
+            name: "Earthquake",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 44,
+            name: "Explosion",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 250,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 50,
+            name: "Double-Edge",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 54,
+            name: "Stone Edge",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
     ],
     76: [
-
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Defense Curl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 4,
+            name: "Mud Sport",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 6,
+            name: "Rock Polish",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 10,
+            name: "Steamroller",
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Magnitude",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 16,
+            name: "Rock Throw",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 18,
+            name: "Smack Down",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 22,
+            name: "Bulldoze",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 24,
+            name: "Self-Destruct",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 200,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 30,
+            name: "Stealth Rock",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 34,
+            name: "Rock Blast",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 40,
+            name: "Earthquake",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 44,
+            name: "Explosion",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 250,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 50,
+            name: "Double-Edge",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 54,
+            name: "Stone Edge",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 60,
+            name: "Heavy Slam",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
     ],
     77: [
-
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 5,
+            name: "Tail Whip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 10,
+            name: "Ember",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 15,
+            name: "Flame Charge",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Agility",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 25,
+            name: "Flame Wheel",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 30,
+            name: "Stomp",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 35,
+            name: "Fire Spin",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 35,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 41,
+            name: "Take Down",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 45,
+            name: "Inferno",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
+        {
+            level: 50,
+            name: "Fire Blast",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 110,
+            accuracy: 85,
+            powerPoints: 5
+        },
+        {
+            level: 55,
+            name: "Flare Blitz",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
     ],
     78: [
-
+        {
+            level: 1,
+            name: "Smart Strike",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Megahorn",
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level:1 ,
+            name: "Poison Jab",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Quick Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Tail Whip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Ember",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 15,
+            name: "Flame Charge",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Agility",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 25,
+            name: "Flame Wheel",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 30,
+            name: "Stomp",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 35,
+            name: "Fire Spin",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 35,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 43,
+            name: "Take Down",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 49,
+            name: "Inferno",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 100,
+            accuracy: 50,
+            powerPoints: 5
+        },
+        {
+            level: 56,
+            name: "Fire Blast",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 110,
+            accuracy: 85,
+            powerPoints: 5
+        },
+        {
+            level: 63,
+            name: "Flare Blitz",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
     ],
     79: [
-
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Curse",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 3,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 6,
+            name: "Water Gun",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 9,
+            name: "Yawn",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 12,
+            name: "Confusion",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 15,
+            name: "Disable",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 18,
+            name: "Water Pulse",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 21,
+            name: "Headbutt",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 24,
+            name: "Zen Headbutt",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 27,
+            name: "Amnesia",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 30,
+            name: "Surf",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 33,
+            name: "Slack Off",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 36,
+            name: "Psychic",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 39,
+            name: "Psych Up",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 42,
+            name: "Rain Dance",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 45,
+            name: "Heal Pulse",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
     ],
     80: [
-
+        {
+            level: 1,
+            name: "Withdraw",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Curse",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Yawn",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 5,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 9,
+            name: "Water Gun",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 14,
+            name: "Confusion",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 19,
+            name: "Disable",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 23,
+            name: "Headbutt",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 28,
+            name: "Water Pulse",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 32,
+            name: "Zen Headbutt",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 36,
+            name: "Slack Off",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 43,
+            name: "Amnesia",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 49,
+            name: "Psychic",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 55,
+            name: "Rain Dance",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 62,
+            name: "Psych Up",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 68,
+            name: "Heal Pulse",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
     ],
     81: [
-
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Supersonic",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 20
+        },
+        {
+            level: 5,
+            name: "Thunder Shock",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Magnet Bomb",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Thunder Wave",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 13,
+            name: "Light Screen",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 17,
+            name: "Sonic Boom",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Spark",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 23,
+            name: "Mirror Shot",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 25,
+            name: "Metal Sound",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 29,
+            name: "Electro Ball",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 31,
+            name: "Flash Cannon",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 35,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 37,
+            name: "Discharge",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 41,
+            name: "Lock-On",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 43,
+            name: "Magnet Rise",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 47,
+            name: "Gyro Ball",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 49,
+            name: "Zap Cannon",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 50,
+            powerPoints: 5
+        },
     ],
     82: [
-
+        {
+            level: 1,
+            name: "Tri Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Zap Cannon",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 50,
+            powerPoints: 5
+        },
+        {
+            level: 1,
+            name: "Electric Terrain",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Supersonic",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 20
+        },
+        {
+            level: 5,
+            name: "Thunder Shock",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Magnet Bomb",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Thunder Wave",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 13,
+            name: "Light Screen",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 17,
+            name: "Sonic Boom",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Spark",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 23,
+            name: "Mirror Shot",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 25,
+            name: "Metal Sound",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 29,
+            name: "Electro Ball",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Flash Cannon",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 39,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 43,
+            name: "Discharge",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 49,
+            name: "Lock-On",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 53,
+            name: "Magnet Rise",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 59,
+            name: "Gyro Ball",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 63,
+            name: "Zap Cannon",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 50,
+            powerPoints: 5
+        },
     ],
     83: [
-
+        {
+            level: 1,
+            name: "Peck",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Sand Attack",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 5,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 10,
+            name: "Fury Cutter",
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 95,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Cut",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 95,
+            powerPoints: 30
+        },
+        {
+            level: 20,
+            name: "Aerial Ace",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 25,
+            name: "Air Cutter",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 95,
+            powerPoints: 25
+        },
+        {
+            level: 30,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 35,
+            name: "False Swipe",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 40,
+            name: "Slash",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 45,
+            name: "Swords Dance",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 50,
+            name: "Air Slash",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
+            power: 75,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 55,
+            name: "Leaf Blade",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 60,
+            name: "Agility",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 65,
+            name: "Brave Bird",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
     ],
     84: [
-
+        {
+            level: 1,
+            name: "Peck",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 5,
+            name: "Quick Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 8,
+            name: "Rage",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 20,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Fury Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Pursuit",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Pluck",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 22,
+            name: "Double Hit",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 26,
+            name: "Agility",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 29,
+            name: "Uproar",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Acupressure",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 36,
+            name: "Swords Dance",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 40,
+            name: "Jump Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 95,
+            powerPoints: 10
+        },
+        {
+            level: 43,
+            name: "Drill Peck",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 47,
+            name: "Endeavor",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 50,
+            name: "Thrash",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
     ],
     85: [
+        {
+            level: 1,
+            name: "Tri Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Peck",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 5,
+            name: "Quick Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 8,
+            name: "Rage",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 20,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Fury Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Pursuit",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Pluck",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 22,
+            name: "Double Hit",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 26,
+            name: "Agility",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 29,
+            name: "Uproar",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 34,
+            name: "Acupressure",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 38,
+            name: "Swords Dance",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 43,
+            name: "Jump Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 95,
+            powerPoints: 10
+        },
+        {
+            level: 47,
+            name: "Drill Peck",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 52,
+            name: "Endeavor",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 56,
+            name: "Thrash",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+    ],
+    86: [
+        {
+            level: 1,
+            name: "Headbutt",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 3,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 7,
+            name: "Water Sport",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 11,
+            name: "Icy Wind",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 13,
+            name: "Encore",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 17,
+            name: "Ice Shard",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 21,
+            name: "Rest",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 23,
+            name: "Aqua Ring",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 27,
+            name: "Aurora Beam",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 31,
+            name: "Aqua Jet",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 33,
+            name: "Brine",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Take Down",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 41,
+            name: "Dive",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 43,
+            name: "Aqua Tail",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 47,
+            name: "Ice Beam",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 51,
+            name: "Safeguard",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 25
+        },
+        {
+            level: 53,
+            name: "Hail",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+    ],
+    87: [
+        {
+            level: 1,
+            name: "Sheer Cold",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 30,
+            powerPoints: 5
+        },
+        {
+            level: 1,
+            name: "Headbutt",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 3,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 7,
+            name: "Signal Beam",
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().special,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 11,
+            name: "Icy Wind",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 13,
+            name: "Encore",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 17,
+            name: "Ice Shard",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 21,
+            name: "Rest",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 23,
+            name: "Aqua Ring",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 27,
+            name: "Aurora Beam",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 31,
+            name: "Aqua Jet",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 33,
+            name: "Brine",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 39,
+            name: "Take Down",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 45,
+            name: "Dive",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 49,
+            name: "Aqua Tail",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 55,
+            name: "Ice Beam",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 61,
+            name: "Safeguard",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 25
+        },
+        {
+            level: 65,
+            name: "Hail",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+    ],
+    88: [
+        {
+            level: 1,
+            name: "Pound",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Poison Gas",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 40
+        },
+        {
+            level: 4,
+            name: "Harden",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Bite",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 12,
+            name: "Disable",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Acid Spray",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 18,
+            name: "Poison Fang",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 21,
+            name: "Minimize",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 26,
+            name: "Fling",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 29,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 32,
+            name: "Crunch",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 37,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 40,
+            name: "Gunk Shot",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 43,
+            name: "Acid Armor",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 46,
+            name: "Belch",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 48,
+            name: "Memento",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+    ],
+    89: [
+        {
+            level: 1,
+            name: "Venom Drench",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Pound",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Poison Gas",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 40
+        },
+        {
+            level: 4,
+            name: "Harden",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Bite",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 12,
+            name: "Disable",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Acid Spray",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 18,
+            name: "Poison Fang",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 21,
+            name: "Minimize",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 26,
+            name: "Fling",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 29,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 32,
+            name: "Crunch",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 37,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 40,
+            name: "Gunk Shot",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 43,
+            name: "Acid Armor",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 46,
+            name: "Belch",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 48,
+            name: "Memento",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+    ],
+    90: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Water Gun",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 4,
+            name: "Withdraw",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 8,
+            name: "Ice Shard",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 12,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 16,
+            name: "Whirlwind",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Supersonic",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 20
+        },
+        {
+            level: 24,
+            name: "Aurora Beam",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 28,
+            name: "Protect",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 32,
+            name: "Razor Shell",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 95,
+            powerPoints: 10
+        },
+        {
+            level: 36,
+            name: "Iron Defense",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 40,
+            name: "Ice Beam",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 44,
+            name: "Shell Smash",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 48,
+            name: "Hydro Pump",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+    ],
+    91: [
+        {
+            level: 1,
+            name: "Icicle Spear",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Icicle Crash",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
+            power: 85,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Toxic Spikes",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Spikes",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Water Gun",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 1,
+            name: "Withdraw",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Ice Shard",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Whirlwind",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Supersonic",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Aurora Beam",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Protect",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Razor Shell",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 95,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Iron Defense",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Ice Beam",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Shell Smash",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Hydro Pump",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 110,
+            accuracy: 80,
+            powerPoints: 5
+        },
+    ],
+    92: [
+        {
+            level: 1,
+            name: "Lick",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Confuse Ray",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 4,
+            name: "Hypnosis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 8,
+            name: "Mean Look",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 12,
+            name: "Payback",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 16,
+            name: "Spite",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Curse",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 24,
+            name: "Hex",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 28,
+            name: "Night Shade",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 32,
+            name: "Sucker Punch",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 36,
+            name: "Dark Pulse",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 40,
+            name: "Shadow Ball",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 44,
+            name: "Destiny Bond",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 48,
+            name: "Dream Eater",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 100,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    93: [
+        {
+            level: 1,
+            name: "Shadow Punch",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Lick",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Confuse Ray",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Hypnosis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Mean Look",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 12,
+            name: "Payback",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 16,
+            name: "Spite",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Curse",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 24,
+            name: "Hex",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 30,
+            name: "Night Shade",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 36,
+            name: "Sucker Punch",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 42,
+            name: "Dark Pulse",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 48,
+            name: "Shadow Ball",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 54,
+            name: "Destiny Bond",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 60,
+            name: "Dream Eater",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 100,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    94: [
+        {
+            level: 1,
+            name: "Shadow Punch",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Perish Song",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 1,
+            name: "Reflect Type",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Lick",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Confuse Ray",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Hypnosis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Mean Look",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 12,
+            name: "Payback",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 16,
+            name: "Spite",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Curse",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 24,
+            name: "Hex",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 30,
+            name: "Night Shade",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 36,
+            name: "Sucker Punch",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 42,
+            name: "Dark Pulse",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 48,
+            name: "Shadow Ball",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 54,
+            name: "Destiny Bond",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 60,
+            name: "Dream Eater",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 100,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    95: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Harden",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Bind",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Rock Throw",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 4,
+            name: "Smack Down",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 8,
+            name: "Rock Polish",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Dragon Breath",
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 16,
+            name: "Curse",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Rock Slide",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 24,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 28,
+            name: "Sand Tomb",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 32,
+            name: "Stealth Rock",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 36,
+            name: "Slam",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 75,
+            powerPoints: 20
+        },
+        {
+            level: 40,
+            name: "Sandstorm",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 44,
+            name: "Dig",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 48,
+            name: "Iron Tail",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 75,
+            powerPoints: 15
+        },
+        {
+            level: 52,
+            name: "Stone Edge",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 56,
+            name: "Double-Edge",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    96: [
+        {
+            level: 1,
+            name: "Pound",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Hypnosis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 5,
+            name: "Disable",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 9,
+            name: "Confusion",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 13,
+            name: "Headbutt",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 17,
+            name: "Poison Gas",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 40
+        },
+        {
+            level: 21,
+            name: "Meditate",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 25,
+            name: "Psybeam",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 29,
+            name: "Wake-Up Slap",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Psych Up",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Synchronoise",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 41,
+            name: "Zen Headbutt",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 45,
+            name: "Swagger",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 15
+        },
+
+        {
+            level: 49,
+            name: "Psychic",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 53,
+            name: "Nasty Plot",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 57,
+            name: "Psychock",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 61,
+            name: "Future Sight",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+    ],
+    97: [
+        {
+            level: 1,
+            name: "Future Sight",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Nasty Plot",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Nightmare",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Switcheroo",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Pound",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Hypnosis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 5,
+            name: "Disable",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 9,
+            name: "Confusion",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 13,
+            name: "Headbutt",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 17,
+            name: "Poison Gas",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 40
+        },
+        {
+            level: 21,
+            name: "Meditate",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 25,
+            name: "Psybeam",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 29,
+            name: "Wake-Up Slap",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Psych Up",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Synchronoise",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 41,
+            name: "Zen Headbutt",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 90,
+            powerPoints: 15
+        },
+        {
+            level: 45,
+            name: "Swagger",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 15
+        },
+
+        {
+            level: 49,
+            name: "Psychic",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 53,
+            name: "Nasty Plot",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 57,
+            name: "Psychock",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 61,
+            name: "Future Sight",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+    ],
+    98: [
+        {
+            level: 1,
+            name: "Mud Sport",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Bubble",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 5,
+            name: "Vice Grip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 55,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 9,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 11,
+            name: "Harden",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 15,
+            name: "Bubble Beam",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Mud Shot",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
+            power: 55,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 21,
+            name: "Metal Claw",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 95,
+            powerPoints: 35
+        },
+        {
+            level: 25,
+            name: "Stomp",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 29,
+            name: "Protect",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 31,
+            name: "Guillotine",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 30,
+            powerPoints: 5
+        },
+        {
+            level: 35,
+            name: "Slam",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 75,
+            powerPoints: 20
+        },
+        {
+            level: 39,
+            name: "Brine",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 41,
+            name: "Crabhammer",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 45,
+            name: "Flail",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    99: [
+        {
+            level: 1,
+            name: "Wide Guard",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Mud Sport",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Bubble",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 5,
+            name: "Vice Grip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 55,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 9,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 11,
+            name: "Harden",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 15,
+            name: "Bubble Beam",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 19,
+            name: "Mud Shot",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().special,
+            power: 55,
+            accuracy: 95,
+            powerPoints: 15
+        },
+        {
+            level: 21,
+            name: "Metal Claw",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 95,
+            powerPoints: 35
+        },
+        {
+            level: 25,
+            name: "Stomp",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 32,
+            name: "Protect",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Guillotine",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 30,
+            powerPoints: 5
+        },
+        {
+            level: 44,
+            name: "Slam",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 75,
+            powerPoints: 20
+        },
+        {
+            level: 51,
+            name: "Brine",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 56,
+            name: "Crabhammer",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 63,
+            name: "Flail",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    100: [
+        {
+            level: 1,
+            name: "Charge",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 4,
+            name: "Sonic Boom",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 6,
+            name: "Eerie Impulse",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 9,
+            name: "Spark",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Rollout",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 13,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 16,
+            name: "Charge Beam",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Swift",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 22,
+            name: "Electro Ball",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 26,
+            name: "Self-Destruct",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 200,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 29,
+            name: "Light Screen",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 34,
+            name: "Magnet Rise",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Discharge",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 41,
+            name: "Explosion",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 250,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 46,
+            name: "Gyro Ball",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 48,
+            name: "Mirror Coat",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+    ],
+    101: [
+        {
+            level: 1,
+            name: "Magnetic Flux",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Charge",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 4,
+            name: "Sonic Boom",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 6,
+            name: "Eerie Impulse",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 9,
+            name: "Spark",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Rollout",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 13,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 16,
+            name: "Charge Beam",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Swift",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 22,
+            name: "Electro Ball",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 26,
+            name: "Self-Destruct",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 200,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 29,
+            name: "Light Screen",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 36,
+            name: "Magnet Rise",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 41,
+            name: "Discharge",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 47,
+            name: "Explosion",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 250,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 54,
+            name: "Gyro Ball",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 58,
+            name: "Mirror Coat",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+    ],
+    102: [
+        {
+            level: 1,
+            name: "Barrage",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Uproar",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Hypnosis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 7,
+            name: "Reflect",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 11,
+            name: "Leech Seed",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 17,
+            name: "Bullet Seed",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 19,
+            name: "Stun Spore",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 30
+        },
+        {
+            level: 21,
+            name: "Poison Powder",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 35
+        },
+        {
+            level: 23,
+            name: "Sleep Powder",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 15
+        },
+        {
+            level: 27,
+            name: "Confusion",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 33,
+            name: "Worry Seed",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Natural Gift",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 43,
+            name: "Solar Beam",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 47,
+            name: "Extrasensory",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 50,
+            name: "Bestow",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+    ],
+    103: [
+        {
+            level: 1,
+            name: "Stomp",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Seed Bomb",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Barrage",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Hypnosis",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 60,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Confusion",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 17,
+            name: "Psychock",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 27,
+            name: "Egg Bomb",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 75,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Wood Hammer",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 47,
+            name: "Leaf Storm",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
+            power: 130,
+            accuracy: 90,
+            powerPoints: 5
+        },
+    ],
+    104: [
+        {
+            level: 1,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 3,
+            name: "Tail Whip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Bone Club",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 11,
+            name: "Headbutt",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 13,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 17,
+            name: "Focus Energy",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 21,
+            name: "Bonemerang",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 23,
+            name: "Rage",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 20,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 27,
+            name: "False Swipe",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 31,
+            name: "Thrash",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 33,
+            name: "Fling",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Stomping Tantrum",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 41,
+            name: "Endeavor",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 43,
+            name: "Double-Edge",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 47,
+            name: "Retaliate",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 51,
+            name: "Bone Rush",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 90,
+            powerPoints: 10
+        },
+    ],
+    105: [
+        {
+            level: 1,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 3,
+            name: "Tail Whip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Bone Club",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 11,
+            name: "Headbutt",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 13,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 17,
+            name: "Focus Energy",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 21,
+            name: "Bonemerang",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 23,
+            name: "Rage",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 20,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 27,
+            name: "False Swipe",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 33,
+            name: "Thrash",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Fling",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 43,
+            name: "Stomping Tantrum",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 49,
+            name: "Endeavor",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 53,
+            name: "Double-Edge",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 59,
+            name: "Retaliate",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 65,
+            name: "Bone Rush",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 90,
+            powerPoints: 10
+        },
+    ],
+    106: [
+        {
+            level: 1,
+            name: "Brick Break",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Feint",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Low Sweep",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Helping Hand",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Fake Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Focus Energy",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 4,
+            name: "Double Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 8,
+            name: "Low Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Endure",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 16,
+            name: "Revenge",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 21,
+            name: "Wide Guard",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 24,
+            name: "Blaze Kick",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
+            power: 85,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 28,
+            name: "Mind Reader",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 32,
+            name: "Mega Kick",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 75,
+            powerPoints:5
+        },
+        {
+            level: 36,
+            name: "Close Combat",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 40,
+            name: "Reversal",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 44,
+            name: "High Jump Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 130,
+            accuracy: 90,
+            powerPoints: 10
+        },
+    ],
+    107: [
+        {
+            level: 1,
+            name: "Drain Punch",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Feint",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Vacuum Wave",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Bullet Punch",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Helping Hand",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Fake Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Focus Energy",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 4,
+            name: "Mach Punch",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 8,
+            name: "Power-Up Punch",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Detect",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 16,
+            name: "Revenge",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 21,
+            name: "Quick Guard",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 24,
+            name: "Thunder Punch",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 24,
+            name: "Ice Punch",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 24,
+            name: "Fire Punch",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().physical,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 28,
+            name: "Agility",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 32,
+            name: "Mega Punch",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 36,
+            name: "Close Combat",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 40,
+            name: "Counter",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 44,
+            name: "Focus Punch",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 150,
+            accuracy: 100,
+            powerPoints: 20
+        },
+    ],
+    108: [
+        {
+            level: 1,
+            name: "Lick",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 5,
+            name: "Supersonic",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 20
+        },
+        {
+            level: 9,
+            name: "Defense Curl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 13,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 17,
+            name: "Wrap",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 21,
+            name: "Stomp",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 25,
+            name: "Disable",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 29,
+            name: "Slam",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 75,
+            powerPoints: 20
+        },
+        {
+            level: 33,
+            name: "Rollout",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 30,
+            accuracy: 90,
+            powerPoints: 20
+        },
+        {
+            level: 37,
+            name: "Chip Away",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 41,
+            name: "Me First",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 45,
+            name: "Refresh",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 49,
+            name: "Screech",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 85,
+            powerPoints: 40
+        },
+        {
+            level: 53,
+            name: "Power Whip",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 57,
+            name: "Wring Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+    ],
+    109: [
+        {
+            level: 1,
+            name: "Poison Gas",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 4,
+            name: "Smog",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 30,
+            accuracy: 70,
+            powerPoints: 20
+        },
+        {
+            level: 8,
+            name: "Smokescreen",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Clear Smog",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 16,
+            name: "Assurance",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Sludge",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 24,
+            name: "Haze",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 28,
+            name: "Self-Destruct",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 200,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 32,
+            name: "Sludge Bomb",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 36,
+            name: "Toxic",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 40,
+            name: "Belch",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 44,
+            name: "Explosion",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 250,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 48,
+            name: "Memento",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 52,
+            name: "Destiny Bond",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+    ],
+    110: [
+        {
+            level: 1,
+            name: "Double Hit",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Heat Wave",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 95,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Poison Gas",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Smog",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 30,
+            accuracy: 70,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Smokescreen",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Clear Smog",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 50,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 16,
+            name: "Assurance",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Sludge",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 24,
+            name: "Haze",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 28,
+            name: "Self-Destruct",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 200,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 32,
+            name: "Sludge Bomb",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 38,
+            name: "Toxic",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 44,
+            name: "Belch",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().special,
+            power: 120,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 50,
+            name: "Explosion",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 250,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 56,
+            name: "Memento",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 62,
+            name: "Destiny Bond",
+            type: properties.returnAttributes().ghost,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+    ],
+    111: [
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Tail Whip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 5,
+            name: "Smack Down",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 10,
+            name: "Bulldoze",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Horn Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 20,
+            name: "Scary Face",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 25,
+            name: "Stomp",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 30,
+            name: "Rock Blast",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 35,
+            name: "Drill Run",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 95,
+            powerPoints: 10
+        },
+        {
+            level: 40,
+            name: "Take Down",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 45,
+            name: "Earthquake",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 50,
+            name: "Stone Edge",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 55,
+            name: "Megahorn",
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 60,
+            name: "Horn Drill",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 30,
+            powerPoints: 5
+        },
+    ],
+    112: [
+        {
+            level: 1,
+            name: "Hammer Arm",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 1,
+            name: "Tackle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Tail Whip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 5,
+            name: "Smack Down",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 50,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 10,
+            name: "Bulldoze",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 15,
+            name: "Horn Attack",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 20,
+            name: "Scary Face",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 25,
+            name: "Stomp",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 30,
+            name: "Rock Blast",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 25,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 35,
+            name: "Drill Run",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 95,
+            powerPoints: 10
+        },
+        {
+            level: 40,
+            name: "Take Down",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 47,
+            name: "Earthquake",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 54,
+            name: "Stone Edge",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 80,
+            powerPoints: 5
+        },
+        {
+            level: 61,
+            name: "Megahorn",
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 68,
+            name: "Horn Drill",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 30,
+            powerPoints: 5
+        },
+    ],
+    113: [
+        {
+            level: 1,
+            name: "Defense Curl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40
+        },
+        {
+            level: 1,
+            name: "Pound",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 1,
+            name: "Growl",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40
+        },
+        {
+            level: 5,
+            name: "Tail Whip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 9,
+            name: "Refresh",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 12,
+            name: "Double Slap",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 10
+        },
+        {
+            level: 16,
+            name: "Soft-Boiled",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 20,
+            name: "Bestow",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15
+        },
+        {
+            level: 23,
+            name: "Minimize",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 27,
+            name: "Take Down",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 31,
+            name: "Sing",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 55,
+            powerPoints: 15
+        },
+        {
+            level: 34,
+            name: "Fling",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 38,
+            name: "Heal Pulse",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 42,
+            name: "Egg Bomb",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 100,
+            accuracy: 75,
+            powerPoints: 10
+        },
+        {
+            level: 46,
+            name: "Light Screen",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30
+        },
+        {
+            level: 50,
+            name: "Healing Wish",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 54,
+            name: "Double-Edge",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    114: [
+        {
+            level: 1,
+            name: "Ingrain",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 1,
+            name: "Constrict",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 10,
+            accuracy: 100,
+            powerPoints: 35
+        },
+        {
+            level: 4,
+            name: "Sleep Powder",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 15
+        },
+        {
+            level: 7,
+            name: "Vine Whip",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 45,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 10,
+            name: "Absorb",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
+            power: 20,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 14,
+            name: "Poison Powder",
+            type: properties.returnAttributes().poison,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 35
+        },
+        {
+            level: 17,
+            name: "Bind",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 15,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 20,
+            name: "Growth",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20
+        },
+        {
+            level: 23,
+            name: "Mega Drain",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 27,
+            name: "Knock Off",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 65,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 30,
+            name: "Stun Spore",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 75,
+            powerPoints: 30
+        },
+        {
+            level: 33,
+            name: "Natural Gift",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+        {
+            level: 36,
+            name: "Giga Drain",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().special,
+            power: 75,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 38,
+            name: "Ancient Power",
+            type: properties.returnAttributes().rock,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 41,
+            name: "Slam",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 75,
+            powerPoints: 20
+        },
+        {
+            level: 44,
+            name: "Tickle",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 46,
+            name: "Wring Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().special,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 48,
+            name: "Grassy Terrain",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5
+        },
+        {
+            level: 50,
+            name: "Power Whip",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 85,
+            powerPoints: 10
+        },
+    ],
+    115: [
+        {
+            level: 1,
+            name: "Comet Punch",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 18,
+            accuracy: 85,
+            powerPoints: 15
+        },
+        {
+            level: 1,
+            name: "Leer",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 7,
+            name: "Fake Out",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 40,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 10,
+            name: "Tail Whip",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 30
+        },
+        {
+            level: 13,
+            name: "Bite",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 25
+        },
+        {
+            level: 19,
+            name: "Double Hit",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 35,
+            accuracy: 90,
+            powerPoints: 10
+        },
+        {
+            level: 22,
+            name: "Rage",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 20,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 25,
+            name: "Mega Punch",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 80,
+            accuracy: 85,
+            powerPoints: 20
+        },
+        {
+            level: 31,
+            name: "Chip Away",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 34,
+            name: "Dizzy Punch",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 37,
+            name: "Crunch",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 20
+        },
+        {
+            level: 43,
+            name: "Endure",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10
+        },
+        {
+            level: 46,
+            name: "Outrage",
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().physical,
+            power: 120,
+            accuracy: 100,
+            powerPoints: 10
+        },
+        {
+            level: 49,
+            name: "Sucker Punch",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 100,
+            powerPoints: 5
+        },
+        {
+            level: 50,
+            name: "Reversal",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15
+        },
+    ],
+    116: [
+
+    ],
+    117: [
+
+    ],
+    118: [
+
+    ],
+    119: [
+
+    ],
+    120: [
+
+    ],
+    121: [
+
+    ],
+    123: [
+
+    ],
+    124: [
+
+    ],
+    125: [
+
+    ],
+    126: [
+
+    ],
+    127: [
+
+    ],
+    128: [
+
+    ],
+    129: [
+
+    ],
+    130: [
+
+    ],
+    131: [
+
+    ],
+    132: [
+
+    ],
+    133: [
+
+    ],
+    134: [
+
+    ],
+    135: [
+
+    ],
+    136: [
+
+    ],
+    137: [
+
+    ],
+    138: [
+
+    ],
+    139: [
+
+    ],
+    140: [
+
+    ],
+    141: [
+
+    ],
+    142: [
+
+    ],
+    143: [
+
+    ],
+    144: [
+
+    ],
+    145: [
+
+    ],
+    146: [
+
+    ],
+    147: [
+
+    ],
+    148: [
+
+    ],
+    149: [
+
+    ],
+    150: [
+
+    ],
+    151: [
 
     ],
 };
@@ -8110,7 +15623,7 @@ const pokDex = {
     1: {
         id: 1,
         name: "Bulbasaur",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "15.2lbs",
         height: "2'04\"",
@@ -8122,8 +15635,8 @@ const pokDex = {
         traded: false,
         description: "It can go for days without eating a single morsel. In the bulb on its back it stores energy.",
         type: {
-            1: attributes.grass,
-            2: attributes.poison,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 49,
@@ -8159,7 +15672,7 @@ const pokDex = {
     2: {
         id: 2,
         name: "Ivysaur",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "28.7lbs",
         height: "3'03\"",
@@ -8171,8 +15684,8 @@ const pokDex = {
         traded: false,
         description: "The bud on its back grows by drawing energy. It gives off an aroma when it is ready to bloom.",
         type: {
-            1: attributes.grass,
-            2: attributes.poison,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 62,
@@ -8208,7 +15721,7 @@ const pokDex = {
     3: {
         id: 3,
         name: "Venusaur",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "220.5lbs",
         height: "6'07\"",
@@ -8220,8 +15733,8 @@ const pokDex = {
         traded: false,
         description: "The flower on its back catches the sun’s rays. The sunlight is then absorbed and used for energy.",
         type: {
-            1: attributes.grass,
-            2: attributes.poison,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 82,
@@ -8257,7 +15770,7 @@ const pokDex = {
     4: {
         id: 4,
         name: "Charmander",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "18.7lbs",
         height: "2′00\"",
@@ -8269,8 +15782,8 @@ const pokDex = {
         traded: false,
         description: "The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 52,
@@ -8306,7 +15819,7 @@ const pokDex = {
     5: {
         id: 5,
         name: "Charmeleon",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "41.9lbs",
         height: "3′07\"",
@@ -8318,8 +15831,8 @@ const pokDex = {
         traded: false,
         description: "Tough fights could excite this Pokémon. When excited it may breathe out bluish-white flames.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 64,
@@ -8355,7 +15868,7 @@ const pokDex = {
     6: {
         id: 6,
         name: "Charizard",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "199.5lbs",
         height: "5′07\"",
@@ -8367,8 +15880,8 @@ const pokDex = {
         traded: false,
         description: "When this Pokémon expels a blast of superhot fire the red flame at the tip of its tails burns more intensely.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 84,
@@ -8404,7 +15917,7 @@ const pokDex = {
     7: {
         id: 7,
         name: "Squirtle",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "19.8lbs",
         height: "1′08\"",
@@ -8416,8 +15929,8 @@ const pokDex = {
         traded: false,
         description: "Shoots water at prey while in the water. Withdraws into its shell when in danger.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 48,
@@ -8453,7 +15966,7 @@ const pokDex = {
     8: {
         id: 8,
         name: "Wartortle",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "49.6lbs",
         height: "3′03\"",
@@ -8465,8 +15978,8 @@ const pokDex = {
         traded: false,
         description: "When tapped on its head this Pokémon will pull it in but its tail will stick out a little bit.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 63,
@@ -8502,7 +16015,7 @@ const pokDex = {
     9: {
         id: 9,
         name: "Blastoise",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "188.5lbs",
         height: "5′03\"",
@@ -8514,8 +16027,8 @@ const pokDex = {
         traded: false,
         description: "Once it takes aim at its enemy it blasts out water with even more force than a fire hose.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 83,
@@ -8551,7 +16064,7 @@ const pokDex = {
     10: {
         id: 10,
         name: "Caterpie",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "6.4lbs",
         height: "1′00\"",
@@ -8563,8 +16076,8 @@ const pokDex = {
         traded: false,
         description: "If you touch the feeler on top of its head it will release a horrible stink to protect itself.",
         type: {
-            1: attributes.bug,
-            2: attributes.null,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 30,
@@ -8600,7 +16113,7 @@ const pokDex = {
     11: {
         id: 11,
         name: "Metapod",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "21.8lbs",
         height: "2′04\"",
@@ -8612,8 +16125,8 @@ const pokDex = {
         traded: false,
         description: "Hardens its shell to protect itself. However a large impact may cause it to pop out of its shell.",
         type: {
-            1: attributes.bug,
-            2: attributes.null,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 20,
@@ -8649,7 +16162,7 @@ const pokDex = {
     12: {
         id: 12,
         name: "Butterfree",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "70.5lbs",
         height: "3′07\"",
@@ -8661,8 +16174,8 @@ const pokDex = {
         traded: false,
         description: "Its wings covered with poisonous powder repel water. This allows it to fly in the rain.",
         type: {
-            1: attributes.bug,
-            2: attributes.null,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 45,
@@ -8698,7 +16211,7 @@ const pokDex = {
     13: {
         id: 13,
         name: "Weedle",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "7.1lbs",
         height: "1′00\"",
@@ -8710,8 +16223,8 @@ const pokDex = {
         traded: false,
         description: "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves.",
         type: {
-            1: attributes.bug,
-            2: attributes.poison,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 35,
@@ -8747,7 +16260,7 @@ const pokDex = {
     14: {
         id: 14,
         name: "Kakuna",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "22.0lbs",
         height: "2′00\"",
@@ -8759,8 +16272,8 @@ const pokDex = {
         traded: false,
         description: "Able to move only slightly. When endangered it may stick out its stinger and poison its enemy.",
         type: {
-            1: attributes.bug,
-            2: attributes.poison,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 25,
@@ -8796,7 +16309,7 @@ const pokDex = {
     15: {
         id: 15,
         name: "Beedrill",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "65.0lbs",
         height: "3′03\"",
@@ -8808,8 +16321,8 @@ const pokDex = {
         traded: false,
         description: "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.",
         type: {
-            1: attributes.bug,
-            2: attributes.null,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 90,
@@ -8845,7 +16358,7 @@ const pokDex = {
     16: {
         id: 16,
         name: "Pidgey",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "4.0lbs",
         height: "1′00\"",
@@ -8857,8 +16370,8 @@ const pokDex = {
         traded: false,
         description: "Very docile. If attacked it will often kick up sand to protect itself rather than fight back.",
         type: {
-            1: attributes.normal,
-            2: attributes.flying,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 45,
@@ -8894,7 +16407,7 @@ const pokDex = {
     17: {
         id: 17,
         name: "Pidgeotto",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "66.1lbs",
         height: "3′07\"",
@@ -8906,8 +16419,8 @@ const pokDex = {
         traded: false,
         description: "This Pokémon is full of vitality. It constantly flies around its large territory in search of prey.",
         type: {
-            1: attributes.normal,
-            2: attributes.flying,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 60,
@@ -8943,7 +16456,7 @@ const pokDex = {
     18: {
         id: 18,
         name: "Pidgeot",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "87.1lbs",
         height: "4′11\"",
@@ -8955,8 +16468,8 @@ const pokDex = {
         traded: false,
         description: "This Pokémon flies at Mach 2 speed seeking prey. Its large talons are feared as wicked weapons.",
         type: {
-            1: attributes.normal,
-            2: attributes.flying,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 80,
@@ -8992,7 +16505,7 @@ const pokDex = {
     19: {
         id: 19,
         name: "Rattata",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "7.7lbs",
         height: "1′00\"",
@@ -9004,8 +16517,8 @@ const pokDex = {
         traded: false,
         description: "Will chew on anything with its fangs. If you see one you can be certain that 40 more live in the area.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 56,
@@ -9041,7 +16554,7 @@ const pokDex = {
     20: {
         id: 20,
         name: "Raticate",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "40.8lbs",
         height: "2′04\"",
@@ -9053,8 +16566,8 @@ const pokDex = {
         traded: false,
         description: "It makes its Rattata underlings gather food for it dining solely on the most nutritious and delicious fare.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 81,
@@ -9090,7 +16603,7 @@ const pokDex = {
     21: {
         id: 21,
         name: "Spearow",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "4.4lbs",
         height: "1′00\"",
@@ -9102,8 +16615,8 @@ const pokDex = {
         traded: false,
         description: "Inept at flying high. However it can fly around very fast to protect its territory.",
         type: {
-            1: attributes.normal,
-            2: attributes.flying,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 60,
@@ -9139,7 +16652,7 @@ const pokDex = {
     22: {
         id: 22,
         name: "Fearow",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "83.8lbs",
         height: "3′11\"",
@@ -9151,8 +16664,8 @@ const pokDex = {
         traded: false,
         description: "A Pokémon that dates back many years. If it senses danger it flies high and away instantly.",
         type: {
-            1: attributes.normal,
-            2: attributes.flying,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 90,
@@ -9188,7 +16701,7 @@ const pokDex = {
     23: {
         id: 23,
         name: "Ekans",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "15.2lbs",
         height: "6′07\"",
@@ -9200,8 +16713,8 @@ const pokDex = {
         traded: false,
         description: "The older it gets the longer it grows. At night it wraps its long body around tree branches to rest.",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 60,
@@ -9237,7 +16750,7 @@ const pokDex = {
     24: {
         id: 24,
         name: "Arbok",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "143.3lbs",
         height: "11′06\"",
@@ -9249,8 +16762,8 @@ const pokDex = {
         traded: false,
         description: "The frightening patterns on its belly have been studied. Six variations have been confirmed.",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 95,
@@ -9286,7 +16799,7 @@ const pokDex = {
     25: {
         id: 25,
         name: "Pikachu",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "13.2lbs",
         height: "1′04\"",
@@ -9298,8 +16811,8 @@ const pokDex = {
         traded: false,
         description: "This forest-dwelling Pokémon stores electricity in its cheeks so you’ll feel a tingly shock if you touch it.",
         type: {
-            1: attributes.electric,
-            2: attributes.null,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 55,
@@ -9335,7 +16848,7 @@ const pokDex = {
     26: {
         id: 26,
         name: "Raichu",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "66.1lbs",
         height: "2′07\"",
@@ -9347,8 +16860,8 @@ const pokDex = {
         traded: false,
         description: "When electricity builds up inside its body it becomes feisty. It also glows in the dark.",
         type: {
-            1: attributes.electric,
-            2: attributes.null,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 90,
@@ -9384,7 +16897,7 @@ const pokDex = {
     27: {
         id: 27,
         name: "Sandshrew",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "26.5lbs",
         height: "2′00\"",
@@ -9396,8 +16909,8 @@ const pokDex = {
         traded: false,
         description: "Its ice-covered body lets it slide across the ground with bullet-like speed sending its enemies flying when it hits them.",
         type: {
-            1: attributes.ground,
-            2: attributes.null,
+            1: properties.returnAttributes().ground,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 75,
@@ -9433,7 +16946,7 @@ const pokDex = {
     28: {
         id: 28,
         name: "Sandslash",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "65.0lbs",
         height: "3′03\"",
@@ -9445,8 +16958,8 @@ const pokDex = {
         traded: false,
         description: "It is skilled at slashing enemies with its claws. If broken they start to grow back in a day.",
         type: {
-            1: attributes.ground,
-            2: attributes.null,
+            1: properties.returnAttributes().ground,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 100,
@@ -9482,7 +16995,7 @@ const pokDex = {
     29: {
         id: 29,
         name: "NidoranF",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "15.4lbs",
         height: "1′04\"",
@@ -9494,8 +17007,8 @@ const pokDex = {
         traded: false,
         description: "A mild-mannered Pokémon that does not like to fight. Beware—its small horn secretes venom.",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 47,
@@ -9531,7 +17044,7 @@ const pokDex = {
     30: {
         id: 30,
         name: "Nidorina",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "44.1lbs",
         height: "2′07\"",
@@ -9543,8 +17056,8 @@ const pokDex = {
         traded: false,
         description: "When resting deep in its burrow its barbs always retract. This is proof that it is relaxed.",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 62,
@@ -9580,7 +17093,7 @@ const pokDex = {
     31: {
         id: 31,
         name: "Nidoqueen",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "132.3lbs",
         height: "4′03\"",
@@ -9592,8 +17105,8 @@ const pokDex = {
         traded: false,
         description: "When this Pokémon expels a blast of superhot fire the red flame at the tip of its tails burns more intensely.",
         type: {
-            1: attributes.poison,
-            2: attributes.ground,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().ground,
         },
         base: {
             atk: 92,
@@ -9629,7 +17142,7 @@ const pokDex = {
     32: {
         id: 32,
         name: "NidoranM",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "19.8lbs",
         height: "1′08\"",
@@ -9641,8 +17154,8 @@ const pokDex = {
         traded: false,
         description: "Its large ears are always kept upright. If it senses danger it will attack with a poisonous sting.",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 57,
@@ -9678,7 +17191,7 @@ const pokDex = {
     33: {
         id: 33,
         name: "Nidorino",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "43.0lbs",
         height: "2′11\"",
@@ -9690,8 +17203,8 @@ const pokDex = {
         traded: false,
         description: "Its horn contains venom. If it stabs an enemy with the horn the impact makes the poison leak out.",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 72,
@@ -9727,7 +17240,7 @@ const pokDex = {
     34: {
         id: 34,
         name: "Nidoking",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "136.7lbs",
         height: "4′07\"",
@@ -9739,8 +17252,8 @@ const pokDex = {
         traded: false,
         description: "Its steel-like hide adds to its powerful tackle. Its horns are so hard they can pierce a diamond.",
         type: {
-            1: attributes.poison,
-            2: attributes.ground,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().ground,
         },
         base: {
             atk: 102,
@@ -9776,7 +17289,7 @@ const pokDex = {
     35: {
         id: 35,
         name: "Clefairy",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "16.5lbs",
         height: "2′00\"",
@@ -9788,8 +17301,8 @@ const pokDex = {
         traded: false,
         description: "Adored for their cute looks and playfulness. They are thought to be rare as they do not appear often.",
         type: {
-            1: attributes.fairy,
-            2: attributes.null,
+            1: properties.returnAttributes().fairy,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 45,
@@ -9825,7 +17338,7 @@ const pokDex = {
     36: {
         id: 36,
         name: "Clefable",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "88.2lbs",
         height: "4′03\"",
@@ -9837,8 +17350,8 @@ const pokDex = {
         traded: false,
         description: "They appear to be very protective of their own world. It is a kind of fairy rarely seen by people.",
         type: {
-            1: attributes.fairy,
-            2: attributes.null,
+            1: properties.returnAttributes().fairy,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 70,
@@ -9874,7 +17387,7 @@ const pokDex = {
     37: {
         id: 37,
         name: "Vulpix",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "21.8lbs",
         height: "2′00\"",
@@ -9886,8 +17399,8 @@ const pokDex = {
         traded: false,
         description: "Both its fur and its tails are beautiful. As it grows the tails split and form more tails.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 41,
@@ -9923,7 +17436,7 @@ const pokDex = {
     38: {
         id: 38,
         name: "Ninetales",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "43.9lbs",
         height: "3′07\"",
@@ -9935,8 +17448,8 @@ const pokDex = {
         traded: false,
         description: "According to an enduring legend nine noble saints were united and reincarnated as this Pokémon.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 76,
@@ -9972,7 +17485,7 @@ const pokDex = {
     39: {
         id: 39,
         name: "Jigglypuff",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "12.1lbs",
         height: "1′08\"",
@@ -9984,8 +17497,8 @@ const pokDex = {
         traded: false,
         description: "Uses its cute round eyes to enrapture its foe. It then sings a pleasing melody that lulls the foe to sleep.",
         type: {
-            1: attributes.normal,
-            2: attributes.fairy,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().fairy,
         },
         base: {
             atk: 45,
@@ -10021,7 +17534,7 @@ const pokDex = {
     40: {
         id: 40,
         name: "Wigglytuff",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "26.5lbs",
         height: "3′03\"",
@@ -10033,8 +17546,8 @@ const pokDex = {
         traded: false,
         description: "Its body is very elastic. By inhaling deeply it can continue to inflate itself without limit.",
         type: {
-            1: attributes.normal,
-            2: attributes.fairy,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().fairy,
         },
         base: {
             atk: 70,
@@ -10070,7 +17583,7 @@ const pokDex = {
     41: {
         id: 41,
         name: "Zubat",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "16.5lbs",
         height: "2′07\"",
@@ -10082,8 +17595,8 @@ const pokDex = {
         traded: false,
         description: "Emits ultrasonic cries while it flies. They act as a sonar used to check for objects in its way.",
         type: {
-            1: attributes.poison,
-            2: attributes.flying,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 45,
@@ -10119,7 +17632,7 @@ const pokDex = {
     42: {
         id: 42,
         name: "Golbat",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "121.3lbs",
         height: "5′03\"",
@@ -10131,8 +17644,8 @@ const pokDex = {
         traded: false,
         description: "It attacks in a stealthy manner without warning. Its sharp fangs are used to bite and to suck blood.",
         type: {
-            1: attributes.poison,
-            2: attributes.flying,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 80,
@@ -10168,7 +17681,7 @@ const pokDex = {
     43: {
         id: 43,
         name: "Oddish",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "16.5lbs",
         height: "2′07\"",
@@ -10180,8 +17693,8 @@ const pokDex = {
         traded: false,
         description: "It may be mistaken for a clump of weeds. If you try to yank it out of the ground it shrieks horribly.",
         type: {
-            1: attributes.grass,
-            2: attributes.poison,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 50,
@@ -10217,7 +17730,7 @@ const pokDex = {
     44: {
         id: 44,
         name: "Gloom",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "19.0lbs",
         height: "2′07\"",
@@ -10229,8 +17742,8 @@ const pokDex = {
         traded: false,
         description: "Smells incredibly foul! However around one out of a thousand people enjoy sniffing its nose-bending stink.",
         type: {
-            1: attributes.grass,
-            2: attributes.poison,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 65,
@@ -10266,7 +17779,7 @@ const pokDex = {
     45: {
         id: 45,
         name: "Vileplume",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "41.0lbs",
         height: "3′11\"",
@@ -10278,8 +17791,8 @@ const pokDex = {
         traded: false,
         description: "Flaps its broad flower petals to scatter its poisonous pollen. The flapping sound is very loud.",
         type: {
-            1: attributes.poison,
-            2: attributes.grass,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().grass,
         },
         base: {
             atk: 75,
@@ -10315,7 +17828,7 @@ const pokDex = {
     46: {
         id: 46,
         name: "Paras",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "11.9lbs",
         height: "1′00\"",
@@ -10327,8 +17840,8 @@ const pokDex = {
         traded: false,
         description: "Burrows under the ground to gnaw on tree roots. The mushrooms on its back absorb most of the nutrition.",
         type: {
-            1: attributes.bug,
-            2: attributes.grass,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().grass,
         },
         base: {
             atk: 70,
@@ -10364,7 +17877,7 @@ const pokDex = {
     47: {
         id: 47,
         name: "Parasect",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "65.0lbs",
         height: "3′03\"",
@@ -10376,8 +17889,8 @@ const pokDex = {
         traded: false,
         description: "The bug host is drained of energy by the mushrooms on its back. The mushroom appears to do all the thinking.",
         type: {
-            1: attributes.bug,
-            2: attributes.grass,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().grass,
         },
         base: {
             atk: 60,
@@ -10413,7 +17926,7 @@ const pokDex = {
     48: {
         id: 48,
         name: "Venonat",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "66.1lbs",
         height: "(3′03\"",
@@ -10425,8 +17938,8 @@ const pokDex = {
         traded: false,
         description: "Its large eyes act as a radar. In a bright place you can see that they are clusters of many tiny eyes.",
         type: {
-            1: attributes.poison,
-            2: attributes.bug,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().bug,
         },
         base: {
             atk: 55,
@@ -10462,7 +17975,7 @@ const pokDex = {
     49: {
         id: 49,
         name: "Venomoth",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "27.6lbs",
         height: "4′11\"",
@@ -10474,8 +17987,8 @@ const pokDex = {
         traded: false,
         description: "The powdery scales on its wings are hard to remove from skin. They also contain poison that leaks out on contact.",
         type: {
-            1: attributes.bug,
-            2: attributes.poison,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 65,
@@ -10511,7 +18024,7 @@ const pokDex = {
     50: {
         id: 50,
         name: "Diglett",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "1.8lbs",
         height: "0′08\"",
@@ -10523,8 +18036,8 @@ const pokDex = {
         traded: false,
         description: "It prefers dark places. It spends most of its time underground though it may pop up in caves.",
         type: {
-            1: attributes.ground,
-            2: attributes.null,
+            1: properties.returnAttributes().ground,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 55,
@@ -10560,7 +18073,7 @@ const pokDex = {
     51: {
         id: 51,
         name: "Dugtrio",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "73.4lbs",
         height: "2′04\"",
@@ -10572,8 +18085,8 @@ const pokDex = {
         traded: false,
         description: "A team of triplets that can burrow to a depth of 60 miles. It’s reported that this triggers an earthquake.",
         type: {
-            1: attributes.ground,
-            2: attributes.null,
+            1: properties.returnAttributes().ground,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 100,
@@ -10609,7 +18122,7 @@ const pokDex = {
     52: {
         id: 52,
         name: "Meowth",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "9.3lbs",
         height: "1′04\"",
@@ -10621,8 +18134,8 @@ const pokDex = {
         traded: false,
         description: "Appears to be more active at night. It loves round and shiny things. It can’t stop itself from picking them up.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 45,
@@ -10658,7 +18171,7 @@ const pokDex = {
     53: {
         id: 53,
         name: "Persian",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "70.5lbs",
         height: "3′03\"",
@@ -10670,8 +18183,8 @@ const pokDex = {
         traded: false,
         description: "The gem in its forehead glows on its own! It walks with all the grace and elegance of a proud queen.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 70,
@@ -10707,7 +18220,7 @@ const pokDex = {
     54: {
         id: 54,
         name: "Psyduck",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "43.2lbs",
         height: "2′07\"",
@@ -10719,8 +18232,8 @@ const pokDex = {
         traded: false,
         description: "Always tormented by headaches. It uses psychic powers but whether it intends to do so is not known.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 52,
@@ -10756,7 +18269,7 @@ const pokDex = {
     55: {
         id: 55,
         name: "Golduck",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "168.9lbs",
         height: "5′07\"",
@@ -10768,8 +18281,8 @@ const pokDex = {
         traded: false,
         description: "Its long slim limbs end in broad flippers. They are used for swimming gracefully in lakes.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 82,
@@ -10805,7 +18318,7 @@ const pokDex = {
     56: {
         id: 56,
         name: "Mankey",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "61.7lbs",
         height: "1′08\"",
@@ -10817,8 +18330,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.fight,
-            2: attributes.null,
+            1: properties.returnAttributes().fight,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 80,
@@ -10854,7 +18367,7 @@ const pokDex = {
     57: {
         id: 57,
         name: "Primeape",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "70.5lbs",
         height: "3′03\"",
@@ -10866,8 +18379,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.fight,
-            2: attributes.null,
+            1: properties.returnAttributes().fight,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 105,
@@ -10903,7 +18416,7 @@ const pokDex = {
     58: {
         id: 58,
         name: "Growlithe",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "16.5lbs",
         height: "2′04\"",
@@ -10915,8 +18428,8 @@ const pokDex = {
         traded: false,
         description: "A Pokémon with a friendly nature. However it will bark fiercely at anything invading its territory.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 70,
@@ -10952,7 +18465,7 @@ const pokDex = {
     59: {
         id: 59,
         name: "Arcanine",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "341.7lbs",
         height: "6′03\"",
@@ -10964,8 +18477,8 @@ const pokDex = {
         traded: false,
         description: "A legendary Pokémon in the East. Many people are charmed by the grace and beauty of its running.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 110,
@@ -11001,7 +18514,7 @@ const pokDex = {
     60: {
         id: 60,
         name: "Poliwag",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "27.3lbs",
         height: "(2′00\"",
@@ -11013,8 +18526,8 @@ const pokDex = {
         traded: false,
         description: "The direction of the spiral on the belly differs by area. It is more adept at swimming than walking.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 50,
@@ -11050,7 +18563,7 @@ const pokDex = {
     61: {
         id: 61,
         name: "Poliwhirl",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "44.1lbs",
         height: "3′03\"",
@@ -11062,8 +18575,8 @@ const pokDex = {
         traded: false,
         description: "Under attack it uses its belly spiral to put the foe to sleep. It then makes its escape.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 65,
@@ -11099,7 +18612,7 @@ const pokDex = {
     62: {
         id: 62,
         name: "Poliwrath",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "119.0lbs",
         height: "4′03\"",
@@ -11111,8 +18624,8 @@ const pokDex = {
         traded: false,
         description: "Swims powerfully using all the muscles in its body. It can even overtake world-class swimmers.",
         type: {
-            1: attributes.water,
-            2: attributes.fight,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().fight,
         },
         base: {
             atk: 95,
@@ -11148,7 +18661,7 @@ const pokDex = {
     63: {
         id: 63,
         name: "Abra",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "43.0lbs",
         height: "2′11\"",
@@ -11160,8 +18673,8 @@ const pokDex = {
         traded: false,
         description: "Sleeps 18 hours a day. If it senses danger it will teleport itself to safety even as it sleeps.",
         type: {
-            1: attributes.psychic,
-            2: attributes.null,
+            1: properties.returnAttributes().psychic,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 20,
@@ -11197,7 +18710,7 @@ const pokDex = {
     64: {
         id: 64,
         name: "Kadabra",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "124.6lbs",
         height: "4′03\"",
@@ -11209,8 +18722,8 @@ const pokDex = {
         traded: false,
         description: "Many odd things happen if this Pokémon is close by. For example it makes clocks run backward.",
         type: {
-            1: attributes.psychic,
-            2: attributes.null,
+            1: properties.returnAttributes().psychic,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 35,
@@ -11246,7 +18759,7 @@ const pokDex = {
     65: {
         id: 65,
         name: "Alakazam",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "4′11lbs",
         height: "105.8\"",
@@ -11258,8 +18771,8 @@ const pokDex = {
         traded: false,
         description: "A Pokémon that can memorize anything. It never forgets what it learns—that’s why this Pokémon is smart.",
         type: {
-            1: attributes.psychic,
-            2: attributes.null,
+            1: properties.returnAttributes().psychic,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 50,
@@ -11295,7 +18808,7 @@ const pokDex = {
     66: {
         id: 66,
         name: "Machop",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "43.0lbs",
         height: "2′07\"",
@@ -11307,8 +18820,8 @@ const pokDex = {
         traded: false,
         description: "Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough.",
         type: {
-            1: attributes.fight,
-            2: attributes.null,
+            1: properties.returnAttributes().fight,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 80,
@@ -11344,7 +18857,7 @@ const pokDex = {
     67: {
         id: 67,
         name: "Machoke",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "155.4lbs",
         height: "4′11\"",
@@ -11356,8 +18869,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.fight,
-            2: attributes.null,
+            1: properties.returnAttributes().fight,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 100,
@@ -11393,7 +18906,7 @@ const pokDex = {
     68: {
         id: 68,
         name: "Machamp",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "286.6lbs",
         height: "5′03\"",
@@ -11405,8 +18918,8 @@ const pokDex = {
         traded: false,
         description: "One arm alone can move mountains. Using all four arms this Pokémon fires off awesome punches.",
         type: {
-            1: attributes.fight,
-            2: attributes.null,
+            1: properties.returnAttributes().fight,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 130,
@@ -11442,7 +18955,7 @@ const pokDex = {
     69: {
         id: 69,
         name: "Bellsprout",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "8.8lbs",
         height: "2′04\"",
@@ -11454,8 +18967,8 @@ const pokDex = {
         traded: false,
         description: "Prefers hot and humid places. It ensnares tiny bugs with its vines and devours them.",
         type: {
-            1: attributes.grass,
-            2: attributes.poison,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 75,
@@ -11491,7 +19004,7 @@ const pokDex = {
     70: {
         id: 70,
         name: "Weepinbell",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "14.1lbs",
         height: "3′03\"",
@@ -11503,8 +19016,8 @@ const pokDex = {
         traded: false,
         description: "When hungry it swallows anything that moves. Its hapless prey is dissolved by strong acids.",
         type: {
-            1: attributes.grass,
-            2: attributes.poison,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 90,
@@ -11540,7 +19053,7 @@ const pokDex = {
     71: {
         id: 71,
         name: "Victreebel",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "34.2lbs",
         height: "5′07\"",
@@ -11552,8 +19065,8 @@ const pokDex = {
         traded: false,
         description: "Lures prey with the sweet aroma of honey. Swallowed whole the prey is dissolved in a day bones and all.",
         type: {
-            1: attributes.grass,
-            2: attributes.poison,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 105,
@@ -11589,7 +19102,7 @@ const pokDex = {
     72: {
         id: 72,
         name: "Tentacool",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "100.3lbs",
         height: "2′11\"",
@@ -11601,8 +19114,8 @@ const pokDex = {
         traded: false,
         description: "It can sometimes be found all dry and shriveled up on a beach. Toss it back into the sea to revive it.",
         type: {
-            1: attributes.water,
-            2: attributes.poison,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 40,
@@ -11638,7 +19151,7 @@ const pokDex = {
     73: {
         id: 73,
         name: "Tentacruel",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "34.2lbs",
         height: "5′07\"",
@@ -11650,8 +19163,8 @@ const pokDex = {
         traded: false,
         description: "Its 80 tentacles can stretch and contract freely. They wrap around prey and weaken it with poison.",
         type: {
-            1: attributes.water,
-            2: attributes.poison,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 70,
@@ -11687,7 +19200,7 @@ const pokDex = {
     74: {
         id: 74,
         name: "Geodude",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "44.1lbs",
         height: "1′04\"",
@@ -11699,8 +19212,8 @@ const pokDex = {
         traded: false,
         description: "Commonly found near mountain trails and the like. If you step on one by accident it gets angry.",
         type: {
-            1: attributes.rock,
-            2: attributes.ground,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().ground,
         },
         base: {
             atk: 80,
@@ -11736,7 +19249,7 @@ const pokDex = {
     75: {
         id: 75,
         name: "Graveler",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "231.5lbs",
         height: "3′03\"",
@@ -11748,8 +19261,8 @@ const pokDex = {
         traded: false,
         description: "Often seen rolling down mountain trails. Obstacles are just things to roll straight over not avoid.",
         type: {
-            1: attributes.rock,
-            2: attributes.ground,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().ground,
         },
         base: {
             atk: 95,
@@ -11785,7 +19298,7 @@ const pokDex = {
     76: {
         id: 76,
         name: "Golem",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "661.4lbs",
         height: "4′07\"",
@@ -11797,8 +19310,8 @@ const pokDex = {
         traded: false,
         description: "Once it sheds its skin its body turns tender and whitish. Its hide hardens when it’s exposed to air.",
         type: {
-            1: attributes.rock,
-            2: attributes.ground,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().ground,
         },
         base: {
             atk: 120,
@@ -11834,7 +19347,7 @@ const pokDex = {
     77: {
         id: 77,
         name: "Ponyta",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "66.1lbs",
         height: "3′03\"",
@@ -11846,8 +19359,8 @@ const pokDex = {
         traded: false,
         description: "Capable of jumping incredibly high. Its hooves and sturdy legs absorb the impact of a hard landing.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 85,
@@ -11883,7 +19396,7 @@ const pokDex = {
     78: {
         id: 78,
         name: "Rapidash",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "209.4lbs",
         height: "5′07\"",
@@ -11895,8 +19408,8 @@ const pokDex = {
         traded: false,
         description: "Just loves to run. If it sees something faster than itself it will give chase at top speed.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 100,
@@ -11932,7 +19445,7 @@ const pokDex = {
     79: {
         id: 79,
         name: "Slowpoke",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "34.2lbs",
         height: "5′07\"",
@@ -11944,8 +19457,8 @@ const pokDex = {
         traded: false,
         description: "Incredibly slow and sluggish. It is quite content to loll about without worrying about the time.",
         type: {
-            1: attributes.water,
-            2: attributes.psychic,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().psychic,
         },
         base: {
             atk: 65,
@@ -11981,7 +19494,7 @@ const pokDex = {
     80: {
         id: 80,
         name: "Slowbro",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "173.1lbs",
         height: "5′03\"",
@@ -11993,8 +19506,8 @@ const pokDex = {
         traded: false,
         description: "Lives lazily by the sea. If the Shellder on its tail comes off it becomes a Slowpoke again.",
         type: {
-            1: attributes.water,
-            2: attributes.psychic,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().psychic,
         },
         base: {
             atk: 75,
@@ -12030,7 +19543,7 @@ const pokDex = {
     81: {
         id: 81,
         name: "Magnemite",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "13.2lbs",
         height: "1′00\"",
@@ -12042,8 +19555,8 @@ const pokDex = {
         traded: false,
         description: "It is hatched with the ability to defy gravity. It floats while emitting powerful electromagnetic waves.",
         type: {
-            1: attributes.electric,
-            2: attributes.steel,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().steel,
         },
         base: {
             atk: 35,
@@ -12079,7 +19592,7 @@ const pokDex = {
     82: {
         id: 82,
         name: "Magneton",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "132.3lbs",
         height: "3′03\"",
@@ -12091,8 +19604,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.electric,
-            2: attributes.steel,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().steel,
         },
         base: {
             atk: 60,
@@ -12128,7 +19641,7 @@ const pokDex = {
     83: {
         id: 83,
         name: "Farfetchd",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "33.1lbs",
         height: "2′07\"",
@@ -12140,8 +19653,8 @@ const pokDex = {
         traded: false,
         description: "They live where reedy plants grow. Farfetch’d are rarely seen so it’s thought their numbers are decreasing.",
         type: {
-            1: attributes.normal,
-            2: attributes.flying,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 90,
@@ -12177,7 +19690,7 @@ const pokDex = {
     84: {
         id: 84,
         name: "Doduo",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "86.4lbs",
         height: "4′07\"",
@@ -12189,8 +19702,8 @@ const pokDex = {
         traded: false,
         description: "Its short wings make flying difficult. Instead this Pokémon runs at high speed on developed legs.",
         type: {
-            1: attributes.normal,
-            2: attributes.flying,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 85,
@@ -12226,7 +19739,7 @@ const pokDex = {
     85: {
         id: 85,
         name: "Dodrio",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "187.8lbs",
         height: "5′07\"",
@@ -12238,8 +19751,8 @@ const pokDex = {
         traded: false,
         description: "One of Doduo’s two heads splits to form a unique species. It runs close to 40 mph in prairies.",
         type: {
-            1: attributes.normal,
-            2: attributes.flying,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 110,
@@ -12275,7 +19788,7 @@ const pokDex = {
     86: {
         id: 86,
         name: "Seel",
-        spawnRate: rarity.common,
+        spawnRate: properties.returnRarity().common,
         level: null,
         weight: "198.4lbs",
         height: "3′07\"",
@@ -12287,8 +19800,8 @@ const pokDex = {
         traded: false,
         description: "Loves freezing-cold conditions. Relishes swimming in a frigid climate of around 14 degrees Fahrenheit.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 45,
@@ -12324,7 +19837,7 @@ const pokDex = {
     87: {
         id: 87,
         name: "Dewgong",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "264.6lbs",
         height: "5′07\"",
@@ -12336,8 +19849,8 @@ const pokDex = {
         traded: false,
         description: "Its entire body is snowy white. Unharmed by even intense cold it swims powerfully in icy waters.",
         type: {
-            1: attributes.water,
-            2: attributes.ice,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().ice,
         },
         base: {
             atk: 70,
@@ -12373,7 +19886,7 @@ const pokDex = {
     88: {
         id: 88,
         name: "Grimer",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "66.1lbs",
         height: "2′11\"",
@@ -12385,8 +19898,8 @@ const pokDex = {
         traded: false,
         description: "Made of congealed sludge. It smells too putrid to touch. Even weeds won’t grow in its path.",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 80,
@@ -12422,7 +19935,7 @@ const pokDex = {
     89: {
         id: 89,
         name: "Muk",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "66.1lbs",
         height: "3′11\"",
@@ -12434,8 +19947,8 @@ const pokDex = {
         traded: false,
         description: "Smells so awful it can cause fainting. Through degeneration of its nose it lost its sense of smell.",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 105,
@@ -12471,7 +19984,7 @@ const pokDex = {
     90: {
         id: 90,
         name: "Shellder",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "8.8lbs",
         height: "1′00\"",
@@ -12483,8 +19996,8 @@ const pokDex = {
         traded: false,
         description: "The shell can withstand any attack. However when it is open the tender body is exposed.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 65,
@@ -12520,7 +20033,7 @@ const pokDex = {
     91: {
         id: 91,
         name: "Cloyster",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "292.1lbs",
         height: "4′11\"",
@@ -12532,8 +20045,8 @@ const pokDex = {
         traded: false,
         description: "For protection it uses its harder-than-diamonds shell. It also shoots spikes from the shell.",
         type: {
-            1: attributes.water,
-            2: attributes.ice,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().ice,
         },
         base: {
             atk: 95,
@@ -12569,7 +20082,7 @@ const pokDex = {
     92: {
         id: 92,
         name: "Gastly",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "0.2lbs",
         height: "4′03\"",
@@ -12581,8 +20094,8 @@ const pokDex = {
         traded: false,
         description: "Said to appear in decrepit deserted buildings. It has no real shape as it appears to be made of a gas.",
         type: {
-            1: attributes.ghost,
-            2: attributes.poison,
+            1: properties.returnAttributes().ghost,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 35,
@@ -12618,7 +20131,7 @@ const pokDex = {
     93: {
         id: 93,
         name: "Haunter",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "0.2lbs",
         height: "5′03\"",
@@ -12630,8 +20143,8 @@ const pokDex = {
         traded: false,
         description: "By licking it saps the victim’s life. It causes shaking that won’t stop until the victim’s demise.",
         type: {
-            1: attributes.ghost,
-            2: attributes.poison,
+            1: properties.returnAttributes().ghost,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 50,
@@ -12667,7 +20180,7 @@ const pokDex = {
     94: {
         id: 94,
         name: "Gengar",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "89.3lbs",
         height: "4′11\"",
@@ -12679,8 +20192,8 @@ const pokDex = {
         traded: false,
         description: "A Gengar is close by if you feel a sudden chill. It may be trying to lay a curse on you.",
         type: {
-            1: attributes.ghost,
-            2: attributes.poison,
+            1: properties.returnAttributes().ghost,
+            2: properties.returnAttributes().poison,
         },
         base: {
             atk: 65,
@@ -12716,7 +20229,7 @@ const pokDex = {
     95: {
         id: 95,
         name: "Onix",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "34.2lbs",
         height: "28′10\"",
@@ -12728,8 +20241,8 @@ const pokDex = {
         traded: false,
         description: "Burrows at high speed in search of food. The tunnels it leaves are used as homes by Diglett.",
         type: {
-            1: attributes.rock,
-            2: attributes.ground,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().ground,
         },
         base: {
             atk: 45,
@@ -12765,7 +20278,7 @@ const pokDex = {
     96: {
         id: 96,
         name: "Drowzee",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "71.4lbs",
         height: "3′03\"",
@@ -12777,8 +20290,8 @@ const pokDex = {
         traded: false,
         description: "If you sleep by it all the time it will sometimes show you dreams it had eaten in the past.",
         type: {
-            1: attributes.psychic,
-            2: attributes.null,
+            1: properties.returnAttributes().psychic,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 48,
@@ -12814,7 +20327,7 @@ const pokDex = {
     97: {
         id: 97,
         name: "Hypno",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "166.7lbs",
         height: "5′03\"",
@@ -12826,8 +20339,8 @@ const pokDex = {
         traded: false,
         description: "Avoid eye contact if you come across one. It will try to put you to sleep by using its pendulum.",
         type: {
-            1: attributes.psychic,
-            2: attributes.null,
+            1: properties.returnAttributes().psychic,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 73,
@@ -12863,7 +20376,7 @@ const pokDex = {
     98: {
         id: 98,
         name: "Krabby",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "14.3lbs",
         height: "1′04\"",
@@ -12875,8 +20388,8 @@ const pokDex = {
         traded: false,
         description: "Its pincers are superb weapons. They sometimes break off during battle but they grow back fast.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 105,
@@ -12912,7 +20425,7 @@ const pokDex = {
     99: {
         id: 99,
         name: "Kingler",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "132.3lbs",
         height: "4′03\"",
@@ -12924,8 +20437,8 @@ const pokDex = {
         traded: false,
         description: "One claw grew massively and is as hard as steel. It has 10,000-horsepower strength. However it is too heavy.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 130,
@@ -12961,7 +20474,7 @@ const pokDex = {
     100: {
         id: 100,
         name: "Voltorb",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "22.9lbs",
         height: "1′08\"",
@@ -12973,8 +20486,8 @@ const pokDex = {
         traded: false,
         description: "It is said to camouflage itself as a Poké Ball. It will self-destruct with very little stimulus.",
         type: {
-            1: attributes.electric,
-            2: attributes.null,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 30,
@@ -13010,7 +20523,7 @@ const pokDex = {
     101: {
         id: 101,
         name: "Electrode",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "146.8lbs",
         height: "3′11\"",
@@ -13022,8 +20535,8 @@ const pokDex = {
         traded: false,
         description: "Stores electrical energy inside its body. Even the slightest shock could trigger a huge explosion.",
         type: {
-            1: attributes.electric,
-            2: attributes.null,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 50,
@@ -13059,7 +20572,7 @@ const pokDex = {
     102: {
         id: 102,
         name: "Exeggcute",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "5.5lbs",
         height: "1′04\"",
@@ -13071,8 +20584,8 @@ const pokDex = {
         traded: false,
         description: "The heads attract each other and spin around. There must be six heads for it to maintain balance.",
         type: {
-            1: attributes.grass,
-            2: attributes.psychic,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().psychic,
         },
         base: {
             atk: 40,
@@ -13108,7 +20621,7 @@ const pokDex = {
     103: {
         id: 103,
         name: "Exeggutor",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "264.6lbs",
         height: "6′07\"",
@@ -13120,8 +20633,8 @@ const pokDex = {
         traded: false,
         description: "Its cries are very noisy. This is because each of the three heads thinks about whatever it likes.",
         type: {
-            1: attributes.grass,
-            2: attributes.psychic,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().psychic,
         },
         base: {
             atk: 95,
@@ -13157,7 +20670,7 @@ const pokDex = {
     104: {
         id: 104,
         name: "Cubone",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "14.3lbs",
         height: "1′04\"",
@@ -13169,8 +20682,8 @@ const pokDex = {
         traded: false,
         description: "Wears the skull of its deceased mother. Its cries echo inside the skull and come out as a sad melody.",
         type: {
-            1: attributes.ground,
-            2: attributes.null,
+            1: properties.returnAttributes().ground,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 50,
@@ -13206,7 +20719,7 @@ const pokDex = {
     105: {
         id: 105,
         name: "Marowak",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "99.2lbs",
         height: "3′03\"",
@@ -13218,8 +20731,8 @@ const pokDex = {
         traded: false,
         description: "Small and weak this Pokémon is adept with its bone club. It has grown more vicious over the ages.",
         type: {
-            1: attributes.ground,
-            2: attributes.null,
+            1: properties.returnAttributes().ground,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 80,
@@ -13255,7 +20768,7 @@ const pokDex = {
     106: {
         id: 102,
         name: "Hitmonlee",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "109.8lbs",
         height: "4′11\"",
@@ -13267,8 +20780,8 @@ const pokDex = {
         traded: false,
         description: "When kicking the sole of its foot turns as hard as a diamond on impact and destroys its enemy.",
         type: {
-            1: attributes.fight,
-            2: attributes.null,
+            1: properties.returnAttributes().fight,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 120,
@@ -13304,7 +20817,7 @@ const pokDex = {
     107: {
         id: 107,
         name: "Hitmonchan",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "110.7lbs",
         height: "4′07\"",
@@ -13316,8 +20829,8 @@ const pokDex = {
         traded: false,
         description: "Punches in corkscrew fashion. It can punch its way through a concrete wall like a drill.",
         type: {
-            1: attributes.fight,
-            2: attributes.null,
+            1: properties.returnAttributes().fight,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 105,
@@ -13353,7 +20866,7 @@ const pokDex = {
     108: {
         id: 108,
         name: "Lickitung",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "144.4lbs",
         height: "3′11\"",
@@ -13365,8 +20878,8 @@ const pokDex = {
         traded: false,
         description: "Its tongue spans almost seven feet and moves more freely than its forelegs. Its licks can cause paralysis.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 55,
@@ -13402,7 +20915,7 @@ const pokDex = {
     109: {
         id: 109,
         name: "Koffing",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "2.2lbs",
         height: "2′00\"",
@@ -13414,8 +20927,8 @@ const pokDex = {
         traded: false,
         description: "In hot places its internal gases could expand and explode without any warning. Be very careful!",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 65,
@@ -13451,7 +20964,7 @@ const pokDex = {
     110: {
         id: 110,
         name: "Weezing",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "20.9lbs",
         height: "3′11\"",
@@ -13463,8 +20976,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.poison,
-            2: attributes.null,
+            1: properties.returnAttributes().poison,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 90,
@@ -13500,7 +21013,7 @@ const pokDex = {
     111: {
         id: 111,
         name: "Rhyhorn",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "253.5lbs",
         height: "3′03\"",
@@ -13512,8 +21025,8 @@ const pokDex = {
         traded: false,
         description: "A Pokémon with a one-track mind. Once it charges it won’t stop running until it falls asleep.",
         type: {
-            1: attributes.ground,
-            2: attributes.rock,
+            1: properties.returnAttributes().ground,
+            2: properties.returnAttributes().rock,
         },
         base: {
             atk: 85,
@@ -13549,7 +21062,7 @@ const pokDex = {
     112: {
         id: 112,
         name: "Rhydon",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "264.6lbs",
         height: "6′03\"",
@@ -13561,8 +21074,8 @@ const pokDex = {
         traded: false,
         description: "Its brain developed when it began walking on its hind legs. Its armor-like hide even repels molten lava.",
         type: {
-            1: attributes.ground,
-            2: attributes.rock,
+            1: properties.returnAttributes().ground,
+            2: properties.returnAttributes().rock,
         },
         base: {
             atk: 130,
@@ -13598,7 +21111,7 @@ const pokDex = {
     113: {
         id: 113,
         name: "Chansey",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "76.3lbs",
         height: "3′07\"",
@@ -13610,8 +21123,8 @@ const pokDex = {
         traded: false,
         description: "A gentle and kindhearted Pokémon that shares its nutritious eggs if it sees an injured Pokémon.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 5,
@@ -13647,7 +21160,7 @@ const pokDex = {
     114: {
         id: 114,
         name: "Tangela",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "77.2lbs",
         height: "3′03\"",
@@ -13659,8 +21172,8 @@ const pokDex = {
         traded: false,
         description: "Its identity is obscured by masses of thick blue vines. The vines are said to never stop growing.",
         type: {
-            1: attributes.grass,
-            2: attributes.null,
+            1: properties.returnAttributes().grass,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 55,
@@ -13696,7 +21209,7 @@ const pokDex = {
     115: {
         id: 115,
         name: "Kangaskhan",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "176.4lbs",
         height: "7′03\"",
@@ -13708,8 +21221,8 @@ const pokDex = {
         traded: false,
         description: "Raises its young in its belly pouch. Won’t run from any fight to keep its young protected.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 95,
@@ -13745,7 +21258,7 @@ const pokDex = {
     116: {
         id: 116,
         name: "Horsea",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "17.6lbs",
         height: "1′04\"",
@@ -13757,8 +21270,8 @@ const pokDex = {
         traded: false,
         description: "If it senses any danger it will vigorously spray water or a special type of ink from its mouth.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 40,
@@ -13794,7 +21307,7 @@ const pokDex = {
     117: {
         id: 117,
         name: "Seadra",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "55.1lbs",
         height: "3′11\"",
@@ -13806,8 +21319,8 @@ const pokDex = {
         traded: false,
         description: "Touching the back fin causes numbness. It hooks its tail to coral to stay in place while sleeping.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 65,
@@ -13843,7 +21356,7 @@ const pokDex = {
     118: {
         id: 118,
         name: "Goldeen",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "33.1lbs",
         height: "2′00\"",
@@ -13855,8 +21368,8 @@ const pokDex = {
         traded: false,
         description: "When it is time for them to lay eggs they can be seen swimming up rivers and falls in large groups.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 67,
@@ -13892,7 +21405,7 @@ const pokDex = {
     119: {
         id: 119,
         name: "Seaking",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "34.2lbs",
         height: "5′07\"",
@@ -13904,8 +21417,8 @@ const pokDex = {
         traded: false,
         description: "It is the male’s job to make a nest by carving out boulders in a stream using the horn on its head.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 92,
@@ -13941,7 +21454,7 @@ const pokDex = {
     120: {
         id: 120,
         name: "Staryu",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "76.1lbs",
         height: "2′07\"",
@@ -13953,8 +21466,8 @@ const pokDex = {
         traded: false,
         description: "As long as the center section is unharmed this Pokémon can grow back fully even if it is chopped to bits.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 45,
@@ -13990,7 +21503,7 @@ const pokDex = {
     121: {
         id: 121,
         name: "Starmie",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "176.4lbs",
         height: "3′07\"",
@@ -14002,8 +21515,8 @@ const pokDex = {
         traded: false,
         description: "The center section is named the core. People think it is communicating when it glows in seven colors.",
         type: {
-            1: attributes.water,
-            2: attributes.psychic,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().psychic,
         },
         base: {
             atk: 75,
@@ -14039,7 +21552,7 @@ const pokDex = {
     122: {
         id: 122,
         name: "MrMime",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "120.2lbs",
         height: "4′03\"",
@@ -14051,8 +21564,8 @@ const pokDex = {
         traded: false,
         description: "Always practices its pantomime act. It makes enemies believe something exists that really doesn’t.",
         type: {
-            1: attributes.psychic,
-            2: attributes.fairy,
+            1: properties.returnAttributes().psychic,
+            2: properties.returnAttributes().fairy,
         },
         base: {
             atk: 45,
@@ -14088,7 +21601,7 @@ const pokDex = {
     123: {
         id: 123,
         name: "Scyther",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "123.5lbs",
         height: "4′11\"",
@@ -14100,8 +21613,8 @@ const pokDex = {
         traded: false,
         description: "Leaps out of tall grass and slices prey with its scythes. The movement looks like that of a ninja.",
         type: {
-            1: attributes.bug,
-            2: attributes.flying,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 110,
@@ -14137,7 +21650,7 @@ const pokDex = {
     124: {
         id: 124,
         name: "Jynx",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "89.5lbs",
         height: "4′07\"",
@@ -14149,8 +21662,8 @@ const pokDex = {
         traded: false,
         description: "Appears to move to a rhythm of its own as if it were dancing. It wiggles its hips as it walks.",
         type: {
-            1: attributes.ice,
-            2: attributes.psychic,
+            1: properties.returnAttributes().ice,
+            2: properties.returnAttributes().psychic,
         },
         base: {
             atk: 50,
@@ -14186,7 +21699,7 @@ const pokDex = {
     125: {
         id: 125,
         name: "Electabuzz",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "66.1lbs",
         height: "3′07\"",
@@ -14198,8 +21711,8 @@ const pokDex = {
         traded: false,
         description: "If a major power outage occurs it is certain that this Pokémon has eaten electricity at a power plant.",
         type: {
-            1: attributes.electric,
-            2: attributes.null,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 83,
@@ -14235,7 +21748,7 @@ const pokDex = {
     126: {
         id: 126,
         name: "Magmar",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "98.1lbs",
         height: "4′03\"",
@@ -14247,8 +21760,8 @@ const pokDex = {
         traded: false,
         description: "Born in an active volcano. Its body is always cloaked in flames so it looks like a big ball of fire.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 95,
@@ -14284,7 +21797,7 @@ const pokDex = {
     127: {
         id: 127,
         name: "Pinsir",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "121.3lbs",
         height: "4′11\"",
@@ -14296,8 +21809,8 @@ const pokDex = {
         traded: false,
         description: "Grips its prey in its pincers and squeezes hard! It can’t move if it’s cold so it lives in warm places.",
         type: {
-            1: attributes.bug,
-            2: attributes.null,
+            1: properties.returnAttributes().bug,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 125,
@@ -14333,7 +21846,7 @@ const pokDex = {
     128: {
         id: 128,
         name: "Tauros",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "194.9lbs",
         height: "4′07\"",
@@ -14345,8 +21858,8 @@ const pokDex = {
         traded: false,
         description: "A rowdy Pokémon with a lot of stamina. Once running it won’t stop until it hits something.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 100,
@@ -14382,7 +21895,7 @@ const pokDex = {
     129: {
         id: 129,
         name: "Magikarp",
-        spawnRate: rarity.ultraCommon,
+        spawnRate: properties.returnRarity().ultraCommon,
         level: null,
         weight: "22.0lbs",
         height: "2′11\"",
@@ -14394,8 +21907,8 @@ const pokDex = {
         traded: false,
         description: "Famous for being very unreliable. It can be found swimming in seas lakes rivers and shallow puddles.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 10,
@@ -14431,7 +21944,7 @@ const pokDex = {
     130: {
         id: 130,
         name: "Gyarados",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "518.1lbs",
         height: "21′04\"",
@@ -14443,8 +21956,8 @@ const pokDex = {
         traded: false,
         description: "Brutally vicious and enormously destructive. Known for totally destroying cities in ancient times.",
         type: {
-            1: attributes.water,
-            2: attributes.flying,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 125,
@@ -14480,7 +21993,7 @@ const pokDex = {
     131: {
         id: 131,
         name: "Lapras",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "485.0lbs",
         height: "8′02\"",
@@ -14492,8 +22005,8 @@ const pokDex = {
         traded: false,
         description: "A gentle soul that can understand human speech. It can ferry people across the sea on its back.",
         type: {
-            1: attributes.water,
-            2: attributes.ice,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().ice,
         },
         base: {
             atk: 85,
@@ -14529,7 +22042,7 @@ const pokDex = {
     132: {
         id: 132,
         name: "Ditto",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "8.8lbs",
         height: "1′00\"",
@@ -14541,8 +22054,8 @@ const pokDex = {
         traded: false,
         description: "When it spots an enemy its body transfigures into an almost-perfect copy of its opponent.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 48,
@@ -14578,7 +22091,7 @@ const pokDex = {
     133: {
         id: 133,
         name: "Eevee",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "14.3lbs",
         height: "1′00\"",
@@ -14590,8 +22103,8 @@ const pokDex = {
         traded: false,
         description: "It can evolve into a variety of forms. Eevee’s genes are the key to solving the mysteries of Pokémon evolution.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 55,
@@ -14627,7 +22140,7 @@ const pokDex = {
     134: {
         id: 134,
         name: "Vaporeon",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "63.9lbs",
         height: "3′03\"",
@@ -14639,8 +22152,8 @@ const pokDex = {
         traded: false,
         description: "Its cell structure is similar to water molecules. It melts into the water and becomes invisible.",
         type: {
-            1: attributes.water,
-            2: attributes.null,
+            1: properties.returnAttributes().water,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 65,
@@ -14676,7 +22189,7 @@ const pokDex = {
     135: {
         id: 135,
         name: "Jolteon",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "54.0lbs",
         height: "2′07\"",
@@ -14688,8 +22201,8 @@ const pokDex = {
         traded: false,
         description: "A sensitive Pokémon that easily becomes sad or angry. Every time its mood changes it charges power.",
         type: {
-            1: attributes.electric,
-            2: attributes.null,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 65,
@@ -14725,7 +22238,7 @@ const pokDex = {
     136: {
         id: 136,
         name: "Flareon",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "55.1lbs",
         height: "2′11\"",
@@ -14737,8 +22250,8 @@ const pokDex = {
         traded: false,
         description: "It has a flame chamber inside its body. It inhales then breathes out fire that is over 3,000 degrees Fahrenheit.",
         type: {
-            1: attributes.fire,
-            2: attributes.null,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 130,
@@ -14774,7 +22287,7 @@ const pokDex = {
     137: {
         id: 137,
         name: "Porygon",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "80.5lbs",
         height: "2′07\"",
@@ -14786,8 +22299,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 60,
@@ -14823,7 +22336,7 @@ const pokDex = {
     138: {
         id: 138,
         name: "Omanyte",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "16.5lbs",
         height: "1′04\"",
@@ -14835,8 +22348,8 @@ const pokDex = {
         traded: false,
         description: "An ancient Pokémon that was recovered from a fossil. It swam by cleverly twisting its 10 tentacles about.",
         type: {
-            1: attributes.rock,
-            2: attributes.water,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().water,
         },
         base: {
             atk: 40,
@@ -14872,7 +22385,7 @@ const pokDex = {
     139: {
         id: 139,
         name: "Omastar",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "77.2lbs",
         height: "3′03\"",
@@ -14884,8 +22397,8 @@ const pokDex = {
         traded: false,
         description: "Its sharp beak rings its mouth. Its shell was too big for it to move freely so it became extinct.",
         type: {
-            1: attributes.rock,
-            2: attributes.water,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().water,
         },
         base: {
             atk: 60,
@@ -14921,7 +22434,7 @@ const pokDex = {
     140: {
         id: 140,
         name: "Kabuto",
-        spawnRate: rarity.uncommon,
+        spawnRate: properties.returnRarity().uncommon,
         level: null,
         weight: "25.4lbs",
         height: "1′08\"",
@@ -14933,8 +22446,8 @@ const pokDex = {
         traded: false,
         description: "A Pokémon that was recovered from a fossil. It used the eyes on its back while hiding on the seafloor.",
         type: {
-            1: attributes.rock,
-            2: attributes.water,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().water,
         },
         base: {
             atk: 80,
@@ -14970,7 +22483,7 @@ const pokDex = {
     141: {
         id: 141,
         name: "Kabutops",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "89.3lbs",
         height: "4′03\"",
@@ -14982,8 +22495,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.rock,
-            2: attributes.water,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().water,
         },
         base: {
             atk: 115,
@@ -15019,7 +22532,7 @@ const pokDex = {
     142: {
         id: 142,
         name: "Aerodactyl",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "130.1lbs",
         height: "5′11\"",
@@ -15031,8 +22544,8 @@ const pokDex = {
         traded: false,
         description: "A savage Pokémon that died out in ancient times. It was resurrected using DNA taken from amber.",
         type: {
-            1: attributes.rock,
-            2: attributes.flying,
+            1: properties.returnAttributes().rock,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 105,
@@ -15068,7 +22581,7 @@ const pokDex = {
     143: {
         id: 143,
         name: "Snorlax",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "1014.1lbs",
         height: "6′11\"",
@@ -15080,8 +22593,8 @@ const pokDex = {
         traded: false,
         description: "Will eat anything even if the food happens to be a little moldy. It never gets an upset stomach.",
         type: {
-            1: attributes.normal,
-            2: attributes.null,
+            1: properties.returnAttributes().normal,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 110,
@@ -15117,7 +22630,7 @@ const pokDex = {
     144: {
         id: 144,
         name: "Articuno",
-        spawnRate: rarity.legendary,
+        spawnRate: properties.returnRarity().legendary,
         level: null,
         weight: "122.1lbs",
         height: "5′07\"",
@@ -15129,8 +22642,8 @@ const pokDex = {
         traded: false,
         description: "A legendary bird Pokémon. It freezes water that is contained in winter air and makes it snow.",
         type: {
-            1: attributes.ice,
-            2: attributes.flying,
+            1: properties.returnAttributes().ice,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 85,
@@ -15166,7 +22679,7 @@ const pokDex = {
     145: {
         id: 145,
         name: "Zapdos",
-        spawnRate: rarity.legendary,
+        spawnRate: properties.returnRarity().legendary,
         level: null,
         weight: "116.0lbs",
         height: "5′03\"",
@@ -15178,8 +22691,8 @@ const pokDex = {
         traded: false,
         description: "This legendary bird Pokémon is said to appear when the sky turns dark and lightning showers down.",
         type: {
-            1: attributes.electric,
-            2: attributes.flying,
+            1: properties.returnAttributes().electric,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 90,
@@ -15215,7 +22728,7 @@ const pokDex = {
     146: {
         id: 146,
         name: "Moltres",
-        spawnRate: rarity.legendary,
+        spawnRate: properties.returnRarity().legendary,
         level: null,
         weight: "132.3lbs",
         height: "6′07\"",
@@ -15227,8 +22740,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.fire,
-            2: attributes.flying,
+            1: properties.returnAttributes().fire,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 100,
@@ -15264,7 +22777,7 @@ const pokDex = {
     147: {
         id: 147,
         name: "Dratini",
-        spawnRate: rarity.rare,
+        spawnRate: properties.returnRarity().rare,
         level: null,
         weight: "7.3lbs",
         height: "5′11\"",
@@ -15276,8 +22789,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.dragon,
-            2: attributes.null,
+            1: properties.returnAttributes().dragon,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 64,
@@ -15313,7 +22826,7 @@ const pokDex = {
     148: {
         id: 148,
         name: "Dragonair",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "36.4lbs",
         height: "13′01\"",
@@ -15325,8 +22838,8 @@ const pokDex = {
         traded: false,
         description: "According to a witness its body was surrounded by a strange aura that gave it a mystical look.",
         type: {
-            1: attributes.dragon,
-            2: attributes.null,
+            1: properties.returnAttributes().dragon,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 84,
@@ -15362,7 +22875,7 @@ const pokDex = {
     149: {
         id: 149,
         name: "Dragonite",
-        spawnRate: rarity.ultraRare,
+        spawnRate: properties.returnRarity().ultraRare,
         level: null,
         weight: "463.0lbs",
         height: "7′03\"",
@@ -15374,8 +22887,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.dragon,
-            2: attributes.flying,
+            1: properties.returnAttributes().dragon,
+            2: properties.returnAttributes().flying,
         },
         base: {
             atk: 134,
@@ -15411,7 +22924,7 @@ const pokDex = {
     150: {
         id: 150,
         name: "Mewtwo",
-        spawnRate: rarity.legendary,
+        spawnRate: properties.returnRarity().legendary,
         level: null,
         weight: "269.0lbs",
         height: "6′07\"",
@@ -15423,8 +22936,8 @@ const pokDex = {
         traded: false,
         description: "\tIts DNA is almost the same as Mew’s. However its size and disposition are vastly different.",
         type: {
-            1: attributes.psychic,
-            2: attributes.null,
+            1: properties.returnAttributes().psychic,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 110,
@@ -15460,7 +22973,7 @@ const pokDex = {
     151: {
         id: 151,
         name: "Mew",
-        spawnRate: rarity.legendary,
+        spawnRate: properties.returnRarity().legendary,
         level: null,
         weight: "8.8lbs",
         height: "1′04\"",
@@ -15472,8 +22985,8 @@ const pokDex = {
         traded: false,
         description: "Emits",
         type: {
-            1: attributes.psychic,
-            2: attributes.null,
+            1: properties.returnAttributes().psychic,
+            2: properties.returnAttributes().null,
         },
         base: {
             atk: 100,
@@ -15508,6 +23021,7 @@ const pokDex = {
     },
 };
 
+
 module.exports = {
     returnDex: function () {
         return pokDex;
@@ -15515,5 +23029,5 @@ module.exports = {
 
     returnMoveList: function () {
         return moveList;
-    }
+    },
 };

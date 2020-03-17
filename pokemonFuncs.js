@@ -12,6 +12,7 @@ let pokDex = require('./pokemonObjs.js');
 const fs = require('fs');
 const readline = require('readline');
 
+
 let min;
 let sec;
 let tree;
@@ -215,51 +216,61 @@ module.exports = {
           };
           follow.currentMoves[1] = {
             level: split[37],
-            name: split[38],
-            type: split[39],
-            category: split[40],
-            power: split[41],
-            accuracy: split[42],
-            powerPoints: split[43]
+            move:
+                {
+                  name: split[38],
+                  type: split[39],
+                  category: split[40],
+                  power: split[41],
+                  accuracy: split[42],
+                  powerPoints: split[43]
+                },
           };
           if (split[44] !== "null") {
             follow.currentMoves[2] = {
               level: split[44],
-              name: split[45],
-              type: split[46],
-              category: split[47],
-              power: split[48],
-              accuracy: split[49],
-              powerPoints: split[50]
+              move:
+                  {
+                    name: split[45],
+                    type: split[46],
+                    category: split[47],
+                    power: split[48],
+                    accuracy: split[49],
+                    powerPoints: split[50]
+                  },
             };
           }
           if (split[51] !== "null") {
             follow.currentMoves[3] = {
               level: split[51],
-              name: split[52],
-              type: split[53],
-              category: split[54],
-              power: split[55],
-              accuracy: split[56],
-              powerPoints: split[57]
+              move:
+                  {
+                    name: split[52],
+                    type: split[53],
+                    category: split[54],
+                    power: split[55],
+                    accuracy: split[56],
+                    powerPoints: split[57]
+                  },
             };
           }
           if (split[58] !== "null") {
             follow.currentMoves[4] = {
               level: split[58],
-              name: split[59],
-              type: split[60],
-              category: split[61],
-              power: split[62],
-              accuracy: split[63],
-              powerPoints: split[64]
+              move:
+                  {
+                    name: split[59],
+                    type: split[60],
+                    category: split[61],
+                    power: split[62],
+                    accuracy: split[63],
+                    powerPoints: split[64]
+                  },
             };
           }
-          // console.log(split[36]);
           module.exports.returnTreeVal(id).follower = follow;
           module.exports.returnTreeVal(id).userID = split[36];
           module.exports.returnTreeVal(id).inBattle = false;
-          // console.log(module.exports.returnTreeVal(id).userID);
         }
         userLine++;
       });
@@ -356,44 +367,56 @@ module.exports = {
           };
           poke.currentMoves[1] = {
             level: split[34],
-            name: split[35],
-            type: split[36],
-            category: split[37],
-            power: split[38],
-            accuracy: split[39],
-            powerPoints: split[40]
+            move:
+                {
+                  name: split[35],
+                  type: split[36],
+                  category: split[37],
+                  power: split[38],
+                  accuracy: split[39],
+                  powerPoints: split[40]
+                },
           };
           if (split[41] !== "null") {
             poke.currentMoves[2] = {
               level: split[41],
-              name: split[42],
-              type: split[43],
-              category: split[44],
-              power: split[45],
-              accuracy: split[46],
-              powerPoints: split[47]
+              move:
+                  {
+                    name: split[42],
+                    type: split[43],
+                    category: split[44],
+                    power: split[45],
+                    accuracy: split[46],
+                    powerPoints: split[47]
+                  },
             };
           }
           if (split[48] !== "null") {
             poke.currentMoves[3] = {
               level: split[48],
-              name: split[49],
-              type: split[50],
-              category: split[51],
-              power: split[52],
-              accuracy: split[53],
-              powerPoints: split[54]
+              move:
+                  {
+                    name: split[49],
+                    type: split[50],
+                    category: split[51],
+                    power: split[52],
+                    accuracy: split[53],
+                    powerPoints: split[54]
+                  },
             };
           }
           if (split[55] !== "null") {
             poke.currentMoves[4] = {
               level: split[55],
-              name: split[56],
-              type: split[57],
-              category: split[58],
-              power: split[59],
-              accuracy: split[60],
-              powerPoints: split[61]
+              move:
+                  {
+                    name: split[56],
+                    type: split[57],
+                    category: split[58],
+                    power: split[59],
+                    accuracy: split[60],
+                    powerPoints: split[61]
+                  },
             };
           }
           if (poke.nickName === "undefined") {
@@ -648,14 +671,14 @@ module.exports = {
     try {
       // for (let i = 0; i < 10000; i++)
       // {
-        let id = module.exports.randomInt(1, 18);
+        let id = module.exports.randomInt(1, 3);
       // console.log(id);
-        let bias = module.exports.rand(0, 85, 0.4);
+        let bias = module.exports.rand(0, 10, 0.4);
         while (bias > pokDex.returnDex()[id].spawnRate) {
-          id = module.exports.randomInt(1, 18);
+          id = module.exports.randomInt(1, 3);
         }
         //
-        // let id = 1;
+        id = 2;
         pokemon = pokDex.returnDex()[id];
         pokemon.level = module.exports.decodeLevel(pokemon.spawnRate);
         pokemon.iv.atk = module.exports.randomInt(1, 32);
@@ -859,9 +882,9 @@ module.exports = {
     let moves = "";
     for (let i = 1; i < 5; i++) {
       if (pokemon.currentMoves[i] !== null && pokemon.currentMoves[i] !== "null" && pokemon.currentMoves[i].level !== "null" && pokemon.currentMoves[i].level !== null) {
-        moves = moves + "move" + i + "lvl:" + pokemon.currentMoves[i].level + "move" + i + "nam:" + pokemon.currentMoves[i].name + "move" + i + "typ:" + pokemon.currentMoves[i].type
-            + "move" + i + "category:" + pokemon.currentMoves[i].category
-            + "move" + i + "power:" + pokemon.currentMoves[i].power + "move" + i + "accuracy:" + pokemon.currentMoves[i].accuracy + "move" + i + "powerPoints:" + pokemon.currentMoves[i].powerPoints;
+        moves = moves + "move" + i + "lvl:" + pokemon.currentMoves[i].level + "move" + i + "nam:" + pokemon.currentMoves[i].move.name + "move" + i + "typ:" + pokemon.currentMoves[i].move.type
+            + "move" + i + "category:" + pokemon.currentMoves[i].move.category
+            + "move" + i + "power:" + pokemon.currentMoves[i].move.power + "move" + i + "accuracy:" + pokemon.currentMoves[i].move.accuracy + "move" + i + "powerPoints:" + pokemon.currentMoves[i].move.powerPoints;
       }
       else {
         moves = moves + "move" + i + "lvl:nullmove" + i + "nam:nullmove" + i + "typ:nullmove" + i + "category:null"
