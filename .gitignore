@@ -1,10 +1,10 @@
 # Project exclude paths
-/node_modules/
-/config.json
-/tockens.txt
-/.idea/
-/.vs/
-/.eslintrc.json
-/package-lock.json
-/package.json
-/files/pokemon/savedData/
+node_modules/
+config.json
+tockens.txt
+.idea/
+.vs/
+.eslintrc.json
+package-lock.json
+package.json
+files/pokemon/savedData/
