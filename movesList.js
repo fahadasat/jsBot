@@ -9,7 +9,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 40,
-            effect: "The user growls in an endearing way, making opposing Pokémon less wary. This lowers their Attack stats."
+            effect: "The user growls in an endearing way making opposing Pokémon less wary. This lowers their Attack stats."
         },
     Scratch:
         {
@@ -19,7 +19,7 @@ const pokeMoves = {
             power: 40,
             accuracy: 100,
             powerPoints: 35,
-            effect: "Hard, pointed, sharp claws rake the target to inflict damage."
+            effect: "Hard pointed sharp claws rake the target to inflict damage."
         },
     Ember:
         {
@@ -81,7 +81,7 @@ const pokeMoves = {
             powerPoints: 10,
             effect: "The user frightens the target with a scary face to harshly lower its Speed stat."
         },
-    Fire:
+    FireSpin:
         {
             name: "Fire Spin",
             type: properties.returnAttributes().fire,
@@ -149,7 +149,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 30,
-            effect: "The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stats."
+            effect: "The user wags its tail cutely making opposing Pokémon less wary and lowering their Defense stats."
         },
     WaterGun:
         {
@@ -169,7 +169,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 40,
-            effect: "The user withdraws its body into its hard shell, raising its Defense stat."
+            effect: "The user withdraws its body into its hard shell raising its Defense stat."
         },
     RapidSpin:
         {
@@ -179,7 +179,7 @@ const pokeMoves = {
             power: 50,
             accuracy: 100,
             powerPoints: 40,
-            effect: "A spin attack that can also eliminate such moves as Bind, Wrap, and Leech Seed. This also raises the user's Speed stat."
+            effect: "A spin attack that can also eliminate such moves as Bind Wrap and Leech Seed. This also raises the user's Speed stat."
         },
     Bite:
         {
@@ -219,7 +219,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 5,
-            effect: "The user summons a heavy rain that falls for five turns, powering up Water-type moves. It lowers the power of Fire-type moves."
+            effect: "The user summons a heavy rain that falls for five turns powering up Water-type moves. It lowers the power of Fire-type moves."
         },
     AquaTail:
         {
@@ -239,7 +239,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 15,
-            effect: "The user breaks its shell, which lowers Defense and Sp. Def stats but sharply raises its Attack, Sp. Atk, and Speed stats."
+            effect: "The user breaks its shell which lowers Defense and Sp. Def stats but sharply raises its Attack Sp. Atk and Speed stats."
         },
     IronDefense:
         {
@@ -249,7 +249,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 15,
-            effect: "The user hardens its body's surface like iron, sharply raising its Defense stat."
+            effect: "The user hardens its body's surface like iron sharply raising its Defense stat."
         },
     HydroPump:
         {
@@ -269,7 +269,7 @@ const pokeMoves = {
             power: 130,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user tucks in its head to raise its Defense stat on the first turn, then rams the target on the next turn."
+            effect: "The user tucks in its head to raise its Defense stat on the first turn then rams the target on the next turn."
         },
     FlashCannon:
         {
@@ -299,7 +299,7 @@ const pokeMoves = {
             power: 60,
             accuracy: 100,
             powerPoints: 20,
-            effect: "The user bites the target. If the target is holding a Berry, the user eats it and gains its effect."
+            effect: "The user bites the target. If the target is holding a Berry the user eats it and gains its effect."
         },
     Harden:
         {
@@ -389,7 +389,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The target is blown away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon."
+            effect: "The target is blown away and a different Pokémon is dragged out. In the wild this ends a battle against a single Pokémon."
         },
     Safeguard:
         {
@@ -439,7 +439,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user lightly performs a beautiful, mystic dance. This boosts the user's Sp. Atk, Sp. Def, and Speed stats."
+            effect: "The user lightly performs a beautiful mystic dance. This boosts the user's Sp. Atk Sp. Def and Speed stats."
         },
     PoisonSting:
         {
@@ -479,7 +479,7 @@ const pokeMoves = {
             power: 20,
             accuracy: 100,
             powerPoints: 20,
-            effect: "As long as this move is in use, the power of rage raises the Attack stat each time the user is hit in battle."
+            effect: "As long as this move is in use the power of rage raises the Attack stat each time the user is hit in battle."
         },
     Pursuit:
         {
@@ -519,7 +519,7 @@ const pokeMoves = {
             power: 60,
             accuracy: 100,
             powerPoints: 10,
-            effect: "If the target has already taken some damage in the same turn, this attack's power is doubled."
+            effect: "If the target has already taken some damage in the same turn this attack's power is doubled."
         },
     ToxicSpikes:
         {
@@ -549,7 +549,7 @@ const pokeMoves = {
             power: 80,
             accuracy: 100,
             powerPoints: 20,
-            effect: "The target is stabbed with a tentacle, arm, or the like steeped in poison. This may also poison the target."
+            effect: "The target is stabbed with a tentacle arm or the like steeped in poison. This may also poison the target."
         },
     Agility:
         {
@@ -579,7 +579,7 @@ const pokeMoves = {
             power: 50,
             accuracy: 100,
             powerPoints: 25,
-            effect: "When the user knocks out a target with this move, the user's Attack stat rises drastically."
+            effect: "When the user knocks out a target with this move the user's Attack stat rises drastically."
         },
     SandAttack:
         {
@@ -589,7 +589,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 15,
-            effect: "Sand is hurled in the target's face, reducing the target's accuracy."
+            effect: "Sand is hurled in the target's face reducing the target's accuracy."
         },
     QuickAttack:
         {
@@ -629,7 +629,7 @@ const pokeMoves = {
             power: 60,
             accuracy: 100,
             powerPoints: 35,
-            effect: "The target is struck with large, imposing wings spread wide to inflict damage."
+            effect: "The target is struck with large imposing wings spread wide to inflict damage."
         },
     Roost:
         {
@@ -719,7 +719,7 @@ const pokeMoves = {
             power: 120,
             accuracy: 100,
             powerPoints: 15,
-            effect: "A reckless, life-risking tackle in which the user rushes the target. This also damages the user quite a lot."
+            effect: "A reckless life-risking tackle in which the user rushes the target. This also damages the user quite a lot."
         },
     SwordsDance:
         {
@@ -759,7 +759,7 @@ const pokeMoves = {
             power: 60,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user confounds the target with speed, then slashes. This attack never misses."
+            effect: "The user confounds the target with speed then slashes. This attack never misses."
         },
     DrillPeck:
         {
@@ -789,7 +789,7 @@ const pokeMoves = {
             power: 35,
             accuracy: 100,
             powerPoints: 35,
-            effect: "The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect."
+            effect: "The user pecks the target. If the target is holding a Berry the user eats it and gains its effect."
         },
     Wrap:
         {
@@ -799,7 +799,7 @@ const pokeMoves = {
             power: 15,
             accuracy: 90,
             powerPoints: 20,
-            effect: "A long body, vines, or the like are used to wrap and squeeze the target for four to five turns."
+            effect: "A long body vines or the like are used to wrap and squeeze the target for four to five turns."
         },
     Glare:
         {
@@ -859,7 +859,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The power stored using the move Stockpile is released at once in an attack. The more power is stored, the greater the move's power."
+            effect: "The power stored using the move Stockpile is released at once in an attack. The more power is stored the greater the move's power."
         },
     AcidSpray:
         {
@@ -969,7 +969,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user and the target become friends, and the target loses its will to fight. This lowers the target's Attack stat."
+            effect: "The user and the target become friends and the target loses its will to fight. This lowers the target's Attack stat."
         },
     SweetKiss:
         {
@@ -979,7 +979,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 75,
             powerPoints: 10,
-            effect: "The user kisses the target with a sweet, angelic cuteness that causes confusion."
+            effect: "The user kisses the target with a sweet angelic cuteness that causes confusion."
         },
     Nuzzle:
         {
@@ -1009,7 +1009,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "The user gazes at the target rather charmingly, making it less wary. This harshly lowers the target's Attack stat."
+            effect: "The user gazes at the target rather charmingly making it less wary. This harshly lowers the target's Attack stat."
         },
     ThunderShock:
         {
@@ -1039,7 +1039,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 15,
-            effect: "By moving rapidly, the user makes illusory copies of itself to raise its evasiveness."
+            effect: "By moving rapidly the user makes illusory copies of itself to raise its evasiveness."
         },
     ElectroBall:
         {
@@ -1049,7 +1049,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user hurls an electric orb at the target. The faster the user is than the target, the greater the move's power."
+            effect: "The user hurls an electric orb at the target. The faster the user is than the target the greater the move's power."
         },
     Feint:
         {
@@ -1079,7 +1079,7 @@ const pokeMoves = {
             power: 80,
             accuracy: 75,
             powerPoints: 20,
-            effect: "The target is slammed with a long tail, vines, or the like to inflict damage."
+            effect: "The target is slammed with a long tail vines or the like to inflict damage."
         },
     Discharge:
         {
@@ -1101,7 +1101,7 @@ const pokeMoves = {
             powerPoints: 15,
             effect: "A strong electric blast crashes down on the target. This may also leave the target with paralysis."
         },
-    Light:
+    LightScreen:
         {
             name: "Light Screen",
             type: properties.returnAttributes().psychic,
@@ -1139,7 +1139,7 @@ const pokeMoves = {
             power: 80,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user burrows into the ground, then attacks on the next turn."
+            effect: "The user burrows into the ground then attacks on the next turn."
         },
     Flash:
         {
@@ -1189,7 +1189,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "If any opposing Pokémon is the opposite gender of the user, it is charmed, which harshly lowers its Sp. Atk stat."
+            effect: "If any opposing Pokémon is the opposite gender of the user it is charmed which harshly lowers its Sp. Atk stat."
         },
     NaturalGift:
         {
@@ -1219,7 +1219,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 0,
             powerPoints: 10,
-            effect: "The user endures attacks for two turns, then strikes back to cause double the damage taken."
+            effect: "The user endures attacks for two turns then strikes back to cause double the damage taken."
         },
     PowderSnow:
         {
@@ -1299,7 +1299,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 5,
-            effect: "The user tackles the target with a high-speed spin. The slower the user compared to the target, the greater the move's power."
+            effect: "The user tackles the target with a high-speed spin. The slower the user compared to the target the greater the move's power."
         },
     Hail:
         {
@@ -1369,7 +1369,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 10,
-            effect: "A five-turn sandstorm is summoned to hurt all combatants except Rock, Ground, and Steel types. It raises the Sp. Def stat of Rock types."
+            effect: "A five-turn sandstorm is summoned to hurt all combatants except Rock Ground and Steel types. It raises the Sp. Def stat of Rock types."
         },
     Earthquake:
         {
@@ -1409,7 +1409,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 15,
-            effect: "Flattery is used to confuse the target. However, this also raises the target's Sp. Atk stat."
+            effect: "Flattery is used to confuse the target. However this also raises the target's Sp. Atk stat."
         },
     PoisonFang:
         {
@@ -1429,7 +1429,7 @@ const pokeMoves = {
             power: 70,
             accuracy: 100,
             powerPoints: 20,
-            effect: "Looking for an opening, the user strikes consistently. The target's stat changes don't affect this attack's damage."
+            effect: "Looking for an opening the user strikes consistently. The target's stat changes don't affect this attack's damage."
         },
     BodySlam:
         {
@@ -1459,7 +1459,7 @@ const pokeMoves = {
             power: 120,
             accuracy: 100,
             powerPoints: 5,
-            effect: "The user attacks the target with great power. However, this also lowers the user's Attack and Defense stats."
+            effect: "The user attacks the target with great power. However this also lowers the user's Attack and Defense stats."
         },
     HornAttack:
         {
@@ -1499,7 +1499,7 @@ const pokeMoves = {
             power: 120,
             accuracy: 85,
             powerPoints: 10,
-            effect: "Using its tough and impressive horn, the user rams into the target with no letup."
+            effect: "Using its tough and impressive horn the user rams into the target with no letup."
         },
     Sing:
         {
@@ -1519,7 +1519,7 @@ const pokeMoves = {
             power: 40,
             accuracy: 101,
             powerPoints: 15,
-            effect: "Letting out a charming cry, the user does emotional damage to opposing Pokémon. This attack never misses."
+            effect: "Letting out a charming cry the user does emotional damage to opposing Pokémon. This attack never misses."
         },
     Encore:
         {
@@ -1549,7 +1549,7 @@ const pokeMoves = {
             power: 40,
             accuracy: 100,
             powerPoints: 35,
-            effect: "The target is physically pounded with a long tail, a foreleg, or the like."
+            effect: "The target is physically pounded with a long tail a foreleg or the like."
         },
     Copycat:
         {
@@ -1569,7 +1569,7 @@ const pokeMoves = {
             power: 20,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user attacks the target with stored power. The more the user's stats are raised, the greater the move's power."
+            effect: "The user attacks the target with stored power. The more the user's stats are raised the greater the move's power."
         },
     Minimize:
         {
@@ -1579,7 +1579,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 10,
-            effect: "The user compresses its body to make itself look smaller, which sharply raises its evasiveness."
+            effect: "The user compresses its body to make itself look smaller which sharply raises its evasiveness."
         },
     AfterYou:
         {
@@ -1649,7 +1649,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user draws attention to itself, making all targets take aim only at the user."
+            effect: "The user draws attention to itself making all targets take aim only at the user."
         },
     CosmicPower:
         {
@@ -1669,7 +1669,7 @@ const pokeMoves = {
             power: 95,
             accuracy: 100,
             powerPoints: 15,
-            effect: "Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat."
+            effect: "Borrowing the power of the moon the user attacks the target. This may also lower the target's Sp. Atk stat."
         },
     HealingWish:
         {
@@ -1679,7 +1679,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 10,
-            effect: "The user faints. In return, the Pokémon taking its place will have its HP restored and status conditions cured."
+            effect: "The user faints. In return the Pokémon taking its place will have its HP restored and status conditions cured."
         },
     Disable:
         {
@@ -1689,7 +1689,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "For four turns, this move prevents the target from using the move it last used."
+            effect: "For four turns this move prevents the target from using the move it last used."
         },
     Spite:
         {
@@ -1709,7 +1709,7 @@ const pokeMoves = {
             power: 60,
             accuracy: 100,
             powerPoints: 15,
-            effect: "The user attacks opposing Pokémon with fire. If a Pokémon is holding a certain item, such as a Berry, the item becomes burned up and unusable."
+            effect: "The user attacks opposing Pokémon with fire. If a Pokémon is holding a certain item such as a Berry the item becomes burned up and unusable."
         },
     ConfuseRay:
         {
@@ -1739,7 +1739,7 @@ const pokeMoves = {
             power: 80,
             accuracy: 100,
             powerPoints: 20,
-            effect: "The user attacks with an odd, unseeable power. This may also make the target flinch."
+            effect: "The user attacks with an odd unseeable power. This may also make the target flinch."
         },
     Imprison:
         {
@@ -1749,7 +1749,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 10,
-            effect: "If opposing Pokémon know any move also known by the user, they are prevented from using it."
+            effect: "If opposing Pokémon know any move also known by the user they are prevented from using it."
         },
     Grudge:
         {
@@ -1759,7 +1759,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 5,
-            effect: "If the user faints, the user's grudge fully depletes the PP of the opponent's move that knocked it out."
+            effect: "If the user faints the user's grudge fully depletes the PP of the opponent's move that knocked it out."
         },
     FireBlast:
         {
@@ -1779,7 +1779,7 @@ const pokeMoves = {
             power: 15,
             accuracy: 85,
             powerPoints: 10,
-            effect: "The target is slapped repeatedly, back and forth, two to five times in a row."
+            effect: "The target is slapped repeatedly back and forth two to five times in a row."
         },
     Round:
         {
@@ -1799,7 +1799,7 @@ const pokeMoves = {
             power: 70,
             accuracy: 100,
             powerPoints: 10,
-            effect: "This attack inflicts big damage on a sleeping target. This also wakes the target up, however."
+            effect: "This attack inflicts big damage on a sleeping target. This also wakes the target up however."
         },
     Rest:
         {
@@ -1879,7 +1879,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 5,
-            effect: "The user pins the target with a dark, arresting look. The target becomes unable to flee."
+            effect: "The user pins the target with a dark arresting look. The target becomes unable to flee."
         },
     LeechLife:
         {
@@ -1909,7 +1909,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user's body grows all at once, raising the Attack and Sp. Atk stats."
+            effect: "The user's body grows all at once raising the Attack and Sp. Atk stats."
         },
     SweetScent:
         {
@@ -2119,7 +2119,7 @@ const pokeMoves = {
             power: 80,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user strikes with a simultaneous three-beam attack. This may also burn, freeze, or paralyze the target."
+            effect: "The user strikes with a simultaneous three-beam attack. This may also burn freeze or paralyze the target."
         },
     FakeOut:
         {
@@ -2199,7 +2199,7 @@ const pokeMoves = {
             power: 70,
             accuracy: 100,
             powerPoints: 5,
-            effect: "The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this move's power is increased."
+            effect: "The user gets revenge for a fainted ally. If an ally fainted in the previous turn this move's power is increased."
         },
     TakeDown:
         {
@@ -2209,7 +2209,7 @@ const pokeMoves = {
             power: 90,
             accuracy: 85,
             powerPoints: 20,
-            effect: "A reckless, full-body charge attack for slamming into the target. This also damages the user a little."
+            effect: "A reckless full-body charge attack for slamming into the target. This also damages the user a little."
         },
     Roar:
         {
@@ -2219,7 +2219,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The target is scared off, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon."
+            effect: "The target is scared off and a different Pokémon is dragged out. In the wild this ends a battle against a single Pokémon."
         },
     Reversal:
         {
@@ -2309,7 +2309,7 @@ const pokeMoves = {
             power: 60,
             accuracy: 100,
             powerPoints: 25,
-            effect: "The user endearingly approaches the target, then steals the target's held item."
+            effect: "The user endearingly approaches the target then steals the target's held item."
         },
     LowKick:
         {
@@ -2319,7 +2319,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "A powerful low kick that makes the target fall over. The heavier the target, the greater the move's power."
+            effect: "A powerful low kick that makes the target fall over. The heavier the target the greater the move's power."
         },
     KarateChop:
         {
@@ -2349,7 +2349,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 85,
             powerPoints: 15,
-            effect: "The user enrages and confuses the target. However, this also sharply raises the target's Attack stat."
+            effect: "The user enrages and confuses the target. However this also sharply raises the target's Attack stat."
         },
     CrossChop:
         {
@@ -2369,7 +2369,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 5,
-            effect: "The more the target has powered up with stat changes, the greater the move's power."
+            effect: "The more the target has powered up with stat changes the greater the move's power."
         },
     CloseCombat:
         {
@@ -2389,7 +2389,7 @@ const pokeMoves = {
             power: 75,
             accuracy: 100,
             powerPoints: 10,
-            effect: "Driven by frustration, the user attacks the target. If the user's previous move has failed, the power of this move doubles."
+            effect: "Driven by frustration the user attacks the target. If the user's previous move has failed the power of this move doubles."
         },
     FinalGambit:
         {
@@ -2429,7 +2429,7 @@ const pokeMoves = {
             power: 130,
             accuracy: 100,
             powerPoints: 5,
-            effect: "To inflict massive damage, the user burns itself out. After using this move, the user will no longer be Fire type."
+            effect: "To inflict massive damage the user burns itself out. After using this move the user will no longer be Fire type."
         },
     Hypnosis:
         {
@@ -2499,7 +2499,7 @@ const pokeMoves = {
             power: 60,
             accuracy: 90,
             powerPoints: 10,
-            effect: "The target is thrown, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon."
+            effect: "The target is thrown and a different Pokémon is dragged out. In the wild this ends a battle against a single Pokémon."
         },
     DynamicPunch:
         {
@@ -2509,7 +2509,7 @@ const pokeMoves = {
             power: 100,
             accuracy: 50,
             powerPoints: 5,
-            effect: "The user punches the target with full, concentrated power. This confuses the target if it hits."
+            effect: "The user punches the target with full concentrated power. This confuses the target if it hits."
         },
     MindReader:
         {
@@ -2529,7 +2529,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user switches places with a party Pokémon in waiting, if any. If a wild Pokémon uses this move, it flees."
+            effect: "The user switches places with a party Pokémon in waiting if any. If a wild Pokémon uses this move it flees."
         },
     MiracleEye:
         {
@@ -2569,7 +2569,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 10,
-            effect: "Restoring its own cells, the user restores its own HP by half of its max HP."
+            effect: "Restoring its own cells the user restores its own HP by half of its max HP."
         },
     Telekinesis:
         {
@@ -2599,7 +2599,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 10,
-            effect: "The user mimics the target completely, copying the target's Ability."
+            effect: "The user mimics the target completely copying the target's Ability."
         },
     FutureSight:
         {
@@ -2609,7 +2609,7 @@ const pokeMoves = {
             power: 120,
             accuracy: 100,
             powerPoints: 10,
-            effect: "Two turns after this move is used, a hunk of psychic energy attacks the target."
+            effect: "Two turns after this move is used a hunk of psychic energy attacks the target."
         },
     Trick:
         {
@@ -2649,7 +2649,7 @@ const pokeMoves = {
             power: 65,
             accuracy: 100,
             powerPoints: 20,
-            effect: "The user makes a swift attack on the target's legs, which lowers the target's Speed stat."
+            effect: "The user makes a swift attack on the target's legs which lowers the target's Speed stat."
         },
     Revenge:
         {
@@ -2669,7 +2669,7 @@ const pokeMoves = {
             power: 65,
             accuracy: 100,
             powerPoints: 20,
-            effect: "The user slaps down the target's held item, and that item can't be used in that battle. The move does more damage if the target has a held item."
+            effect: "The user slaps down the target's held item and that item can't be used in that battle. The move does more damage if the target has a held item."
         },
     VitalThrow:
         {
@@ -2679,7 +2679,7 @@ const pokeMoves = {
             power: 70,
             accuracy: 101,
             powerPoints: 10,
-            effect: "User attacks last, but ignores Accuracy and Evasiveness."
+            effect: "User attacks last but ignores Accuracy and Evasiveness."
         },
     DualChop:
         {
@@ -2699,7 +2699,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user tenses its muscles to bulk up its body, raising both its Attack and Defense stats."
+            effect: "The user tenses its muscles to bulk up its body raising both its Attack and Defense stats."
         },
     WideGuard:
         {
@@ -2719,7 +2719,7 @@ const pokeMoves = {
             power: 45,
             accuracy: 100,
             powerPoints: 25,
-            effect: "The target is struck with slender, whiplike vines to inflict damage."
+            effect: "The target is struck with slender whiplike vines to inflict damage."
         },
     RazorLeaf:
         {
@@ -2739,7 +2739,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 5,
-            effect: "The user powerfully wrings the target. The more HP the target has, the greater the move's power."
+            effect: "The user powerfully wrings the target. The more HP the target has the greater the move's power."
         },
     LeafTornado:
         {
@@ -2779,7 +2779,7 @@ const pokeMoves = {
             power: 10,
             accuracy: 100,
             powerPoints: 35,
-            effect: "The target is attacked with long, creeping tentacles, vines, or the like. This may also lower the target's Speed stat."
+            effect: "The target is attacked with long creeping tentacles vines or the like. This may also lower the target's Speed stat."
         },
     Barrier:
         {
@@ -2799,7 +2799,7 @@ const pokeMoves = {
             power: 65,
             accuracy: 100,
             powerPoints: 10,
-            effect: "If the target's HP is half or less, this attack will hit with double the power."
+            effect: "If the target's HP is half or less this attack will hit with double the power."
         },
     Hex:
         {
@@ -2829,7 +2829,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 15,
-            effect: "The user reflects the target's type, making the user the same type as the target."
+            effect: "The user reflects the target's type making the user the same type as the target."
         },
     MudSport:
         {
@@ -2939,7 +2939,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user slams into the target with its heavy body. The more the user outweighs the target, the greater the move's power."
+            effect: "The user slams into the target with its heavy body. The more the user outweighs the target the greater the move's power."
         },
     Steamroller:
         {
@@ -2959,7 +2959,7 @@ const pokeMoves = {
             power: 50,
             accuracy: 100,
             powerPoints: 20,
-            effect: "Cloaking itself in flame, the user attacks the target. Then, building up more power, the user raises its Speed stat."
+            effect: "Cloaking itself in flame the user attacks the target. Then building up more power the user raises its Speed stat."
         },
     Stomp:
         {
@@ -3029,7 +3029,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 10,
-            effect: "The user slacks off, restoring its own HP by up to half of its max HP."
+            effect: "The user slacks off restoring its own HP by up to half of its max HP."
         },
     HealPulse:
         {
@@ -3119,7 +3119,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 10,
-            effect: "The user electrifies the ground for five turns, powering up Electric-type moves. Pokémon on the ground no longer fall asleep."
+            effect: "The user electrifies the ground for five turns powering up Electric-type moves. Pokémon on the ground no longer fall asleep."
         },
     Cut:
         {
@@ -3159,7 +3159,7 @@ const pokeMoves = {
             power: 35,
             accuracy: 90,
             powerPoints: 10,
-            effect: "The user slams the target with a long tail, vines, or a tentacle. The target is hit twice in a row."
+            effect: "The user slams the target with a long tail vines or a tentacle. The target is hit twice in a row."
         },
     Uproar:
         {
@@ -3169,7 +3169,7 @@ const pokeMoves = {
             power: 90,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user attacks in an uproar for three turns. During that time, no Pokémon can fall asleep."
+            effect: "The user attacks in an uproar for three turns. During that time no Pokémon can fall asleep."
         },
     Acupressure:
         {
@@ -3179,7 +3179,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 30,
-            effect: "The user applies pressure to stress points, sharply boosting one of its or its allies' stats."
+            effect: "The user applies pressure to stress points sharply boosting one of its or its allies' stats."
         },
     JumpKick:
         {
@@ -3189,7 +3189,7 @@ const pokeMoves = {
             power: 100,
             accuracy: 95,
             powerPoints: 10,
-            effect: "The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself."
+            effect: "The user jumps up high then strikes with a kick. If the kick misses the user hurts itself."
         },
     IcyWind:
         {
@@ -3239,7 +3239,7 @@ const pokeMoves = {
             power: 80,
             accuracy: 100,
             powerPoints: 10,
-            effect: "Diving on the first turn, the user floats up and attacks on the next turn."
+            effect: "Diving on the first turn the user floats up and attacks on the next turn."
         },
     IceBeam:
         {
@@ -3269,7 +3269,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 90,
             powerPoints: 40,
-            effect: "A cloud of poison gas is sprayed in the face of opposing Pokémon, poisoning those it hits."
+            effect: "A cloud of poison gas is sprayed in the face of opposing Pokémon poisoning those it hits."
         },
     AcidArmor:
         {
@@ -3279,7 +3279,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user alters its cellular structure to liquefy itself, sharply raising its Defense stat."
+            effect: "The user alters its cellular structure to liquefy itself sharply raising its Defense stat."
         },
     Memento:
         {
@@ -3289,7 +3289,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user faints when using this move. In return, this harshly lowers the target's Attack and Sp. Atk stats."
+            effect: "The user faints when using this move. In return this harshly lowers the target's Attack and Sp. Atk stats."
         },
     VenomDrench:
         {
@@ -3299,7 +3299,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "Opposing Pokémon are drenched in an odd poisonous liquid. This lowers the Attack, Sp. Atk, and Speed stats of a poisoned target."
+            effect: "Opposing Pokémon are drenched in an odd poisonous liquid. This lowers the Attack Sp. Atk and Speed stats of a poisoned target."
         },
     RazorShell:
         {
@@ -3349,7 +3349,7 @@ const pokeMoves = {
             power: 30,
             accuracy: 100,
             powerPoints: 30,
-            effect: "The target is licked with a long tongue, causing damage. This may also leave the target with paralysis."
+            effect: "The target is licked with a long tongue causing damage. This may also leave the target with paralysis."
         },
     Payback:
         {
@@ -3359,7 +3359,7 @@ const pokeMoves = {
             power: 50,
             accuracy: 100,
             powerPoints: 10,
-            effect: "The user stores power, then attacks. If the user moves after the target, this attack's power will be doubled."
+            effect: "The user stores power then attacks. If the user moves after the target this attack's power will be doubled."
         },
     NightShade:
         {
@@ -3399,7 +3399,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 5,
-            effect: "After using this move, if the user faints, the Pokémon that landed the knockout hit also faints. Its chance of failing rises if it is used in succession."
+            effect: "After using this move if the user faints the Pokémon that landed the knockout hit also faints. Its chance of failing rises if it is used in succession."
         },
     DreamEater:
         {
@@ -3429,7 +3429,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 5,
-            effect: "Any Pokémon that hears this song faints in three turns, unless it switches out of battle."
+            effect: "Any Pokémon that hears this song faints in three turns unless it switches out of battle."
         },
     Bind:
         {
@@ -3479,7 +3479,7 @@ const pokeMoves = {
             power: 120,
             accuracy: 100,
             powerPoints: 10,
-            effect: "Using an odd shock wave, the user inflicts damage on any Pokémon of the same type in the area around it."
+            effect: "Using an odd shock wave the user inflicts damage on any Pokémon of the same type in the area around it."
         },
     Psyshock:
         {
@@ -3529,7 +3529,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 30,
             powerPoints: 5,
-            effect: "A vicious, tearing attack with big pincers. The target faints instantly if this attack hits."
+            effect: "A vicious tearing attack with big pincers. The target faints instantly if this attack hits."
         },
     Crabhammer:
         {
@@ -3549,7 +3549,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 15,
-            effect: "The user flails about aimlessly to attack. The less HP the user has, the greater the move's power."
+            effect: "The user flails about aimlessly to attack. The less HP the user has the greater the move's power."
         },
     EerieImpulse:
         {
@@ -3579,7 +3579,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "A retaliation move that counters any special attack, inflicting double the damage taken."
+            effect: "A retaliation move that counters any special attack inflicting double the damage taken."
         },
     MagneticFlux:
         {
@@ -3589,7 +3589,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user manipulates magnetic fields, which raises the Defense and Sp. Def stats of ally Pokémon with the Plus or Minus Ability."
+            effect: "The user manipulates magnetic fields which raises the Defense and Sp. Def stats of ally Pokémon with the Plus or Minus Ability."
         },
     Barrage:
         {
@@ -3639,7 +3639,7 @@ const pokeMoves = {
             power: 120,
             accuracy: 100,
             powerPoints: 10,
-            effect: "In this two-turn attack, the user gathers light, then blasts a bundled beam on the next turn."
+            effect: "In this two-turn attack the user gathers light then blasts a bundled beam on the next turn."
         },
     Bestow:
         {
@@ -3719,7 +3719,7 @@ const pokeMoves = {
             power: 75,
             accuracy: 100,
             powerPoints: 15,
-            effect: "The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect."
+            effect: "The user attacks with a swift chop. It can also break barriers such as Light Screen and Reflect."
         },
     Endure:
         {
@@ -3759,7 +3759,7 @@ const pokeMoves = {
             power: 130,
             accuracy: 90,
             powerPoints: 10,
-            effect: "The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead."
+            effect: "The target is attacked with a knee kick from a jump. If it misses the user is hurt instead."
         },
     DrainPunch:
         {
@@ -3849,7 +3849,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "A retaliation move that counters any physical attack, inflicting double the damage taken."
+            effect: "A retaliation move that counters any physical attack inflicting double the damage taken."
         },
     FocusPunch:
         {
@@ -3869,7 +3869,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user rests to cure itself of poisoning, a burn, or paralysis."
+            effect: "The user rests to cure itself of poisoning a burn or paralysis."
         },
     PowerWhip:
         {
@@ -3879,7 +3879,7 @@ const pokeMoves = {
             power: 120,
             accuracy: 85,
             powerPoints: 10,
-            effect: "The user violently whirls its vines, tentacles, or the like to harshly lash the target."
+            effect: "The user violently whirls its vines tentacles or the like to harshly lash the target."
         },
     Smog:
         {
@@ -3929,7 +3929,7 @@ const pokeMoves = {
             power: 100,
             accuracy: 90,
             powerPoints: 10,
-            effect: "The user swings and hits with its strong, heavy fist. It lowers the user's Speed, however."
+            effect: "The user swings and hits with its strong heavy fist. It lowers the user's Speed however."
         },
     SoftBoiled:
         {
@@ -3949,7 +3949,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 20,
-            effect: "The user lays roots that restore its HP on every turn. Because it's rooted, it can't switch out."
+            effect: "The user lays roots that restore its HP on every turn. Because it's rooted it can't switch out."
         },
     AncientPower:
         {
@@ -3969,7 +3969,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "The user tickles the target into laughing, reducing its Attack and Defense stats."
+            effect: "The user tickles the target into laughing reducing its Attack and Defense stats."
         },
     CometPunch:
         {
@@ -4009,7 +4009,7 @@ const pokeMoves = {
             power: 80,
             accuracy: 100,
             powerPoints: 10,
-            effect: "In this two-turn attack, blades of wind hit opposing Pokémon on the second turn. Critical hits land more easily."
+            effect: "In this two-turn attack blades of wind hit opposing Pokémon on the second turn. Critical hits land more easily."
         },
     Fly:
         {
@@ -4029,7 +4029,7 @@ const pokeMoves = {
             power: 60,
             accuracy: 85,
             powerPoints: 15,
-            effect: "The user lashes out with a quick, spinning kick. This may also make the target flinch."
+            effect: "The user lashes out with a quick spinning kick. This may also make the target flinch."
         },
     Mist:
         {
@@ -4099,7 +4099,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 75,
             powerPoints: 10,
-            effect: "With a scary face, the user tries to force a kiss on the target. If it succeeds, the target falls asleep."
+            effect: "With a scary face the user tries to force a kiss on the target. If it succeeds the target falls asleep."
         },
     SkyAttack:
         {
@@ -4139,7 +4139,7 @@ const pokeMoves = {
             power: 0,
             accuracy: 101,
             powerPoints: 30,
-            effect: "The user makes its edges more jagged, which raises its Attack stat."
+            effect: "The user makes its edges more jagged which raises its Attack stat."
         },
     Conversion:
         {
@@ -4167,2069 +4167,2099 @@ const pokeMoves = {
             type: properties.returnAttributes().normal,
             category: properties.returnCategory().physical,
             power: 50,
-            accuracy: 101,
+            accuracy: 100,
             powerPoints: 10,
             effect: "This attack is used in desperation only if the user has no PP. It also damages the user a little."
         },
     Sketch:
         {
-            name: "testing",
+            name: "Sketch",
             type: properties.returnAttributes().normal,
             category: properties.returnCategory().status,
             power: 0,
-            accuracy: 100,
-            powerPoints: 20,
-            effect: "Lowers"
+            accuracy: 101,
+            powerPoints: 1,
+            effect: "It enables the user to permanently learn the move last used by the target. Once used Sketch disappears."
         },
     TripleKick:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().status,
-            power: 0,
-            accuracy: 100,
-            powerPoints: 20,
-            effect: "Lowers"
+            name: "Triple Kick",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().physical,
+            power: 10,
+            accuracy: 90,
+            powerPoints: 10,
+            effect: "A consecutive three-kick attack that becomes more powerful with each successive hit."
         },
     Thief:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().status,
-            power: 0,
+            name: "Thief",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 60,
             accuracy: 100,
-            powerPoints: 20,
-            effect: "Lowers"
+            powerPoints: 25,
+            effect: "The user attacks and steals the target's held item simultaneously. The user can't steal anything if it already holds an item."
         },
     SpiderWeb:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Spider Web",
+            type: properties.returnAttributes().bug,
             category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
-            powerPoints: 20,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user ensnares the target with thin gooey silk so it can't flee from battle."
         },
     Snore:
         {
-            name: "testing",
+            name: "Snore",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().status,
-            power: 0,
+            category: properties.returnCategory().special,
+            power: 50,
             accuracy: 100,
-            powerPoints: 20,
-            effect: "Lowers"
+            powerPoints: 15,
+            effect: "This attack can be used only if the user is asleep. The harsh noise may also make the target flinch."
         },
     Conversion2:
         {
-            name: "testing",
+            name: "Conversion 2",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30,
+            effect: "The user changes its type to make itself resistant to the type of the attack the target used last."
+        },
+    Aeroblast:
+        {
+            name: "Aeroblast",
+            type: properties.returnAttributes().flying,
+            category: properties.returnCategory().special,
+            power: 100,
+            accuracy: 95,
+            powerPoints: 5,
+            effect: "A vortex of air is shot at the target to inflict damage. Critical hits land more easily."
+        },
+    CottonSpore:
+        {
+            name: "Cotton Spore",
+            type: properties.returnAttributes().grass,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 40,
+            effect: "The user releases cotton-like spores that cling to opposing Pokémon which harshly lowers their Speed stats."
+        },
+    FeintAttack:
+        {
+            name: "Feint Attack",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().physical,
+            power: 60,
+            accuracy: 100,
+            powerPoints: 20,
+            effect: "The user approaches the target disarmingly then throws a sucker punch. This attack never misses."
+        },
+    Octazooka:
+        {
+            name: "Octazooka",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 65,
+            accuracy: 85,
+            powerPoints: 10,
+            effect: "The user attacks by spraying ink at the target's face or eyes. This may also lower the target's accuracy."
+        },
+    MilkDrink:
+        {
+            name: "Milk Drink",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10,
+            effect: "The user restores its own HP by up to half of its max HP."
+        },
+    SteelWing:
+        {
+            name: "Steel Wing",
+            type: properties.returnAttributes().steel,
+            category: properties.returnCategory().physical,
+            power: 70,
+            accuracy: 90,
+            powerPoints: 25,
+            effect: "The target is hit with wings of steel. This may also raise the user's Defense stat."
+        },
+    Attract:
+        {
+            name: "Attract",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 15,
+            effect: "If it is the opposite gender of the user the target becomes infatuated and less likely to attack."
+        },
+    SleepTalk:
+        {
+            name: "Sleep Talk",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 10,
+            effect: "While it is asleep the user randomly uses one of the moves it knows."
+        },
+    HealBell:
+        {
+            name: "Heal Bell",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5,
+            effect: "The user makes a soothing bell chime to heal the status conditions of all the party Pokémon."
+        },
+    Return:
+        {
+            name: "Return",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20,
+            effect: "This full-power attack grows more powerful the more the user likes its Trainer."
+        },
+    Present:
+        {
+            name: "Present",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 90,
+            powerPoints: 15,
+            effect: "The user attacks by giving the target a gift with a hidden trap. It restores HP sometimes however."
+        },
+    Frustration:
+        {
+            name: "Frustration",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().physical,
+            power: 0,
+            accuracy: 100,
+            powerPoints: 20,
+            effect: "This full-power attack grows more powerful the less the user likes its Trainer."
+        },
+    PainSplit:
+        {
+            name: "Pain Split",
             type: properties.returnAttributes().normal,
             category: properties.returnCategory().status,
             power: 0,
             accuracy: 100,
             powerPoints: 20,
-            effect: "Lowers"
-        },
-    Aeroblast:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    CottonSpore:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FeintAttack:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Octazooka:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    MilkDrink:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SteelWing:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Attract:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SleepTalk:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HealBell:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Return:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Present:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Frustration:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    PainSplit:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            effect: "The user adds its HP to the target's HP then equally shares the combined HP with the target."
         },
     SacredFire:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Sacred Fire",
+            type: properties.returnAttributes().fire,
             category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            power: 100,
+            accuracy: 95,
+            powerPoints: 5,
+            effect: "The target is razed with a mystical fire of great intensity. This may also leave the target with a burn."
         },
     BatonPass:
         {
-            name: "testing",
+            name: "Baton Pass",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 40,
+            effect: "The user switches places with a party Pokémon in waiting and passes along any stat changes."
         },
     HiddenPower:
         {
-            name: "testing",
+            name: "Hidden Power",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            category: properties.returnCategory().special,
+            power: 60,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 15,
+            effect: "A unique attack that varies in type depending on the Pokémon using it."
         },
     MorningSun:
         {
-            name: "testing",
+            name: "Morning Sun",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5,
+            effect: "The user restores its own HP. The amount of HP regained varies with the weather."
         },
     Wish:
         {
-            name: "testing",
+            name: "Wish",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10,
+            effect: "One turn after this move is used the user's or its replacement's HP is restored by half the user's max HP."
         },
     SunnyDay:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            name: "Sunny Day",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 5,
+            effect: "The user intensifies the sun for five turns powering up Fire-type moves. It lowers the power of Water-type moves."
         },
     Whirlpool:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            name: "Whirlpool",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 35,
+            accuracy: 85,
+            powerPoints: 15,
+            effect: "The user traps the target in a violent swirling whirlpool for four to five turns."
         },
     BeatUp:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Beat Up",
+            type: properties.returnAttributes().dark,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user gets all party Pokémon to attack the target. The more party Pokémon the greater the number of attacks."
         },
     Torment:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Torment",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 15,
+            effect: "The user torments and enrages the target making it incapable of using the same move twice in a row."
         },
     Facade:
         {
-            name: "testing",
+            name: "Facade",
             type: properties.returnAttributes().normal,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 70,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 20,
+            effect: "This attack move doubles its power if the user is poisoned burned or paralyzed."
         },
     SmellingSalts:
         {
-            name: "testing",
+            name: "Smelling Salts",
             type: properties.returnAttributes().normal,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 70,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "This attack's power is doubled when used on a target with paralysis. This also cures the target's paralysis however."
         },
     NaturePower:
         {
-            name: "testing",
+            name: "Nature Power",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 20,
+            effect: "This attack makes use of nature's power. Its effects vary depending on the user's environment."
         },
     Assist:
         {
-            name: "testing",
+            name: "Assist",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 20,
+            effect: "The user hurriedly and randomly uses a move among those known by ally Pokémon."
         },
     MagicCoat:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Magic Coat",
+            type: properties.returnAttributes().Psychic,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 15,
+            effect: "Moves like Leech Seed and moves that inflict status conditions are blocked by a barrier and reflected back to the user of those moves."
         },
     Recycle:
         {
-            name: "testing",
+            name: "Recycle",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 10,
+            effect: "The user recycles a held item that has been used in battle so it can be used again."
         },
     Eruption:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Eruption",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 150,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 5,
+            effect: "The user attacks opposing Pokémon with explosive fury. The lower the user's HP the lower the move's power."
         },
     SkillSwap:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Skill Swap",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user employs its psychic power to exchange Abilities with the target."
         },
     Snatch:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Snatch",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user steals the effects of any attempts to use a healing or stat-changing move."
         },
     ArmThrust:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Arm Thrust",
+            type: properties.returnAttributes().fight,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 15,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 20,
+            effect: "The user lets loose a flurry of open-palmed arm thrusts that hit two to five times in a row."
         },
-    Camouflage:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // Camouflage:
+    //     {
+    //         name: "Camouflage",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().status,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 20,
+    //         effect: "Lowers"
+    //     },
     TailGlow:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            name: "Tail Glow",
+            type: properties.returnAttributes().bug,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20,
+            effect: "The user stares at flashing lights to focus its mind drastically raising its Sp. Atk stat."
         },
     LusterPurge:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Luster Purge",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 70,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 5,
+            effect: "The user lets loose a damaging burst of light. This may also lower the target's Sp. Def stat."
         },
     MistBall:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Mist Ball",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 70,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 5,
+            effect: "A mist-like flurry of down envelops and damages the target. This may also lower the target's Sp. Atk stat."
         },
     TeeterDance:
         {
-            name: "testing",
+            name: "Teeter Dance",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 20,
+            effect: "The user performs a wobbly dance that confuses the Pokémon around it."
         },
-    NeedleArm:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    BlastBurn:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HydroCannon:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    WeatherBall:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // NeedleArm:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // BlastBurn:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HydroCannon:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // WeatherBall:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     FakeTears:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Fake Tears",
+            type: properties.returnAttributes().dark,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 20,
+            effect: "The user feigns crying to fluster the target harshly lowering its Sp. Def stat."
         },
-    Overheat:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    OdorSleuth:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    RockTomb:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    GrassWhistle:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    WaterSpout:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SkyUppercut:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // Overheat:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // OdorSleuth:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // RockTomb:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // GrassWhistle:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // WaterSpout:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SkyUppercut:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     MuddyWater:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            name: "Muddy Water",
+            type: properties.returnAttributes().water,
+            category: properties.returnCategory().special,
+            power: 90,
+            accuracy: 85,
+            powerPoints: 10,
+            effect: "The user attacks by shooting muddy water at opposing Pokémon. This may also lower their accuracy."
         },
     Block:
         {
-            name: "testing",
+            name: "Block",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 5,
+            effect: "The user blocks the target's way with arms spread wide to prevent escape."
         },
-    FrenzyPlant:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Bounce:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    PoisonTail:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    VoltTackle:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    MagicalLeaf:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // FrenzyPlant:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Bounce:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // PoisonTail:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // VoltTackle:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // MagicalLeaf:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     DragonDance:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            name: "Dragon Dance",
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 20,
+            effect: "The user vigorously performs a mystic powerful dance that raises its Attack and Speed stats."
         },
     ShockWave:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            name: "Shock Wave",
+            type: properties.returnAttributes().electric,
+            category: properties.returnCategory().special,
+            power: 60,
+            accuracy: 101,
+            powerPoints: 20,
+            effect: "The user strikes the target with a quick jolt of electricity. This attack never misses."
         },
-    DoomDesire:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    PsychoBoost:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    MetalBurst:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    UTurn:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Embargo:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    PsychoShift:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    TrumpCard:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HealBlock:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    PowerTrick:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    LuckyChant:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // DoomDesire:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // PsychoBoost:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // MetalBurst:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // UTurn:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Embargo:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // PsychoShift:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // TrumpCard:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HealBlock:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // PowerTrick:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // LuckyChant:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     PowerSwap:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Power Swap",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user employs its psychic power to switch changes to its Attack and Sp. Atk stats with the target."
         },
     GuardSwap:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Guard Swap",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user employs its psychic power to switch changes to its Defense and Sp. Def stats with the target."
         },
     LastResort:
         {
-            name: "testing",
+            name: "Last Resort",
             type: properties.returnAttributes().normal,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 140,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 5,
+            effect: "This move can be used only after the user has used all the other moves it knows in the battle."
         },
-    HeartSwap:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    ForcePalm:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // HeartSwap:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // ForcePalm:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     AuraSphere:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            name: "Aura Sphere",
+            type: properties.returnAttributes().fight,
+            category: properties.returnCategory().special,
+            power: 80,
+            accuracy: 101,
+            powerPoints: 20,
+            effect: "The user lets loose a blast of aura power from deep within its body at the target. This attack never misses."
         },
     DragonPulse:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Dragon Pulse",
+            type: properties.returnAttributes().dragon,
+            category: properties.returnCategory().special,
+            power: 85,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The target is attacked with a shock wave generated by the user's gaping mouth."
         },
     DragonRush:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Dragon Rush",
+            type: properties.returnAttributes().dragon,
             category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            power: 100,
+            accuracy: 75,
+            powerPoints: 10,
+            effect: "The user tackles the target while exhibiting overwhelming menace. This may also make the target flinch."
         },
-    FocusBlast:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    EnergyBall:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // FocusBlast:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // EnergyBall:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     GigaImpact:
         {
-            name: "testing",
+            name: "Giga Impact",
             type: properties.returnAttributes().normal,
             category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            power: 150,
+            accuracy: 90,
+            powerPoints: 5,
+            effect: "The user charges at the target using every bit of its power. The user can't move on the next turn."
         },
     Avalanche:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Avalanche",
+            type: properties.returnAttributes().ice,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 60,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The power of this attack move is doubled if the user has been hurt by the target in the same turn."
         },
-    ShadowClaw:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    ShadowSneak:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    RockClimb:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Defog:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    TrickRoom:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    DracoMeteor:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // ShadowClaw:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // ShadowSneak:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // RockClimb:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Defog:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // TrickRoom:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // DracoMeteor:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     LavaPlume:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Lava Plume",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 80,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 15,
+            effect: "The user torches everything around it in an inferno of scarlet flames. This may also leave those it hits with a burn."
         },
-    RockWrecker:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    GrassKnot:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Chatter:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Judgement:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    AttackOrder:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    DefendOrder:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HealOrder:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HeadSmash:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    RoarOfTime:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SpacialRend:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    LunarDance:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    CrushGrip:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    MagmaStorm:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    DarkVoid:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SeedFlare:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    OminousWind:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    ShadowForce:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HoneClaws:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    GuardSplit:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    PowerSplit:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Automize:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    MagicRoom:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // RockWrecker:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // GrassKnot:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Chatter:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Judgement:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // AttackOrder:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // DefendOrder:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HealOrder:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HeadSmash:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // RoarOfTime:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SpacialRend:
+    //     {
+    //         name: "Spacial Rend",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // LunarDance:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // CrushGrip:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // MagmaStorm:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // DarkVoid:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SeedFlare:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // OminousWind:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // ShadowForce:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HoneClaws:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // GuardSplit:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // PowerSplit:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Automize:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // MagicRoom:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     StormThrow:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Storm Throw",
+            type: properties.returnAttributes().fight,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 60,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user strikes the target with a fierce blow. This attack always results in a critical hit."
         },
     FlameBurst:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Flame Burst",
+            type: properties.returnAttributes().fire,
+            category: properties.returnCategory().special,
+            power: 70,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 15,
+            effect: "The user attacks the target with a bursting flame. The bursting flame damages Pokémon next to the target as well."
         },
-    FoulPlay:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SimpleBeam:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Entrainment:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    EchoedVoice:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // FoulPlay:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SimpleBeam:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Entrainment:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // EchoedVoice:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     SkyDrop:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Sky Drop",
+            type: properties.returnAttributes().flying,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 60,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user takes the target into the sky then drops it during the next turn. The target cannot attack while in the sky."
         },
-    ShiftGear:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Quash:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Acrobatics:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    WaterPledge:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FirePledge:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    GrassPledge:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    VoltSwitch:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    StruggleBug:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FrostBreath:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // ShiftGear:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Quash:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Acrobatics:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // WaterPledge:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FirePledge:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // GrassPledge:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // VoltSwitch:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // StruggleBug:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FrostBreath:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     DragonTail:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Dragon Tail",
+            type: properties.returnAttributes().dragon,
             category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            power: 60,
+            accuracy: 90,
+            powerPoints: 10,
+            effect: "The target is knocked away and a different Pokémon is dragged out. In the wild this ends a battle against a single Pokémon."
         },
     WorkUp:
         {
-            name: "testing",
+            name: "Work Up",
             type: properties.returnAttributes().normal,
             category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30,
+            effect: "The user is roused and its Attack and Sp. Atk stats increase."
         },
-    Electroweb:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    WildCharge:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // Electroweb:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // WildCharge:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     HeartStamp:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Heart Stamp",
+            type: properties.returnAttributes().psychic,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 60,
             accuracy: 100,
-            powerPoints: 2000,
+            powerPoints: 25,
             effect: "Lowers"
         },
-    HornLeech:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SacredSword:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HeatCrash:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    CottonGuard:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    NightDaze:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // HornLeech:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SacredSword:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HeatCrash:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // CottonGuard:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // NightDaze:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     Psystrike:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Psystrike",
+            type: properties.returnAttributes().psychic,
+            category: properties.returnCategory().special,
+            power: 100,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user materializes an odd psychic wave to attack the target. This attack does physical damage."
         },
-    TailSlap:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HeadCharge:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    GearGrind:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SearingShot:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    TechnoBlast:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    RelicSong:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SecretSword:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Glaciate:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    BoltStrike:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    BlueFlare:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FieryDance:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FreezeShock:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    IceBurn:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Snarl:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    VCreate:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FusionFlare:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FusionBolt:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FlyingPress:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    MatBlock:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Rototiller:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    StickyWeb:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    PhantomForce:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    TrickOrTreat:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    NobleRoar:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    IonDeluge:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    ParabolicCharge:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    ForestsCurse:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // TailSlap:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HeadCharge:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // GearGrind:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SearingShot:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // TechnoBlast:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // RelicSong:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SecretSword:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Glaciate:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // BoltStrike:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // BlueFlare:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FieryDance:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FreezeShock:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // IceBurn:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Snarl:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // VCreate:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FusionFlare:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FusionBolt:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FlyingPress:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // MatBlock:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Rototiller:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // StickyWeb:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // PhantomForce:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // TrickOrTreat:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // NobleRoar:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // IonDeluge:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // ParabolicCharge:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // ForestsCurse:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     FreezeDry:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Freeze-Dry",
+            type: properties.returnAttributes().ice,
+            category: properties.returnCategory().special,
+            power: 70,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 20,
+            effect: "The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types."
         },
-    PartingShot:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    TopsyTurvy:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // PartingShot:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // TopsyTurvy:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     DrainingKiss:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Draining Kiss",
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
+            power: 50,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user steals the target's HP with a kiss. The user's HP is restored by over half of the damage taken by the target."
         },
-    CraftyShield:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FlowerShield:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    MistyTerrain:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Electrify:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FairyWind:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Boomburst:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    FairyLock:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    KingsShield:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Confide:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    DiamondStorm:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SteamEruption:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HyperspaceHole:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    WaterShuriken:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    MysticalFire:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    SpikyShield:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    AromaticMist:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Powder:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Geomancy:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HappyHour:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // CraftyShield:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FlowerShield:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // MistyTerrain:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Electrify:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FairyWind:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Boomburst:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // FairyLock:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // KingsShield:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Confide:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // DiamondStorm:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SteamEruption:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HyperspaceHole:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // WaterShuriken:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // MysticalFire:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // SpikyShield:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // AromaticMist:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Powder:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Geomancy:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HappyHour:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     DazzlingGleam:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Dazzling Gleam",
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().special,
+            power: 80,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 10,
+            effect: "The user damages opposing Pokémon by emitting a powerful flash."
         },
-    Celebrate:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    HoldHands:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // Celebrate:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // HoldHands:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     BabyDollEyes:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
+            name: "Baby-Doll Eyes",
+            type: properties.returnAttributes().fairy,
+            category: properties.returnCategory().status,
+            power: 0,
             accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            powerPoints: 30,
+            effect: "The user stares at the target with its baby-doll eyes which lowers the target's Attack stat. This move always goes first."
         },
-    HoldBack:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    Infestation:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
+    // HoldBack:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // Infestation:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
     PowerUpPunch:
         {
-            name: "testing",
-            type: properties.returnAttributes().normal,
+            name: "Power-Up Punch",
+            type: properties.returnAttributes().fight,
             category: properties.returnCategory().physical,
-            power: 1000,
+            power: 40,
             accuracy: 100,
-            powerPoints: 2000,
+            powerPoints: 20,
+            effect: "Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat."
+        },
+    // OblivionWing:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // ThousandArrows:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // ThousandWaves:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // LandsWrath:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // LightOfRuin:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // OriginPulse:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // PrecipiceBlades:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    // DragonAscent:
+    //     {
+    //         name: "testing",
+    //         type: properties.returnAttributes().normal,
+    //         category: properties.returnCategory().physical,
+    //         power: 1000,
+    //         accuracy: 100,
+    //         powerPoints: 2000,
+    //         effect: "Lowers"
+    //     },
+    Spotlight:
+        {
+            name: "Spotlight",
+            type: properties.returnAttributes().normal,
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 15,
+            effect: "The user shines a spotlight on the target so that only the target will be attacked during the turn."
+        },
+    HighHorsepower:
+        {
+            name: "HighHorsepower",
+            type: properties.returnAttributes().ground,
+            category: properties.returnCategory().physical,
+            power: 95,
+            accuracy: 95,
+            powerPoints: 10,
             effect: "Lowers"
         },
-    OblivionWing:
+    LaserFocus:
         {
-            name: "testing",
+            name: "Laser Focus",
             type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    ThousandArrows:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    ThousandWaves:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    LandsWrath:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    LightOfRuin:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    OriginPulse:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    PrecipiceBlades:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
-        },
-    DragonAscent:
-        {
-            name: "testing",
-            type: properties.returnAttributes().normal,
-            category: properties.returnCategory().physical,
-            power: 1000,
-            accuracy: 100,
-            powerPoints: 2000,
-            effect: "Lowers"
+            category: properties.returnCategory().status,
+            power: 0,
+            accuracy: 101,
+            powerPoints: 30,
+            effect: "The user concentrates intensely. The attack on the next turn always results in a critical hit."
         },
     temp:
         {

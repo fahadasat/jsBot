@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 exports.run = (client, message, args) => {
-  if (message.channel.id != 479420164744544278) return;
+  // if (message.channel.id != 479420164744544278) return;
 
   console.log("updaterole")
 
@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
       let Masters = message.guild.roles.find(r => r.name === "Masters");
 
       //if (message.author.id != 330011881341452288) return;
-      message.channel.send(message.guild.roles.find(r => r.name === "Admin") + " " + message.author.username + " changed their role.").catch(console.error);
+      message.channel.send(message.guild.roles.find(r => r.name === "Mod") + " " + message.author.username + " changed their role.").catch(console.error);
 
       // if (message.author.id == 330011881341452288) {
       //   message.member.addRole(Senior).catch(console.error);

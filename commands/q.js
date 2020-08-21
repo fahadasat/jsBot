@@ -37,7 +37,7 @@ exports.run = async (client, message, args) => {
         questions [questions.length] = question;
         if (spam === false) {
           spam = true;
-          let min = 0;
+          let min = 5;
           let sec = 10;
           setInterval(function () {
             sec--;
@@ -45,7 +45,7 @@ exports.run = async (client, message, args) => {
               min--;
               sec = 10;
               if (min == -1) {
-                min = 0;
+                min = 20;
                 if (questions.length > 1) {
                   message.channel.send("Please help a fellow matador in their question! (~q list)")
                 }
